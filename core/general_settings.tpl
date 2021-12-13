@@ -21,15 +21,14 @@
                     </div>
                 </div>
                 {include file='includes/update.tpl'}
-                <div class="card shadow mb-4">
+                <div class="card">
                     <div class="card-body">
-                        {include file='includes/alerts.tpl'}
-                        <form action="" method="post">
+                        <form id="xxx" action="" method="post">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="inputSiteName">{$SITE_NAME_LABEL}</label>
-                                        <input type="text" class="form-control" id="inputSiteName" name="sitename" placeholder="{$SITE_NAME_LABEL}" value="{$SITE_NAME}">
+                                        <input type="text" class="form-control" minlength="2" maxlength="64" id="inputSiteName" name="sitename" placeholder="{$SITE_NAME_LABEL}" value="{$SITE_NAME}">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputContactEmail">{$CONTACT_EMAIL_ADDRESS}</label>

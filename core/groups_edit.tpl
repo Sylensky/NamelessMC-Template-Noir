@@ -55,9 +55,6 @@
                         </div>
                         <hr />
 
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
                         {if isset($OWN_GROUP)}
                             <div class="card shadow border-left-primary">
                                 <div class="card-body">
@@ -82,11 +79,7 @@
                             <div class="form-group">
                                 <label for="InputColour">{$GROUP_USERNAME_COLOUR}</label>
                                 <div class="input-group">
-                                    <input type="text" name="username_style" class="form-control" id="InputColour"
-                                           value="{$GROUP_USERNAME_COLOUR_VALUE}">
-                                    <span class="input-group-append groupColour">
-                                            <span class="input-group-text colorpicker-input-addon"><i></i></span>
-                                        </span>
+                                    <input type="text" name="username_style" class="form-control color-picker" id="InputColour" value="{$GROUP_USERNAME_COLOUR_VALUE}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -101,13 +94,8 @@
                             </div>
                             {if $DISCORD_INTEGRATION}
                                 <div class="form-group">
-                                    <label for="InputDiscordRoleID">{$DISCORD_ROLE_ID} <span class="badge badge-info"
-                                                                                             data-toggle="popover"
-                                                                                             data-title="{$INFO}"
-                                                                                             data-content="{$ID_INFO|escape}"><i
-                                                    class="fa fa-question"></i></label>
-                                    <input type="number" min="1" class="form-control" id="InputDiscordRoleID"
-                                           name="discord_role_id" value="{$DISCORD_ROLE_ID_VALUE}">
+                                    <label for="InputDiscordRoleID">{$DISCORD_ROLE_ID} <span class="badge badge-info" data-toggle="popover" data-title="{$INFO}" data-content="{$ID_INFO|escape}"><i class="fa fa-question"></i></label>
+                                    <input type="number" min="1" class="form-control" id="InputDiscordRoleID" name="discord_role_id" value="{$DISCORD_ROLE_ID_VALUE}">
                                 </div>
                             {/if}
                             <div class="form-group">
@@ -209,8 +197,6 @@
             </div>
         </div>
     {/if}
-
-    <!-- End Wrapper -->
 </div>
 
 {include file='scripts.tpl'}
@@ -220,26 +206,10 @@
     $('#cancelModal').modal().show();
   }
   {if isset($DELETE_GROUP)}
-  function showDeleteModal() {
-    $('#deleteModal').modal().show();
-  }
+    function showDeleteModal() {
+        $('#deleteModal').modal().show();
+    }
   {/if}
-  $(function () {
-    $('.groupColour').colorpicker({
-      format: 'hex',
-      'color': {if $GROUP_USERNAME_COLOUR_VALUE} '{$GROUP_USERNAME_COLOUR_VALUE}' {else} '#000000' {/if}
-    });
-
-    $('.groupColour').on('colorpickerChange', function (event) {
-      $('#InputColour').val(event.color.toString());
-    });
-
-    $('#InputColour').change(function () {
-      $('.groupColour').colorpicker('setValue', $(this).val());
-    });
-  });
 </script>
-
 </body>
-
 </html>

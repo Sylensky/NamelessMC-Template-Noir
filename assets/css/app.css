@@ -3849,6 +3849,12 @@ textarea.form-control-lg {
     border-color: rgba(255, 255, 255, 0.19);
 }
 
+.form-select:focus-visible {
+    border-color: rgba(255, 255, 255, 0.19);
+    border-radius: 0;
+    outline: 0;
+}
+
 .form-select:focus {
     border-color: rgba(255, 255, 255, 0.19);
 }
@@ -5443,7 +5449,7 @@ textarea.form-control-lg {
     word-wrap: break-word;
     background-color: #252b3b;
     background-clip: border-box;
-    border: 0 solid #2d3448;
+    border: 0;
 }
 
 .card>hr {
@@ -13495,4 +13501,51 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
 
 .bc-github {
     color: #c9510c !important;
+}
+/* Toast */
+.toast {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: #030303
+}
+
+.toast-success {
+    background-color: #0bb197 !important;
+}
+
+.toast-error {
+    background-color: rgb(220 53 69)!important;
+}
+
+.toast-info {
+    background-color: #2f96b4
+}
+
+.toast-warning {
+    background-color: #f89406
+}
+
+.toast-top-center {
+    top: 12px;
+    margin: 0 auto 0 -150px;
+    left: 50%
+}
+
+.toast-top-center .toast {
+    margin: 0 !important
+}
+
+.toast-bottom-center {
+    bottom: 12px;
+    margin: 0 auto 0 -150px;
+    left: 50%
+}
+
+.toast-bottom-center .toast {
+    margin: 0 !important
+}
+/* Spectrum */
+.sp-original-input-container .sp-add-on {
+    border-radius: 0!important;
 }

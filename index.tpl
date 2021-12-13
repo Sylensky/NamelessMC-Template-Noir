@@ -125,7 +125,7 @@
                     datasets: [
                         {foreach from=$graph.datasets item=dataset}
                         {
-                            fill: false,
+                            fill: true,
                             borderColor: '{$dataset.colour}',
                             label: '{$dataset.label}',
                             yAxisID: '{$dataset.axis}',

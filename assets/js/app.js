@@ -1,36 +1,49 @@
-$("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
-  $("#success-alert").slideUp(500);
-});
-$("#danger-alert").fadeTo(2000, 500).slideUp(500, function () {
-  $("#danger-alert").slideUp(500);
+$(document).ready(function () {
+  $('.color-picker').spectrum({
+      type: "component",
+      togglePaletteOnly: true,
+      hideAfterPaletteSelect: true,
+      showInput: true,
+      showInitial: true
+  });
 });
 
 $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
+$(document).ready(function () {
+  $('input[maxlength]').maxlength({
+    alwaysShow: true,
+    threshold: 10,
+    warningClass: "badge badge-success",
+    limitReachedClass: "badge badge-danger",
+    message: '%charsTyped% / %charsTotal%',
+    validate: true
+  });
+});
 
 $(document).ready(function () {
   $('[data-toggle="popover"]')
-    .popover({
-      trigger: "manual",
-      html: true,
-    })
-    .on("mouseenter", function () {
-      var _this = this;
-      $(this).popover("show");
-      $(".popover").on("mouseleave", function () {
-        $(_this).popover("hide");
-      });
-    })
-    .on("mouseleave", function () {
-      var _this = this;
-      setTimeout(function () {
-        if (!$(".popover:hover").length) {
-          $(_this).popover("hide");
-        }
-      }, 100);
+  .popover({
+    trigger: "manual",
+    html: true,
+  })
+  .on("mouseenter", function () {
+    var _this = this;
+    $(this).popover("show");
+    $(".popover").on("mouseleave", function () {
+      $(_this).popover("hide");
     });
+  })
+  .on("mouseleave", function () {
+    var _this = this;
+    setTimeout(function () {
+      if (!$(".popover:hover").length) {
+        $(_this).popover("hide");
+      }
+    }, 100);
+  });
 });
 
 if ($(".settings-dropdown").length) {
