@@ -45,9 +45,6 @@
                             {if isset($ALL_ANNOUNCEMENTS)}
                             <hr />{else}<br />{/if}
 
-                            <!-- Success and Error Alerts -->
-                            {include file='includes/alerts.tpl'}
-
                             {if isset($ALL_ANNOUNCEMENTS)}
                             <div class="table-responsive">
                                 <table class="table table-borderless table-striped">

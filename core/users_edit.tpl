@@ -142,7 +142,7 @@
                                     <div class="form-group">
                                         <b>{$MAIN_GROUP_INFO}</b> <span class="badge bg-info">{$MAIN_GROUP->name}</span> {if isset($CANT_EDIT_GROUP)} <i>({$CANT_EDIT_GROUP})</i>{/if}
                                         <hr>
-                                        <select multiple="multiple" size="10" name="groups[]" id="inputGroups">
+                                        <select multiple="multiple" size="8" name="groups[]" id="inputGroups">
                                             {foreach from=$ALL_GROUPS item=item}
                                             <option value="{$item->id}" {if in_array($item->id, $GROUPS_VALUE)} selected{/if}>{$item->name|escape}</option>
                                             {/foreach}

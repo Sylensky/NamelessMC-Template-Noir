@@ -22,9 +22,6 @@
                     </div>
                 </div>
                 {include file='includes/update.tpl'}
-                <div class="row">
-                    <div class="col-md-12">{include file='includes/alerts.tpl'}</div>
-                </div>
                 <div class="card">
                     <form action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">

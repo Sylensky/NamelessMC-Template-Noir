@@ -5,21 +5,16 @@
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
             {include file='navbar.tpl'}
+            <!--  -->
             <div class="container-fluid">
-            <div class="row">
+                <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                             <h4 class="mb-sm-0">{$EDITING_PROFILE_FIELD}</h4>
-                            <div class="page-title-right">
-
-                            </div>
                         </div>
                     </div>
                 </div>
                 {include file='includes/update.tpl'}
-                <div class="row">
-                    <div class="col-md-12">{include file='includes/alerts.tpl'}</div>
-                </div>
                 <div class="row">
                 <form class="d-contents" action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
@@ -34,11 +29,11 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label for="inputFieldName">{$FIELD_NAME}</label>
-                                                <input type="text" class="form-control" id="inputFieldName" name="name" placeholder="{$FIELD_NAME}" value="{$FIELD_NAME_VALUE}">
+                                                <input type="text" class="form-control" id="inputFieldName" name="name" placeholder="{$FIELD_NAME}" value="{$FIELD_NAME_VALUE}" onchange="this.form.submit()">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="inputFieldType">{$TYPE}</label>
-                                                <select class="form-control" name="type" id="inputFieldType">
+                                                <select class="form-control" name="type" id="inputFieldType" onchange="this.form.submit()">
                                                     {foreach from=$TYPES key=key item=item}
                                                         <option value="{$key}" {if $key eq $TYPE_VALUE} selected{/if}>{$item}</option>
                                                     {/foreach}
@@ -48,7 +43,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputDescription">{$DESCRIPTION}</label>
-                                        <textarea class="form-control" id="inputDescription" name="description">{$DESCRIPTION_VALUE}</textarea>
+                                        <textarea class="form-control" id="inputDescription" name="description" onchange="this.form.submit()">{$DESCRIPTION_VALUE}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -59,42 +54,40 @@
                                     Field Settings
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="inputRequired">{$REQUIRED}</label>
-                                        <span class="badge badge-info" style="margin-right:10px"><i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$REQUIRED_HELP}"></i></span>
-                                        <input type="checkbox" id="inputRequired" name="required" class="js-switch" {if $REQUIRED_VALUE eq 1} checked{/if} />
+                                    <div class="d-flex">
+                                        <input class="form-check form-switch" type="checkbox" id="inputRequired" name="required" switch="success" {if $REQUIRED_VALUE eq 1}checked{/if} onchange="this.form.submit()">
+                                        <label class="form-label" for="inputRequired" data-on-label="Yes" data-off-label="No"></label>
+                                        <label for="inputRequired"> &nbsp;{$REQUIRED} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$REQUIRED_HELP}"></i></label>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="inputEditable">{$EDITABLE}</label>
-                                        <span class="badge badge-info" style="margin-right:10px"><i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$EDITABLE_HELP}"></i></span>
-                                        <input type="checkbox" id="inputEditable" name="editable" class="js-switch" {if $EDITABLE_VALUE eq 1} checked{/if} />
+                                    <div class="d-flex">
+                                        <input class="form-check form-switch" type="checkbox" id="inputEditable" name="editable" switch="success" {if $EDITABLE_VALUE eq 1}checked{/if} onchange="this.form.submit()">
+                                        <label class="form-label" for="inputEditable" data-on-label="Yes" data-off-label="No"></label>
+                                        <label for="inputEditable"> &nbsp;{$EDITABLE} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$EDITABLE_HELP}"></i></label>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="inputPublic">{$PUBLIC}</label>
-                                        <span class="badge badge-info" style="margin-right:10px"><i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$PUBLIC_HELP}"></i></span>
-                                        <input type="checkbox" id="inputPublic" name="public" class="js-switch" {if $PUBLIC_VALUE eq 1} checked{/if} />
+                                    <div class="d-flex">
+                                        <input class="form-check form-switch" type="checkbox" id="inputPublic" name="public" switch="success" {if $PUBLIC_VALUE eq 1}checked{/if} onchange="this.form.submit()">
+                                        <label class="form-label" for="inputPublic" data-on-label="Yes" data-off-label="No"></label>
+                                        <label for="inputPublic"> &nbsp;{$PUBLIC} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$PUBLIC_HELP}"></i></label>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="inputForum">{$DISPLAY_FIELD_ON_FORUM}</label>
-                                        <span class="badge badge-info"><i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$DISPLAY_FIELD_ON_FORUM_HELP}"></i></span>
-                                        <input type="checkbox" id="inputForum" name="forum" class="js-switch" {if $DISPLAY_FIELD_ON_FORUM_VALUE eq 1} checked{/if} />
+                                    <div class="d-flex">
+                                        <input class="form-check form-switch" type="checkbox" id="inputForum" name="forum" switch="success" {if $DISPLAY_FIELD_ON_FORUM_VALUE eq 1}checked{/if} onchange="this.form.submit()">
+                                        <label class="form-label" for="inputForum" data-on-label="Yes" data-off-label="No"></label>
+                                        <label for="inputForum"> &nbsp;{$DISPLAY_FIELD_ON_FORUM} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$DISPLAY_FIELD_ON_FORUM_HELP}"></i></label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="{$SUBMIT}">
+                                <input type="submit" class="btn btn-outline-primary" value="Save">
                                 <a class="btn btn-outline-danger float-right ml-3" href="#" onclick="showDeleteModal()">{$DELETE}</a>
-                                <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">{$CANCEL}</a>
+                                <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">Back</a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+            <!--  -->
         </div>
         {include file='footer.tpl'}
     </div>

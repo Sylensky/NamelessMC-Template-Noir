@@ -43,9 +43,7 @@
                             <div class="form-group">
                                 {$ENABLE_REGISTRATION}
                                 <input type="hidden" name="enable_registration" value="0">
-                                <input name="enable_registration" type="checkbox"
-                                       class="js-switch js-check-change" {if $REGISTRATION_ENABLED eq 1} checked{/if}
-                                       value="1" />
+                                <input name="enable_registration" type="checkbox" class="js-switch js-check-change" {if $REGISTRATION_ENABLED eq 1} checked{/if} value="1" />
                             </div>
                             <input type="hidden" name="token" value="{$TOKEN}">
                         </form>

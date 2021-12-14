@@ -22,13 +22,9 @@
                 </div>
                 {include file='includes/update.tpl'}
                 <div class="row">
-                    <div class="col-md-12">{include file='includes/alerts.tpl'}</div>
-                </div>
-                <div class="row">
                    <div class="col-md-12">
-                        <input class="form-control text-center" type="text" id="SearchFields" onkeyup="Search_Fields()" placeholder="Search Fields..">
+                        <input class="form-control text-center" type="text" id="SearchFields" onkeyup="Search_Fields()" placeholder="Search Custom Profile Fields...">
                         <hr>
-                        <div id="result"></div>
                    </div>
                     {if $smarty.const.Profile_Fields_Style eq "card"}
                         {if count($FIELDS)}
@@ -59,10 +55,10 @@
                     {else $smarty.const.Profile_Fields_Style eq "table"}
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body no-padding">
                                     {if count($FIELDS)}
                                     <div class="table-responsive">
-                                        <table class="table table-striped">
+                                        <table class="table table-striped table-bordered table-responsive">
                                             <thead>
                                             <tr>
                                                 <th>{$FIELD_NAME}</th>
@@ -94,6 +90,12 @@
                             </div>
                         </div>
                     {/if}
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="btn btn-primary" {if count($FIELDS)}style="margin-bottom: 15px"{/if}href="{$NEW_FIELD_LINK}"><i class="far fa-plus-circle"></i>  Create New Field</a>
+                    </div>
                 </div>
             </div>
         </div>

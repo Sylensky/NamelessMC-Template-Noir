@@ -62,6 +62,8 @@ if (!class_exists('Noir_Panel_Template')) {
 
             define('Profile_Fields_Style', 'card');
             // card - table
+            define('Easy_Update', '1');
+            // 0 - 1
         }
 
         public function onPageLoad() {
@@ -104,18 +106,18 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'debugging_and_maintenance':
                         $this->addCSSStyle('
-						.error_log {
-	                        width: 100%;
-	                        height: 400px;
-	                        padding: 0 10px;
-	                        -webkit-box-sizing: border-box;
-	                        -moz-box-sizing: border-box;
-	                        box-sizing: border-box;
-	                        overflow-y: scroll;
-	                        overflow-x: scroll;
-	                        white-space: initial;
-	                        background-color: #eceeef;
-	                    }
+                            .error_log {
+                                width: 100%;
+                                height: 400px;
+                                padding: 0 10px;
+                                -webkit-box-sizing: border-box;
+                                -moz-box-sizing: border-box;
+                                box-sizing: border-box;
+                                overflow-y: scroll;
+                                overflow-x: scroll;
+                                white-space: initial;
+                                background-color: #eceeef;
+                            }
 						');
 
                         $this->addJSFiles(array(
@@ -142,10 +144,10 @@ if (!class_exists('Noir_Panel_Template')) {
                         $this->addJSScript(Input::createEditor('InputRegistrationDisabledMessage'));
 
                         $this->addJSScript('
-						var changeCheckbox = document.querySelector(\'.js-check-change\');
+                            var changeCheckbox = document.querySelector(\'.js-check-change\');
 
-						changeCheckbox.onchange = function() {
-						  $(\'#enableRegistration\').submit();
+                            changeCheckbox.onchange = function() {
+                            $(\'#enableRegistration\').submit();
 						};
 						');
 

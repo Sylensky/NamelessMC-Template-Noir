@@ -44,9 +44,6 @@
                         </div>
                         <hr />
 
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
                         <form role="form" action="" method="post">
                             <div class="form-group">
                                 <label for="header">{$HEADER}</label>

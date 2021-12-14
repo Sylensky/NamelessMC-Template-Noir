@@ -22,6 +22,11 @@
                 {/if}
             </div>
         </li>
+        <li class="nav-item no-arrow mx-1">
+            <a class="nav-link" href="#">
+                <i class="mdi mdi-cog"></i>
+            </a>
+        </li>
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link" href="{$LOGGED_IN_USER.panel_profile}">
                 <img class="img-profile rounded-circle mr-2" src="{$LOGGED_IN_USER.avatar}" alt="{$LOGGED_IN_USER.username}">

@@ -92,8 +92,7 @@ if ($(".sidebar").length) {
           s(".sidebar").addClass("toggled"),
           s(".sidebar .collapse").collapse("hide"));
     }),
-    s("body.fixed-nav .sidebar").on(
-      "mousewheel DOMMouseScroll wheel",
+    s("body.fixed-nav .sidebar").on( "mousewheel DOMMouseScroll wheel",
       function (e) {
         if (768 < s(window).width()) {
           var o = e.originalEvent,
