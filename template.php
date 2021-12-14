@@ -61,6 +61,7 @@ if (!class_exists('Noir_Panel_Template')) {
             define('PANEL_TEMPLATE_STAFF_USERS_AJAX', true);
 
             define('Profile_Fields_Style', 'card');
+            define('Panel_Template_Style', 'card');
             // card - table
             define('Easy_Update', '1');
             // 0 - 1
@@ -353,7 +354,6 @@ if (!class_exists('Noir_Panel_Template')) {
                             }
                         }
                         break;
-
                     case 'hooks':
                     case 'discord':
                     case 'security':
