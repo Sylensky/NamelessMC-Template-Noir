@@ -51,7 +51,6 @@
                                     {foreach from=$TEMPLATE_LIST item=template}
                                         <tr>
                                             <td>
-                                                <img src="https://cdn.xemah.com/lithium/template-icon.png" style="float: left; width: 45px; height: 45px; margin-right: 0.75rem; border-radius: 50%;">
                                                 <strong>{$template.name}</strong> <small>{$template.version}</small>
                                                 {if $template.default_warning}
                                                     &nbsp;
@@ -63,7 +62,7 @@
                                                 {/if}
                                                 <br />
                                                 <small>{$template.author_x}</small>
-                                                <small>{$Profile_Fields_Style} ></small>
+                                                <small>{$Profile_Fields_Style}</small>
                                             </td>
                                             <td>
                                                 <div class="float-md-right">

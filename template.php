@@ -33,6 +33,7 @@ if (!class_exists('Noir_Panel_Template')) {
             $this->_language = $language;
             $this->_user = $user;
             $this->_pages = $pages;
+            $this->_smarty = $smarty;
 
             parent::__construct(self::$NAME, self::$VERSION, self::$NAMELESS_VERSION, self::$AUTHOR);
 
@@ -67,7 +68,15 @@ if (!class_exists('Noir_Panel_Template')) {
             // 0 - 1
         }
 
-        public function onPageLoad() {
+        public function onPageLoad()
+        {
+            $NoirSettings = self::getConfig();
+            $this->_smarty->assign('NS', $NoirSettings);
+
+            $NoirLanguage = new Language(__DIR__ . '/language', LANGUAGE);
+            require($NoirLanguage->getActiveLanguageDirectory() . '/general.php');
+            $this->_smarty->assign('LOCALE', $language);
+
             if (defined('PANEL_PAGE')) {
                 switch (PANEL_PAGE) {
                     case 'dashboard':
@@ -341,9 +350,9 @@ if (!class_exists('Noir_Panel_Template')) {
                                 ));
 
                                 $this->addCSSStyle('
-							    .thumbnails li img{
-							        width: 200px;
-							    }
+                                    .thumbnails li img{
+                                        width: 200px;
+                                    }
 								');
 
                                 $this->addJSFiles(array(
@@ -459,6 +468,17 @@ if (!class_exists('Noir_Panel_Template')) {
                     case 'forum_settings':
                 }
             }
+        }
+
+        public static function getConfig()
+        {
+            $configFile = __DIR__ . '/settings/config.json';
+
+            $configData = file_get_contents($configFile);
+            if (!$configData) {
+                $configData = '{}';
+            }
+            return json_decode($configData, 1);
         }
     }
 }

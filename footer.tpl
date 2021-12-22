@@ -1,6 +1,6 @@
 <footer class="sticky-footer">
     <div class="footer">
-        <div class="d-flex">
+        <div class="row">
             <div class="col-sm-5 mb-0">
                 <span>{'Y'|date} &copy; <a href="https://namelessmc.com/" target="_blank">NamelessMC</a></span>
             </div>

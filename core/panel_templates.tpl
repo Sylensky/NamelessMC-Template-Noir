@@ -23,15 +23,16 @@
                 {include file='includes/update.tpl'}
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="btn btn-outline-primary" href="{$INSTALL_TEMPLATE_LINK}">{$INSTALL_TEMPLATE}</a>
-                                <a class="btn btn-outline-secondary" href="{$CLEAR_CACHE_LINK}">{$CLEAR_CACHE}</a>
-                                <span class="float-right">
-                                    <a class="btn btn-outline-primary" href="{$VIEW_ALL_PANEL_TEMPLATES_LINK}" target="_blank"><i class="far fa-external-link"></i> {$FIND_TEMPLATES}</a>
-                                </span>
-                            </div>
-                        </div>
+                        <a class="btn btn-outline-primary" href="{$INSTALL_TEMPLATE_LINK}">{$INSTALL_TEMPLATE}</a>
+                        <a class="btn btn-outline-secondary" href="{$CLEAR_CACHE_LINK}">{$CLEAR_CACHE}</a>
+                        <span class="float-right">
+                            <a class="btn btn-outline-primary" href="{$VIEW_ALL_PANEL_TEMPLATES_LINK}" target="_blank"><i class="far fa-external-link"></i> {$FIND_TEMPLATES}</a>
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        {if isset($WEBSITE_TEMPLATES_ERROR)}
+                            <div class="alert bg-danger text-white">{$WEBSITE_TEMPLATES_ERROR}</div>
+                        {/if}
                     </div>
                 </div>
                 <div class="row">
@@ -75,7 +76,7 @@
                     {else $smarty.const.Panel_Template_Style eq "table"}
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-body no-padding">
+                            <div class="card-body np">
                                 <div class="table-responsive">
                                     <table class="table table-striped">
                                         <colgroup>
@@ -120,11 +121,6 @@
                         </div>
                     </div>
                     {/if}
-                    <div class="col-md-12">
-                        {if isset($WEBSITE_TEMPLATES_ERROR)}
-                            <div class="alert bg-danger text-white">{$WEBSITE_TEMPLATES_ERROR}</div>
-                        {/if}
-                    </div>
                 </div>
             </div>
         </div>
