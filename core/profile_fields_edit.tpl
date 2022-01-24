@@ -5,7 +5,6 @@
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
             {include file='navbar.tpl'}
-            <!--  -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -43,7 +42,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputDescription">{$DESCRIPTION}</label>
-                                        <textarea class="form-control" id="inputDescription" name="description" onchange="this.form.submit()">{$DESCRIPTION_VALUE}</textarea>
+                                        <input class="form-control" type="text" id="inputDescription" name="description" value="{$DESCRIPTION_VALUE}" onchange="this.form.submit()">
                                     </div>
                                 </div>
                             </div>
@@ -78,16 +77,14 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-outline-primary" value="Save">
-                                <a class="btn btn-outline-danger float-right ml-3" href="#" onclick="showDeleteModal()">{$DELETE}</a>
-                                <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">Back</a>
-                            </div>
+                            <hr>
+                            <input type="submit" class="btn btn-outline-primary" value="Save">
+                            <a class="btn btn-outline-danger float-right ml-3" href="#" onclick="showDeleteModal()">{$DELETE}</a>
+                            <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">Back</a>
                         </div>
                     </form>
                 </div>
             </div>
-            <!--  -->
         </div>
         {include file='footer.tpl'}
     </div>
@@ -104,13 +101,15 @@
                     {$CONFIRM_DELETE}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{$NO}</button>
-                    <form action="" method="post">
+                    <form class="float-left" action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="id" value="{$FIELD_ID}">
-                        <input type="submit" class="btn btn-primary" value="{$YES}">
+                        <input type="submit" class="btn btn-primary btn-sm" value="{$YES}">
                     </form>
+                    <span class="float-right">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
+                    </span>
                 </div>
             </div>
         </div>

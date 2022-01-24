@@ -1,45 +1,28 @@
 {include file='header.tpl'}
-
 <body id="page-top">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$NAVIGATION}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$CONFIGURATION}</li>
-                        <li class="breadcrumb-item active">{$NAVIGATION}</li>
-                    </ol>
-                </div>
-
-                <!-- Update Notification -->
-                {include file='includes/update.tpl'}
-
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
-                        <form action="" method="post">
+    <div id="wrapper">
+        {include file='sidebar.tpl'}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {include file='navbar.tpl'}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">{$NAVIGATION}</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
+                                        <li class="breadcrumb-item">{$CONFIGURATION}</li>
+                                        <li class="breadcrumb-item">{$NAVIGATION}</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {include file='includes/update.tpl'}
+                    <div class="row">
+                        <div class="col-12">
                             <div class="card shadow border-left-primary">
                                 <div class="card-body">
                                     <h5><i class="icon fa fa-info-circle"></i> {$INFO}</h5>
@@ -47,88 +30,62 @@
                                     <p>{$NAVBAR_ICON_INSTRUCTIONS}</p>
                                 </div>
                             </div>
-                            <br />
-                            {foreach from=$NAV_ITEMS key=key item=item}
-                                <strong>{$item.title|escape}</strong>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="input{$item.title|escape}">{$NAVBAR_ORDER}</label>
-                                            <input type="number" min="1" class="form-control"
-                                                   id="input{$item.title|escape}"
-                                                   name="inputOrder[{if isset($item.custom) && is_numeric($item.custom)}{$item.custom}{else}{$key}{/if}]"
-                                                   value="{$item.order|escape}">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="input{$item.title|escape}Icon">{$NAVBAR_ICON}</label>
-                                            <input type="text" class="form-control" id="input{$item.title|escape}Icon"
-                                                   name="inputIcon[{if isset($item.custom) && is_numeric($item.custom)}{$item.custom}{else}{$key}{/if}]"
-                                                   value="{$item.icon|escape}">
+                        </div>
+                    </div>
+                    <form class="" action="" method="post">
+                    <input type="hidden" name="token" value="{$TOKEN}">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="dropdown_name">{$DROPDOWN_NAME}</label>
+                                            <input type="text" class="form-control" id="dropdown_name" name="dropdown_name" value="{$DROPDOWN_NAME_VALUE}" onchange="this.form.submit()">
                                         </div>
                                     </div>
                                 </div>
-                                {if isset($item.items) && count($item.items)}
-                                    <br>
-                                    <strong>{$item.title|escape} &raquo; {$DROPDOWN_ITEMS}</strong>
-                                    <br />
-                                    {foreach from=$item.items key=dropdown_key item=dropdown_item}
-                                        <strong>{$dropdown_item.title|escape}</strong>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="input{$dropdown_item.title|escape}">{$NAVBAR_ORDER}</label>
-                                                    <input type="number" min="1" class="form-control"
-                                                           id="input{$dropdown_item.title|escape}"
-                                                           name="inputOrder[{if isset($dropdown_item.custom) && is_numeric($dropdown_item.custom)}{$dropdown_item.custom}{else}{$dropdown_key}{/if}]"
-                                                           value="{$dropdown_item.order|escape}">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            {foreach from=$NAV_ITEMS key=key item=item}
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        {$item.title|escape}
+                                        <span class="float-right">{$item.order}</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <label for="input{$item.title|escape}Icon">{$NAVBAR_ORDER}</label>
+                                                <div class="input-group">
+                                                    <input type="number" min="1" class="form-control" id="input{$item.title|escape}" name="inputOrder[{if isset($item.custom) && is_numeric($item.custom)}{$item.custom}{else}{$key}{/if}]" value="{$item.order|escape}" onchange="this.form.submit()">
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label for="input{$dropdown_item.title|escape}Icon">{$NAVBAR_ICON}</label>
-                                                    <input type="text" class="form-control"
-                                                           id="input{$dropdown_item.title|escape}Icon"
-                                                           name="inputIcon[{if isset($dropdown_item.custom) && is_numeric($dropdown_item.custom)}{$dropdown_item.custom}{else}{$dropdown_key}{/if}]"
-                                                           value="{$dropdown_item.icon|escape}">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <label for="input{$item.title|escape}Icon">{$NAVBAR_ICON}</label>
+                                                <div class="input-group">
+                                                    {if $item.icon}
+                                                    <div class="input-group-append">
+                                                        <span class="btn btn-secondary text-white">{$item.icon}</span>
+                                                    </div>
+                                                    {/if}
+                                                    <input type="text" class="form-control" id="input{$item.title|escape}Icon" name="inputIcon[{if isset($item.custom) && is_numeric($item.custom)}{$item.custom}{else}{$key}{/if}]" value="{$item.icon|escape}" onchange="this.form.submit()">
                                                 </div>
                                             </div>
                                         </div>
-                                    {/foreach}
-                                {/if}
-
+                                    </div>
+                                </div>
+                            </div>
                             {/foreach}
-                            <hr>
-                            <div class="form-group">
-                                <label for="dropdown_name">{$DROPDOWN_NAME}</label>
-                                <input type="text" class="form-control" id="dropdown_name" name="dropdown_name"
-                                       value="{$DROPDOWN_NAME_VALUE}">
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" name="token" value="{$TOKEN}">
-                                <input type="submit" value="{$SUBMIT}" class="btn btn-primary">
-                            </div>
-                        </form>
-
-                    </div>
+                        </div>
+                    </form>
                 </div>
-
-                <!-- Spacing -->
-                <div style="height:1rem;"></div>
-
-                <!-- End Page Content -->
             </div>
-
-            <!-- End Main Content -->
+            {include file='footer.tpl'}
         </div>
-
-        {include file='footer.tpl'}
-
-        <!-- End Content Wrapper -->
     </div>
-
-    <!-- End Wrapper -->
-</div>
-
-{include file='scripts.tpl'}
-
+    {include file='scripts.tpl'}
 </body>
-
 </html>

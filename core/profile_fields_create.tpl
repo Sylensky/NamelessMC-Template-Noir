@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="inputDescription">{$DESCRIPTION}</label>
-                                        <textarea class="form-control" id="inputDescription" name="description">{$DESCRIPTION_VALUE}</textarea>
+                                        <input type="text" class="form-control" id="inputDescription" name="description">
                                     </div>
                                 </div>
                             </div>
@@ -76,6 +76,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
+                            <hr>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-outline-primary" value="Save">
                                 <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">Back</a>

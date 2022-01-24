@@ -1,83 +1,51 @@
 {include file='header.tpl'}
 
 <body id="page-top">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$PRIVACY_AND_TERMS}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$CONFIGURATION}</li>
-                        <li class="breadcrumb-item active">{$PRIVACY_AND_TERMS}</li>
-                    </ol>
-                </div>
-
-                <!-- Update Notification -->
-                {include file='includes/update.tpl'}
-
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="InputPrivacy">{$PRIVACY_POLICY}</label>
-                                <textarea style="width:100%" rows="10" name="privacy"
-                                          id="InputPrivacy">{$PRIVACY_POLICY_VALUE}</textarea>
+    <div id="wrapper">
+        {include file='sidebar.tpl'}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {include file='navbar.tpl'}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">{$PRIVACY_AND_TERMS}</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
+                                        <li class="breadcrumb-item active">{$CONFIGURATION}</li>
+                                        <li class="breadcrumb-item active">{$PRIVACY_AND_TERMS}</li>
+                                    </ol>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="InputTerms">{$TERMS_AND_CONDITIONS}</label>
-                                <textarea style="width:100%" rows="10" name="terms"
-                                          id="InputTerms">{$TERMS_AND_CONDITIONS_VALUE}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" name="token" value="{$TOKEN}">
-                                <input type="submit" class="btn btn-primary" value="{$SUBMIT}">
-                            </div>
-                        </form>
-
+                        </div>
                     </div>
+                    {include file='includes/update.tpl'}
+                    <form class="row" action="" method="post">
+                    <input type="hidden" name="token" value="{$TOKEN}">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">{$PRIVACY_POLICY}</div>
+                                <div class="card-body">
+                                    <textarea style="width:100%" rows="10" name="privacy" id="InputPrivacy" onchange="this.form.submit()">{$PRIVACY_POLICY_VALUE}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">{$TERMS_AND_CONDITIONS}</div>
+                                <div class="card-body">
+                                    <textarea style="width:100%" rows="10" name="terms" id="InputTerms" onchange="this.form.submit()">{$TERMS_AND_CONDITIONS_VALUE}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <!-- Spacing -->
-                <div style="height:1rem;"></div>
-
-                <!-- End Page Content -->
             </div>
-
-            <!-- End Main Content -->
+            {include file='footer.tpl'}
         </div>
-
-        {include file='footer.tpl'}
-
-        <!-- End Content Wrapper -->
     </div>
-
-    <!-- End Wrapper -->
-</div>
-
-{include file='scripts.tpl'}
-
+    {include file='scripts.tpl'}
 </body>
-
 </html>

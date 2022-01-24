@@ -22,8 +22,13 @@
                 </div>
                 {include file='includes/update.tpl'}
                 <div class="row">
-                   <div class="col-md-12">
+                   <div class="col-md-12 text-center">
+                        <div class="input-group">
                         <input class="form-control text-center" type="text" id="SearchFields" onkeyup="Search_Fields()" placeholder="Search Custom Profile Fields...">
+                            <div class="input-group-append">
+                                <a href="{$NEW_FIELD_LINK}" class="btn btn-primary text-white">Create New Field</a>
+                            </div>
+                        </div>
                         <hr>
                    </div>
                     {if $smarty.const.Profile_Fields_Style eq "card"}
@@ -50,13 +55,15 @@
                             </div>
                             {/foreach}
                         {else}
-                            {$NO_FIELDS}
+                        <div class="col-md-12 text-center">
+                            <div class="text-warning">{$NO_FIELDS}</div>
+                        </div>
                         {/if}
-                    {else $smarty.const.Profile_Fields_Style eq "table"}
+                        {else $smarty.const.Profile_Fields_Style eq "table"}
+                        {if count($FIELDS)}
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body no-padding">
-                                    {if count($FIELDS)}
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-responsive">
                                             <thead>
@@ -83,19 +90,15 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                {else}
-                                    {$NO_FIELDS}
-                                {/if}
                                 </div>
                             </div>
                         </div>
+                        {else}
+                        <div class="col-md-12 text-center">
+                            <div class="text-warning">{$NO_FIELDS}</div>
+                        </div>
+                        {/if}
                     {/if}
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <a class="btn btn-primary" {if count($FIELDS)}style="margin-bottom: 15px"{/if}href="{$NEW_FIELD_LINK}"><i class="far fa-plus-circle"></i>  Create New Field</a>
-                    </div>
                 </div>
             </div>
         </div>
