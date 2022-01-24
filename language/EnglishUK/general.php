@@ -9,4 +9,5 @@ $language = [
 
 	// Misc
 	'Save' => 'Save',
+	'display_records_per_page ' => 'Save',
 ];

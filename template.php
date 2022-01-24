@@ -73,10 +73,6 @@ if (!class_exists('Noir_Panel_Template')) {
             $NoirSettings = self::getConfig();
             $this->_smarty->assign('NS', $NoirSettings);
 
-            $NoirLanguage = new Language(__DIR__ . '/language', LANGUAGE);
-            require($NoirLanguage->getActiveLanguageDirectory() . '/general.php');
-            $this->_smarty->assign('LOCALE', $language);
-
             if (defined('PANEL_PAGE')) {
                 switch (PANEL_PAGE) {
                     case 'dashboard':
@@ -160,10 +156,10 @@ if (!class_exists('Noir_Panel_Template')) {
                             $(\'#enableRegistration\').submit();
 						};
 						');
-
                         break;
 
                     case 'announcements':
+                    case 'emails':
                     case 'groups':
                         $this->addCSSFiles(array(
                             'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css' => array()
@@ -411,7 +407,6 @@ if (!class_exists('Noir_Panel_Template')) {
                         ));
 
                         $this->addJSScript('
-						// Dropzone options
 						Dropzone.options.upload_background_dropzone = {
 						    maxFilesize: 2,
 						    dictNoirMessage: "' . $this->_language->get('admin', 'drag_files_here') . '",

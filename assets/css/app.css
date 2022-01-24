@@ -219,6 +219,9 @@ svg {
 table {
     border-collapse: collapse;
 }
+.dataTables-users tbody{
+    cursor: pointer;
+}
 
 caption {
     padding-top: 0.75rem;
@@ -306,8 +309,18 @@ input[type="radio"] {
 textarea {
     overflow: auto;
     resize: vertical;
+    color: rgb(133 144 165);
+    background-color: rgb(37 43 59);
+    border: 2px solid rgb(45 52 72);
 }
-
+textarea:focus {
+    color: rgb(133 144 165);
+    background-color: rgb(39 45 61);
+    border-color: rgb(49 56 76);
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 fieldset {
     min-width: 0;
     padding: 0;
@@ -1815,9 +1828,8 @@ pre code {
     --bs-table-active-color: #79859c;
     --bs-table-active-bg: rgba(0, 0, 0, 0.075);
     --bs-table-hover-color: #79859c;
-    --bs-table-hover-bg: rgba(133, 144, 165, 0.05);
+    --bs-table-hover-bg: rgb(133 144 165 / 10%);
     width: 100%;
-    /* margin-bottom: 1rem; */
     color: #79859c;
     vertical-align: top;
     border-color: #2d3448
@@ -6749,7 +6761,7 @@ a.close.disabled {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: rgb(45 52 72);
 }
 
@@ -12963,7 +12975,7 @@ form.user .btn-user {
 
 footer.sticky-footer {
     background-color: #212734;
-    padding: 1rem 0;
+    padding: 1rem 15px;
     flex-shrink: 0;
 }
 
@@ -13369,6 +13381,10 @@ table.dataTable tbody th.focus {
 
 .dataTables_info {
     font-weight: 600
+}
+
+tr.ui-sortable-handle:hover {
+    cursor: move;
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>td:first-child:before,

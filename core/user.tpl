@@ -1,43 +1,28 @@
 {include file='header.tpl'}
-
 <body id="page-top">
-
-<!-- Wrapper -->
 <div id="wrapper">
-
-    <!-- Sidebar -->
     {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
         <div id="content">
-
-            <!-- Topbar -->
             {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$NICKNAME}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$NICKNAME}</li>
-                    </ol>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">{$NICKNAME}</h4>
+                            <div class="page-title-right">
+                                {foreach from=$LINKS item=item}
+                                <a class="btn btn-outline-primary btn-sm" href="{($item.link|replace:'{id}':$USER_ID)|replace:'{username}':$USERNAME}">{$item.title}</a>
+                                {/foreach}
+                                <a class="btn btn-outline-warning btn-sm" href="/panel/users/">Back</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Update Notification -->
                 {include file='includes/update.tpl'}
-
-                <!-- Success and Error Alerts -->
-                {include file='includes/alerts.tpl'}
-
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card shadow mb-4">
+                        <div class="card">
                             <div class="card-body">
                                 <div class="text-center">
                                     <img class="profile-user-img rounded-circle" src="{$AVATAR}" alt="{$USERNAME}">
@@ -52,39 +37,24 @@
                                         <b>{$REGISTERED}</b><br />{$REGISTERED_VALUE}
                                     </li>
                                     <li class="list-group-item">
-                                        <b>{$LAST_SEEN}</b><br /><span data-toggle="tooltip"
-                                                                       data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
+                                        <b>{$LAST_SEEN}</b><br /><span data-toggle="tooltip" data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="card shadow mb-4">
+                        <div class="card">
                             <div class="card-body">
-                                <ul class="nav nav-pills">
-                                    <li class="nav-item">
-                                        <a class="nav-link active">{$DETAILS}</a>
-                                    </li>
-                                    {foreach from=$LINKS item=item}
-                                        <li class="nav-item">
-                                            <a class="nav-link"
-                                               href="{($item.link|replace:'{id}':$USER_ID)|replace:'{username}':$USERNAME}">{$item.title}</a>
-                                        </li>
-                                    {/foreach}
-                                </ul>
-                                <hr />
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="username">{$USERNAME_LABEL}</label>
-                                            <input id="username" type="text" class="form-control" value="{$USERNAME}"
-                                                   readonly>
+                                            <input id="username" type="text" class="form-control" value="{$USERNAME}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="nickname">{$NICKNAME_LABEL}</label>
-                                            <input id="nickname" type="text" class="form-control" value="{$NICKNAME}"
-                                                   readonly>
+                                            <input id="nickname" type="text" class="form-control" value="{$NICKNAME}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -92,8 +62,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="title">{$USER_TITLE_LABEL}</label>
-                                            <input id="title" type="text" class="form-control" value="{$USER_TITLE}"
-                                                   readonly>
+                                            <input id="title" type="text" class="form-control" value="{$USER_TITLE}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="uuid">{$UUID_LABEL}</label>
@@ -105,13 +74,11 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="language">{$LANGUAGE_LABEL}</label>
-                                            <input id="language" type="text" class="form-control" value="{$LANGUAGE}"
-                                                   readonly>
+                                            <input id="language" type="text" class="form-control" value="{$LANGUAGE}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="timezone">{$TIMEZONE_LABEL}</label>
-                                            <input id="timezone" type="text" class="form-control" value="{$TIMEZONE}"
-                                                   readonly>
+                                            <input id="timezone" type="text" class="form-control" value="{$TIMEZONE}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -125,8 +92,7 @@
                                                 {/if}
                                                 {if isset($EMAIL_ADDRESS)}
                                                     <label for="email">{$EMAIL_ADDRESS_LABEL}</label>
-                                                    <input id="email" type="email" class="form-control"
-                                                           value="{$EMAIL_ADDRESS}" readonly>
+                                                    <input id="email" type="email" class="form-control" value="{$EMAIL_ADDRESS}" readonly>
                                                 {/if}
                                                 {if isset($EMAIL_ADDRESS) && isset($LAST_IP)}
                                             </div>
@@ -134,8 +100,7 @@
                                                 {/if}
                                                 {if isset($LAST_IP)}
                                                     <label for="last_ip">{$LAST_IP_LABEL}</label>
-                                                    <input id="last_ip" type="text" class="form-control"
-                                                           value="{$LAST_IP}" readonly>
+                                                    <input id="last_ip" type="text" class="form-control" value="{$LAST_IP}" readonly>
                                                 {/if}
                                             </div>
                                         </div>
@@ -145,27 +110,11 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- Spacing -->
-                    <div style="height:1rem;"></div>
-
-                    <!-- End Page Content -->
                 </div>
-
-                <!-- End Main Content -->
             </div>
-
             {include file='footer.tpl'}
-
-            <!-- End Content Wrapper -->
         </div>
-
-        <!-- End Wrapper -->
     </div>
-
     {include file='scripts.tpl'}
-
 </body>
-
 </html>

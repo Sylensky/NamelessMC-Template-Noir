@@ -23,7 +23,6 @@
                 {include file='includes/update.tpl'}
                 <div class="card">
                     <div class="card-body">
-                        {include file='includes/alerts.tpl'}
                         <div class="table-responsive">
                             <table class="table-hover dataTables-users table table-striped dt-responsive" style="width:100%">
                                 <thead>
@@ -36,7 +35,6 @@
                                 </thead>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 {if isset($NEW_UPDATE)}
+<div class="row">
+    <div class="col-md-12">
     {if $NEW_UPDATE_URGENT eq true}
         <div class="alert bg-danger">
     {else}
@@ -12,4 +14,6 @@
         <hr style="border-color: rgba(0,0,0,.1)" /> {$CURRENT_VERSION}
         <br />{$NEW_VERSION}
     </div>
+    </div>
+</div>
 {/if}
