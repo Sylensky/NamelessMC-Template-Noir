@@ -1,18 +1,18 @@
 {foreach from=$TEMPLATE_JS item=script}
     {$script}
 {/foreach}
+{if isset($SUCCESS)}
 <script>
-    {if isset($SUCCESS)}
-        Command: toastr["success"]("{$SUCCESS}")
-    {/if}
+    Command: toastr["success"]("{$SUCCESS}")
 </script>
-<script>
+{/if}
 {if isset($ERRORS) && count($ERRORS)}
+<script>
     {foreach from=$ERRORS item=error}
         Command: toastr["error"]("{$error}")
     {/foreach}
-{/if}
 </script>
+{/if}
 {if isset($NEW_UPDATE)}
     {if $NEW_UPDATE_URGENT ne true}
         <script type="text/javascript">

@@ -130,7 +130,7 @@ if (!class_exists('Noir_Panel_Template')) {
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
                         ));
 
-                        $this->addJSScript(Input::createEditor('InputMaintenanceMessage'));
+                        $this->addJSScript(Input::createEditor('MaintenanceMessage'));
                         break;
 
                     case 'privacy_and_terms':
