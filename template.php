@@ -16,7 +16,7 @@ if (!class_exists('Noir_Panel_Template')) {
     {
         public static $NAME = 'Noir';
         public static $AUTHOR = '<a href="https://teemocell.dev" target=_blank">TeemoCell</a>';
-        public static $VERSION = '1.12';
+        public static $VERSION = '1.0.0';
         public static $NAMELESS_VERSION = '2.0.0-pr12';
 
         public static $PATH;
