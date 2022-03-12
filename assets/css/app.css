@@ -5531,10 +5531,6 @@ textarea.form-control-lg {
     border-top: 0 solid #2d3448;
 }
 
-.card-footer:last-child {
-    border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-}
-
 .card-header-tabs {
     margin-right: -0.625rem;
     margin-bottom: -0.75rem;
@@ -13257,32 +13253,12 @@ input[switch=dark]:checked+label {
 }
 
 /* CKE Editor */
-.cke_chrome {
-    border: 1px solid #2d3448 !important;
-}
-
-.cke_top {
-    border-bottom: 1px solid #2d3448 !important;
-    background: #2d3448 !important;
-}
-
-.cke_reset {
-    background: transparent !important;
-}
-
-.cke_bottom {
-    border-top: 1px solid #2d3448 !important;
-    background: #2d3448 !important;
-}
 
 #InputSignature {
     background: transparent !important;
     border: none !important;
 }
 
-.cke_button_icon {
-    color: red !important;
-}
 
 /* DataTable */
 .dataTables_wrapper.container-fluid {

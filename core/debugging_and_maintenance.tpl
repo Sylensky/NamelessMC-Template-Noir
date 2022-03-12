@@ -31,8 +31,11 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <textarea style="width:100%" id="MaintenanceMessage" name="message" onchange="this.form.submit()">{$MAINTENANCE_MODE_MESSAGE_VALUE}</textarea>
+                                    <textarea style="width:100%" id="MaintenanceMessage" name="message">{$MAINTENANCE_MODE_MESSAGE_VALUE}</textarea onchange="this.form.submit()">
                                 </div>
+                            </div>
+                            <div class="card-footer p-0 bg-transparent">
+                                <input type="submit" value="{$SUBMIT}" class="btn btn-primary btn-block">
                             </div>
                         </div>
                     </div>
