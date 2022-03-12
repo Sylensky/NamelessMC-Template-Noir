@@ -183,7 +183,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{$NO}</button>
-                    <a href="{$UPDATE_USER_LANGUAGES_LINK}" class="btn btn-primary">{$YES}</a>
+                    <a href="{$UPDATE_USER_LANGUAGES_LINK}" class="btn btn-primary float-right">{$YES}</a>
                 </div>
             </div>
         </div>
