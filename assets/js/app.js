@@ -1,14 +1,4 @@
 $(document).ready(function () {
-  $('.color-picker').spectrum({
-      type: "component",
-      togglePaletteOnly: true,
-      hideAfterPaletteSelect: true,
-      showInput: true,
-      showInitial: true
-  });
-});
-
-$(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
@@ -20,6 +10,16 @@ $(document).ready(function () {
     limitReachedClass: "badge badge-danger",
     message: '%charsTyped% / %charsTotal%',
     validate: true
+  });
+});
+
+$(document).ready(function () {
+  $('.color-picker').spectrum({
+      type: "component",
+      togglePaletteOnly: true,
+      hideAfterPaletteSelect: true,
+      showInput: true,
+      showInitial: true
   });
 });
 

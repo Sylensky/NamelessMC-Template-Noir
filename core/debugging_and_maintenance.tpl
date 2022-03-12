@@ -29,7 +29,7 @@
                             <div class="card-header">
                                 {$MAINTENANCE_MODE_MESSAGE}
                             </div>
-                            <div class="card-body">
+                            <div class="card-body p-2 pb-0">
                                 <div class="form-group">
                                     <textarea style="width:100%" id="MaintenanceMessage" name="message">{$MAINTENANCE_MODE_MESSAGE_VALUE}</textarea onchange="this.form.submit()">
                                 </div>
