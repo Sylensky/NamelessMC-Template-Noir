@@ -127,7 +127,6 @@ if (!class_exists('Noir_Panel_Template')) {
 						');
 
                         $this->addJSFiles(array(
-                            // self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array(),
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
                             self::$PUBLIC_PATH . '/assets/js/pages/debugging_and_maintenance.js' => array()
                         ));
