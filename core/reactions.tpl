@@ -30,8 +30,6 @@
                         </span>
                     </div>
                     <div class="card-body">
-                        
-                        <hr />
                         {if count($REACTIONS_LIST)}
                             <div class="table-responsive">
                                 <table class="table table-borderless table-striped">
