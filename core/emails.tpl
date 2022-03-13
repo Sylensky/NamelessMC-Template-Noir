@@ -24,6 +24,29 @@
                 <form action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <div class="row">
+                <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                {if isset($MASS_MESSAGE_LINK)}
+                                <a href="{$MASS_MESSAGE_LINK}" class="btn btn-primary btn-sm">{$MASS_MESSAGE}</a>
+                                {/if}
+                                <a href="{$EDIT_EMAIL_MESSAGES_LINK}" class="btn btn-primary btn-sm">{$EDIT_EMAIL_MESSAGES}</a>
+                                <span class="float-right">
+                                    <a href="{$SEND_TEST_EMAIL_LINK}" class="btn btn-info btn-sm">{$SEND_TEST_EMAIL}</a>
+                                    <a href="{$EMAIL_ERRORS_LINK}" class="btn btn-warning btn-sm">{$EMAIL_ERRORS}</a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="InputOutgoingEmail">{$OUTGOING_EMAIL}</label>
+                                        <span class="badge text-info">
+                                            <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="right" title="{$INFO}" data-content="{$OUTGOING_EMAIL_INFO}"></i>
+                                        </span>
+                                        <input type="text" id="InputOutgoingEmail" name="email" value="{$OUTGOING_EMAIL_VALUE}" class="form-control">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
@@ -71,29 +94,6 @@
                             </div>
                         </div>
                         {/if}
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header">
-                                {if isset($MASS_MESSAGE_LINK)}
-                                <a href="{$MASS_MESSAGE_LINK}" class="btn btn-primary btn-sm">{$MASS_MESSAGE}</a>
-                                {/if}
-                                <a href="{$EDIT_EMAIL_MESSAGES_LINK}" class="btn btn-primary btn-sm">{$EDIT_EMAIL_MESSAGES}</a>
-                                <span class="float-right">
-                                    <a href="{$SEND_TEST_EMAIL_LINK}" class="btn btn-info btn-sm">{$SEND_TEST_EMAIL}</a>
-                                    <a href="{$EMAIL_ERRORS_LINK}" class="btn btn-warning btn-sm">{$EMAIL_ERRORS}</a>
-                                </span>
-                            </div>
-                            <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="InputOutgoingEmail">{$OUTGOING_EMAIL}</label>
-                                        <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="right" title="{$INFO}" data-content="{$OUTGOING_EMAIL_INFO}"></i>
-                                        </span>
-                                        <input type="text" id="InputOutgoingEmail" name="email" value="{$OUTGOING_EMAIL_VALUE}" class="form-control">
-                                    </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 </form>
