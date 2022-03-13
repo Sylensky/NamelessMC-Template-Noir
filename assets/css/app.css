@@ -13630,18 +13630,18 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     --ck-color-base-active: #fff;
     --ck-color-base-active-focus: #0e7fe1;
     --ck-color-base-error: #db3700;
-    --ck-color-focus-border-coordinates: 208,79%,51%;
+    --ck-color-focus-border-coordinates: 208, 79%, 51%;
     --ck-color-focus-border: hsl(var(--ck-color-focus-border-coordinates));
     --ck-color-focus-outer-shadow: #bcdefb;
-    --ck-color-focus-disabled-shadow: rgba(119,186,248,0.3);
-    --ck-color-focus-error-shadow: rgba(255,64,31,0.3);
+    --ck-color-focus-disabled-shadow: rgba(119, 186, 248, 0.3);
+    --ck-color-focus-error-shadow: rgba(255, 64, 31, 0.3);
     --ck-color-text: var(--ck-color-base-text);
-    --ck-color-shadow-drop: rgba(0,0,0,0.15);
-    --ck-color-shadow-drop-active: rgba(0,0,0,0.2);
-    --ck-color-shadow-inner: rgba(0,0,0,0.1);
+    --ck-color-shadow-drop: rgba(0, 0, 0, 0.15);
+    --ck-color-shadow-drop-active: rgba(0, 0, 0, 0.2);
+    --ck-color-shadow-inner: rgba(0, 0, 0, 0.1);
     --ck-color-button-default-background: transparent;
-    --ck-color-button-default-hover-background: #0bb197 !important;
-    --ck-color-button-default-active-background: #0bb197 !important;
+    --ck-color-button-default-hover-background: #0bb197ad !important;
+    --ck-color-button-default-active-background: #0bb197ad !important;
     --ck-color-button-default-active-shadow: none;
     --ck-color-button-default-disabled-background: transparent;
     --ck-color-button-on-background: #0bb197 !important;
@@ -13662,7 +13662,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     --ck-color-switch-button-on-background: var(--ck-color-button-action-background);
     --ck-color-switch-button-on-hover-background: #579e3d;
     --ck-color-switch-button-inner-background: var(--ck-color-base-background);
-    --ck-color-switch-button-inner-shadow: rgba(0,0,0,0.1);
+    --ck-color-switch-button-inner-shadow: rgba(0, 0, 0, 0.1);
     --ck-color-dropdown-panel-background: var(--ck-color-base-background);
     --ck-color-dropdown-panel-border: var(--ck-color-base-border);
     --ck-color-input-background: var(--ck-color-base-background);
@@ -13686,8 +13686,8 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     --ck-color-engine-placeholder-text: #707070;
     --ck-color-upload-bar-background: #6cb5f9;
     --ck-color-link-default: #0000f0;
-    --ck-color-link-selected-background: rgba(31,177,255,0.1);
-    --ck-color-link-fake-selection: rgba(31,177,255,0.3);
+    --ck-color-link-selected-background: rgba(31, 177, 255, 0.1);
+    --ck-color-link-fake-selection: rgba(31, 177, 255, 0.3);
     --ck-disabled-opacity: .5;
     --ck-focus-outer-shadow-geometry: 0 0 0 3px;
     --ck-focus-outer-shadow: var(--ck-focus-outer-shadow-geometry) var(--ck-color-focus-outer-shadow);
@@ -13696,7 +13696,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     --ck-focus-ring: 1px solid var(--ck-color-focus-border);
     --ck-font-size-base: 13px;
     --ck-line-height-base: 1.84615;
-    --ck-font-face: Helvetica,Arial,Tahoma,Verdana,Sans-Serif;
+    --ck-font-face: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
     --ck-font-size-tiny: 0.7em;
     --ck-font-size-small: 0.75em;
     --ck-font-size-normal: 1em;
@@ -13704,57 +13704,90 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     --ck-font-size-large: 1.8em;
     --ck-ui-component-min-height: 2.3em;
 }
-.ck.ck-button:not(.ck-disabled):hover, a.ck.ck-button:not(.ck-disabled):hover {
+
+.ck.ck-button:not(.ck-disabled):hover {
     color: #fff !important;
+    background: var(--ck-color-button-default-hover-background) !important;
 }
-.ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
-    background: var(--ck-color-button-default-active-background);
+
+.ck.ck-button:not(.ck-disabled):active,
+a.ck.ck-button:not(.ck-disabled):active {
+    background: var(--ck-color-button-default-active-background) !important;
     box-shadow: none !important;
 }
-.ck.ck-button:active, .ck.ck-button:focus, a.ck.ck-button:active, a.ck.ck-button:focus {
+
+.ck.ck-button:active,
+.ck.ck-button:focus,
+a.ck.ck-button:active,
+a.ck.ck-button:focus {
     color: #fff !important;
 }
-.ck.ck-button.ck-on:not(.ck-disabled):hover, a.ck.ck-button.ck-on:not(.ck-disabled):hover {
+
+.ck.ck-button.ck-on:not(.ck-disabled):hover,
+a.ck.ck-button.ck-on:not(.ck-disabled):hover {
     background: #0bb197 !important;
     color: #fff !important;
 }
+
 .ck .ck-insert-table-dropdown-grid-box.ck-on {
     border-color: #0bb197 !important;
     background: #0bb197 !important;
 }
-.ck-focused{
+
+.ck-focused {
     border: 1px solid #212734 !important;
     box-shadow: none !important;
 }
-.ck.ck-button.ck-on, a.ck.ck-button.ck-on {
+
+.ck.ck-button.ck-on,
+a.ck.ck-button.ck-on {
     background: var(--ck-color-button-on-background);
     color: #fff !important;
 }
+
 .ck.ck-list__item .ck-button.ck-on {
-    background: #0bb197a6  !important;
+    background: #0bb197a6 !important;
     color: #fff !important;
 }
+
 .ck-editor__editable {
     min-height: 200px !important;
 }
+
 .ck.ck-input:focus {
     color: #fff !important;
     border: 1px solid #0bb197 !important;
     box-shadow: none !important;
 }
+
 .ck.ck-input {
     background: var(--ck-color-input-background);
     border: 1px solid #79859c !important;
     color: #fff !important;
 }
+
 .ck .ck-insert-table-dropdown-grid-box {
     border: 1px solid #79859c !important;
     border-radius: 0px !important;
 }
+
 .ck-source-editing-area textarea:not([readonly]):focus {
     border: 1px solid #212734 !important;
     box-shadow: none !important;
 }
-.ck.ck-button.ck-disabled, a.ck.ck-button.ck-disabled {
+
+.ck.ck-button.ck-disabled,
+a.ck.ck-button.ck-disabled {
     cursor: not-allowed !important;
+}
+
+.ck.ck-splitbutton.ck-splitbutton_open>.ck-button:not(.ck-on):not(.ck-disabled):not(:hover),
+.ck.ck-splitbutton:hover>.ck-button:not(.ck-on):not(.ck-disabled):not(:hover) {
+    background: #0bb197ad !important;
+    color: #fff !important;
+}
+
+[dir=ltr] .ck.ck-splitbutton.ck-splitbutton_open>.ck-splitbutton__arrow:not(.ck-disabled):after, [dir=ltr] .ck.ck-splitbutton:hover>.ck-splitbutton__arrow:not(.ck-disabled):after {
+    left: -1px;
+    background: transparent !important;
 }
