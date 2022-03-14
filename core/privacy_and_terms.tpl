@@ -1,5 +1,4 @@
 {include file='header.tpl'}
-
 <body id="page-top">
     <div id="wrapper">
         {include file='sidebar.tpl'}
@@ -20,13 +19,15 @@
                                 </div>
                             </div>
                         </div>
+                        {include file='includes/update.tpl'}
                     </div>
-                    {include file='includes/update.tpl'}
                     <form class="row" action="" method="post">
-                    <input type="hidden" name="token" value="{$TOKEN}">
+                        <input type="hidden" name="token" value="{$TOKEN}">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">{$PRIVACY_POLICY}</div>
+                                <div class="card-header">
+                                    <span class="font-size-22">{$PRIVACY_POLICY}</span>
+                                </div>
                                 <div class="card-body">
                                     <textarea style="width:100%" rows="10" name="privacy" id="InputPrivacy" onchange="this.form.submit()">{$PRIVACY_POLICY_VALUE}</textarea>
                                 </div>
@@ -34,7 +35,9 @@
                         </div>
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">{$TERMS_AND_CONDITIONS}</div>
+                                <div class="card-header">
+                                    <span class="font-size-22">{$TERMS_AND_CONDITIONS}</span>
+                                </div>
                                 <div class="card-body">
                                     <textarea style="width:100%" rows="10" name="terms" id="InputTerms" onchange="this.form.submit()">{$TERMS_AND_CONDITIONS_VALUE}</textarea>
                                 </div>

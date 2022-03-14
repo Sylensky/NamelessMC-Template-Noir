@@ -1,96 +1,75 @@
 {include file='header.tpl'}
-
 <body id="page-top">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$EMAILS}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$CONFIGURATION}</li>
-                        <li class="breadcrumb-item"><a href="{$EMAILS_LINK}">{$EMAILS}</a></li>
-                        <li class="breadcrumb-item active">{$EMAILS_MASS_MESSAGE}</li>
-                    </ol>
-                </div>
-
-                <!-- Update Notification -->
-                {include file='includes/update.tpl'}
-
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-                        <a class="btn btn-primary" href="{$BACK_LINK}">{$BACK}</a>
-                        <hr />
-
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
-                        <form action="" method="post">
+    <div id="wrapper">
+        {include file='sidebar.tpl'}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {include file='navbar.tpl'}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">{$EMAILS_MASS_MESSAGE}</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb float-sm-right">
+                                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
+                                        <li class="breadcrumb-item active">{$CONFIGURATION}</li>
+                                        <li class="breadcrumb-item"><a href="{$BACK_LINK}">{$EMAILS}</a></li>
+                                        <li class="breadcrumb-item active">{$EMAILS_MASS_MESSAGE}</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        {include file='includes/update.tpl'}
+                    </div>
+                    <form action="" method="post">
+                    <input type="hidden" name="token" value="{$TOKEN}">
+                    <div class="card">
+                        <div class="card-body">
                             <div class="form-group">
                                 <label for="inputSubject">{$SUBJECT}</label>
                                 <input class="form-control" type="text" name="subject" id="inputSubject">
                             </div>
                             <div class="form-group">
-                                <label for="inputContent">{$CONTENT} <span class="badge badge-info"><i
-                                                class="fa fa-lightbulb" data-container="body" data-toggle="popover"
-                                                title="{$INFO}" data-content="{$REPLACEMENT_INFO}"></i></span></label>
+                                <label for="inputContent">{$CONTENT}
+                                    <i class="fas fa-question-circle text-info" data-container="body" data-toggle="popover" data-placement="top" data-content="{$REPLACEMENT_INFO}"></i>
+                                </label>
                                 {if isset($MARKDOWN)}
-                                    <div class="field">
-                                        <textarea name="content" id="markdown"></textarea>
-                                    </div>
+                                <div class="field">
+                                    <textarea name="content" id="markdown"></textarea>
+                                </div>
                                 {else}
-                                    <div class="field">
-                                        <textarea name="content" id="reply"></textarea>
-                                    </div>
+                                <div class="field">
+                                    <textarea name="content" id="EmailMassMessage"></textarea>
+                                </div>
                                 {/if}
                             </div>
-                            <div class="form-group">
-                                <input type="hidden" name="token" value="{$TOKEN}">
-                                <input type="submit" class="btn btn-primary" value="{$SUBMIT}"
-                                       onclick="$('#loading').css('visibility', 'visible');">
-                                <strong style="visibility:hidden; color:orange;" id="loading">{$LOADING}</strong>
-                            </div>
-                        </form>
-
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" class="btn btn-primary btn-sm" value="Send" onclick="$('#loading').css('visibility', 'visible');">
+                            <span class="float-right">
+                                <a class="btn btn-primary btn-sm" href="{$BACK_LINK}">{$BACK}</a>
+                            </span>
+                        </div>
+                    </div><br>
+                    <div class="alert alert-info text-center" id="loading" style="visibility:hidden;">
+                        {$LOADING}
                     </div>
+                    </form>
                 </div>
-
-                <!-- Spacing -->
-                <div style="height:1rem;"></div>
-
-                <!-- End Page Content -->
             </div>
-
-            <!-- End Main Content -->
+            {include file='footer.tpl'}
         </div>
-
-        {include file='footer.tpl'}
-
-        <!-- End Content Wrapper -->
     </div>
-
-    <!-- End Wrapper -->
-</div>
-
-{include file='scripts.tpl'}
-
+    {include file='scripts.tpl'}
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#EmailMassMessage'), {
+            toolbar: ['bold', 'italic', 'strikethrough', '|', 'fontColor', 'fontSize', '|', 'bulletedList', 'numberedList']
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    </script>
 </body>
-
 </html>

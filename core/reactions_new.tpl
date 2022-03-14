@@ -66,7 +66,7 @@
         <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         {$CONFIRM_CANCEL}
                     </div>
                     <div class="modal-footer">

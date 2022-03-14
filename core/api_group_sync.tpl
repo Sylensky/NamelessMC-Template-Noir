@@ -19,8 +19,8 @@
                             </div>
                         </div>
                     </div>
+                    {include file='includes/update.tpl'}
                 </div>
-                {include file='includes/update.tpl'}
                 <div class="row">
                     <div class="col-md-12">
                         <form action="" method="post">

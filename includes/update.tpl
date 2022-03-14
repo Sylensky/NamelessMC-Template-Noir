@@ -1,15 +1,17 @@
 {if isset($NEW_UPDATE)}
+<div class="col-md-12">
     {if $NEW_UPDATE_URGENT eq true}
-        <div class="alert bg-danger text-white">
-    {else}
-        <div class="alert bg-primary text-white alert-dismissible" id="updateAlert">
-        <button type="button" class="close" id="closeUpdate" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    {/if}
-    {$NEW_UPDATE}<br />
-    <a href="{$UPDATE_LINK}" class="btn btn-info">{$UPDATE}</a>
-    <hr style="border-color: rgba(0,0,0,.1)" /> {$CURRENT_VERSION}
-    <br />{$NEW_VERSION}
+    <div class="alert alert-danger text-center">
+        {$NEW_UPDATE} <br>
+        <span class="text-warning">{$CURRENT_VERSION}</span> | <span class="text-success">{$NEW_VERSION}</span><br>
+        <a href="{$UPDATE_LINK}" class="btn btn-info">{$UPDATE}</a>
     </div>
+    {else}
+    <div class="alert alert-warning text-center">
+        {$NEW_UPDATE} <br>
+        <span class="text-warning">{$CURRENT_VERSION}</span> | <span class="text-success">{$NEW_VERSION}</span><br>
+        <a href="{$UPDATE_LINK}" class="btn btn-info">{$UPDATE}</a>
+    </div>
+    {/if}
+</div>
 {/if}

@@ -19,8 +19,8 @@
                             </div>
                         </div>
                     </div>
+                    {include file='includes/update.tpl'}
                 </div>
-                {include file='includes/update.tpl'}
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -35,7 +35,6 @@
                 </div><br>
                 <div class="card shadow mb-4">
                     <div class="card-body">
-                        {include file='includes/alerts.tpl'}
                         {if count($HOOKS_LIST)}
                             <div class="table-responsive">
                                 <table class="table table-borderless table-striped">

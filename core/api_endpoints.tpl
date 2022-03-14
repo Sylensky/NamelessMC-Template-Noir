@@ -19,8 +19,8 @@
                                 </div>
                             </div>
                         </div>
+                        {include file='includes/update.tpl'}
                     </div>
-                    {include file='includes/update.tpl'}
                     <div class="card mb-4">
                         <div class="card-header">
                             {$ENDPOINTS_INFO}

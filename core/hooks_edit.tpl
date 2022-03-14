@@ -20,8 +20,8 @@
                             </div>
                         </div>
                     </div>
+                    {include file='includes/update.tpl'}
                 </div>
-                {include file='includes/update.tpl'}
                 <div class="card">
                     <div class="card-header">
                         <span>{$EDITING_HOOK}</span>
@@ -29,7 +29,6 @@
                             <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                         </span>
                     </div>
-                    {include file='includes/alerts.tpl'}
                     <form role="form" action="" method="post">
                         <div class="card-body">
                             <div class="row">

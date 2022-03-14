@@ -42,7 +42,6 @@ if (!class_exists('Noir_Panel_Template')) {
 
 
             $this->addCSSFiles(array(
-                self::$PUBLIC_PATH . '/assets/css/app.css' => array(),
 				self::$PUBLIC_PATH . '/assets/plugins/bootstrap-duallistbox/bootstrap-duallistbox.css' => array(),
                 'https://pro.fontawesome.com/releases/v5.15.4/css/all.css' => array(),
                 'https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css' => array(),
@@ -56,7 +55,8 @@ if (!class_exists('Noir_Panel_Template')) {
 				self::$PUBLIC_PATH . '/assets/plugins/bootstrap-duallistbox//jquery.bootstrap-duallistbox.js' => array(),
                 self::$PUBLIC_PATH . '/assets/js/app.js' => array(),
                 self::$PUBLIC_PATH . '/assets/js/jquery.cookie.js' => array(),
-                self::$PUBLIC_PATH . '/assets/plugins/toastr/toastr.min.js' => array()
+                self::$PUBLIC_PATH . '/assets/plugins/toastr/toastr.min.js' => array(),
+                self::$PUBLIC_PATH . '/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js' => array()
             ));
 
             define('PANEL_TEMPLATE_STAFF_USERS_AJAX', true);
@@ -84,11 +84,6 @@ if (!class_exists('Noir_Panel_Template')) {
 						    $(".stats-card i").addClass("fa-2x text-gray-300");
 						');
                         break;
-                    case 'general_settings':
-                        $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js' => array(),
-                        ));
-                        break;
                     case 'avatars':
                         $this->addCSSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.css' => array(),
@@ -111,26 +106,11 @@ if (!class_exists('Noir_Panel_Template')) {
 						');
                     break;
                     case 'debugging_and_maintenance':
-                        $this->addCSSStyle('
-                            .error_log {
-                                width: 100%;
-                                height: 400px;
-                                padding: 0 10px;
-                                -webkit-box-sizing: border-box;
-                                -moz-box-sizing: border-box;
-                                box-sizing: border-box;
-                                overflow-y: scroll;
-                                overflow-x: scroll;
-                                white-space: initial;
-                                background-color: #eceeef;
-                            }
-						');
-
                         $this->addJSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
                             self::$PUBLIC_PATH . '/assets/js/pages/debugging_and_maintenance.js' => array()
                         ));
-                        break;
+                    break;
                     case 'privacy_and_terms':
                         $this->addJSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
@@ -138,8 +118,7 @@ if (!class_exists('Noir_Panel_Template')) {
 
                         $this->addJSScript(Input::createEditor('InputPrivacy'));
                         $this->addJSScript(Input::createEditor('InputTerms'));
-                        break;
-
+                    break;
                     case 'registration':
                         $this->addJSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
@@ -154,10 +133,18 @@ if (!class_exists('Noir_Panel_Template')) {
                             $(\'#enableRegistration\').submit();
 						};
 						');
-                        break;
-
+                    break;
                     case 'announcements':
                     case 'emails':
+                        $this->addCSSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
+                        ));
+                    break;
                     case 'groups':
                         $this->addCSSFiles(array(
                             'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css' => array()
@@ -167,8 +154,7 @@ if (!class_exists('Noir_Panel_Template')) {
                             'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js' => array(),
                             self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
                         ));
-                        break;
-
+                    break;
                     case 'template':
                         if (isset($_GET['file'])) {
                             $this->addCSSFiles(array(
@@ -191,8 +177,7 @@ if (!class_exists('Noir_Panel_Template')) {
 
                             $this->addJSScript(Input::createEditor('inputContent', true));
                         }
-                        break;
-
+                    break;
                     case 'seo':
                         $this->addCSSFiles(array(
                             self::$PUBLIC_PATH . '/assets/css/dataTables.bootstrap4.min.css' => array()
@@ -224,8 +209,7 @@ if (!class_exists('Noir_Panel_Template')) {
                             });
                         });
                         ');
-                        break;
-
+                    break;
                     case 'users':
                         if (!defined('EDITING_USER')) {
                             $this->addCSSFiles(array(
@@ -279,7 +263,7 @@ if (!class_exists('Noir_Panel_Template')) {
 							');
 
                         }
-                        break;
+                    break;
                     case 'minecraft':
                         if (!defined('MINECRAFT_PAGE')) {
 
@@ -356,7 +340,7 @@ if (!class_exists('Noir_Panel_Template')) {
                                 $this->addJSScript('$(".image-picker").imagepicker();');
                             }
                         }
-                        break;
+                    break;
                     case 'hooks':
                     case 'discord':
                     case 'security':
@@ -391,8 +375,7 @@ if (!class_exists('Noir_Panel_Template')) {
 							});
 							');
                         }
-                        break;
-
+                    break;
                     case 'images':
                         $this->addCSSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.css' => array(),
@@ -441,8 +424,7 @@ if (!class_exists('Noir_Panel_Template')) {
 
 						$(".image-picker").imagepicker();
 						');
-                        break;
-
+                    break;
                     case 'forums':
                         if (isset($_GET['forum'])) {
 
@@ -457,7 +439,7 @@ if (!class_exists('Noir_Panel_Template')) {
                             self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
                         ));
 
-                        break;
+                    break;
                     case 'forum_settings':
                 }
             }

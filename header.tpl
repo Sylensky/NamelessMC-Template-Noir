@@ -11,4 +11,6 @@
         {foreach from=$TEMPLATE_CSS item=css}
         {$css}
         {/foreach}
+
+        <link rel="stylesheet" href="/custom/panel_templates/Noir/assets/css/app.css">
     </head>

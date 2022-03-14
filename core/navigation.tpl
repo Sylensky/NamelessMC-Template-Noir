@@ -19,8 +19,8 @@
                                 </div>
                             </div>
                         </div>
+                        {include file='includes/update.tpl'}
                     </div>
-                    {include file='includes/update.tpl'}
                     <div class="row">
                         <div class="col-12">
                             <div class="card shadow border-left-primary">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <form class="" action="" method="post">
-                    <input type="hidden" name="token" value="{$TOKEN}">
+                        <input type="hidden" name="token" value="{$TOKEN}">
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">

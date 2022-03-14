@@ -19,8 +19,8 @@
                             </div>
                         </div>
                     </div>
+                    {include file='includes/update.tpl'}
                 </div>
-                {include file='includes/update.tpl'}
                 <form action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <div class="row">
