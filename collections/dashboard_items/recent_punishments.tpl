@@ -36,7 +36,7 @@
             {assign var=i value=($i+1)} {/foreach}
         </div>
         {else}
-            <span class="text-info">{$NO_PUNISHMENTS}</span>
+            <div class="text-info text-center">{$NO_PUNISHMENTS}</div>
         {/if}
     </div>
 </div>
