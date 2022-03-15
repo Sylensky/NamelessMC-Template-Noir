@@ -29,7 +29,7 @@
                                     <div class="card-header">
                                         <span class="font-size-22">{$SELECT_LANGUAGE}</span>
                                         <span class="float-right">
-                                            <a class="btn btn-primary btn-sm" href="{$BACK_LINK}">{$BACK}</a>
+                                            <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                         </span>
                                     </div>
                                     <div class="card-body">
@@ -113,10 +113,5 @@
         </div>
     </div>
     {include file='scripts.tpl'}
-    <script>
-        $(document).ready(function() {
-            $('.select2-selection--single').select2();
-        });
-    </script>
 </body>
 </html>

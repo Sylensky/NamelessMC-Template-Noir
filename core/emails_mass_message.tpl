@@ -48,7 +48,7 @@
                         <div class="card-footer">
                             <input type="submit" class="btn btn-primary btn-sm" value="Send" onclick="$('#loading').css('visibility', 'visible');">
                             <span class="float-right">
-                                <a class="btn btn-primary btn-sm" href="{$BACK_LINK}">{$BACK}</a>
+                                <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                             </span>
                         </div>
                     </div><br>

@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="card-footer p-0 bg-transparent">
-                                <input type="submit" value="{$SUBMIT}" class="btn btn-primary btn-block">
+                                <input type="submit" value="{$L_SAVE}" class="btn btn-primary btn-block">
                             </div>
                         </div>
                     </div>
@@ -49,17 +49,17 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <input class="form-check form-switch" type="checkbox" id="InputDebug" name="enable_debugging" switch="success" value="1" {if $ENABLE_DEBUG_MODE_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                    <label class="form-label" for="InputDebug" data-on-label="Yes" data-off-label="No"></label>
+                                    <label class="form-label" for="InputDebug" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                     <label for="InputDebug"> &nbsp;{$ENABLE_DEBUG_MODE}</label>
                                 </div>
                                 <div class="d-flex">
                                     <input class="form-check form-switch" type="checkbox" id="InputMaintenance" name="enable_maintenance" switch="success" value="1" {if $ENABLE_MAINTENANCE_MODE_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                    <label class="form-label" for="InputMaintenance" data-on-label="Yes" data-off-label="No"></label>
+                                    <label class="form-label" for="InputMaintenance" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                     <label for="InputMaintenance"> &nbsp;{$ENABLE_MAINTENANCE_MODE}</label>
                                 </div>
                                 <div class="d-flex">
                                     <input class="form-check form-switch" type="checkbox" id="InputPageLoad" name="enable_page_load_timer" switch="success" value="1" {if $ENABLE_PAGE_LOAD_TIMER_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                    <label class="form-label" for="InputPageLoad" data-on-label="Yes" data-off-label="No"></label>
+                                    <label class="form-label" for="InputPageLoad" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                     <label for="InputPageLoad"> &nbsp;{$ENABLE_PAGE_LOAD_TIMER}</label>
                                 </div>
                             </div>

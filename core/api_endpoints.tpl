@@ -25,7 +25,7 @@
                         <div class="card-header">
                             {$ENDPOINTS_INFO}
                             <span class="float-right">
-                                <a class="btn btn-outline-warning btn-ssm" href="{$BACK_LINK}">{$BACK}</a>
+                                <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                             </span>
                         </div>
                         <div class="card-body">

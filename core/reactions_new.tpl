@@ -46,7 +46,7 @@
                             </div>
                             <div class="d-flex">
                                 <input class="form-check form-switch" type="checkbox" id="enabled" name="enabled" switch="success">
-                                <label class="form-label" for="enabled" data-on-label="Yes" data-off-label="No"></label>
+                                <label class="form-label" for="enabled" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                 <label for="enabled"> &nbsp;{$ENABLED}</label>
                             </div>
                         </div>

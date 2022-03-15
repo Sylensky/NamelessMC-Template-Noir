@@ -12,7 +12,6 @@
                                 <h4 class="mb-sm-0">{$EMAILS}</h4>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
                                         <li class="breadcrumb-item">{$CONFIGURATION}</li>
                                         <li class="breadcrumb-item">{$EMAILS}</li>
                                     </ol>
@@ -40,7 +39,7 @@
                                         <div class="form-group">
                                             <label for="InputOutgoingEmail">{$OUTGOING_EMAIL}</label>
                                             <span class="badge text-info">
-                                                <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="right" title="{$INFO}" data-content="{$OUTGOING_EMAIL_INFO}"></i>
+                                                <i class="fas fa-question-circle" data-toggle="tooltip" title="{$OUTGOING_EMAIL_INFO}"></i>
                                             </span>
                                             <input type="text" id="InputOutgoingEmail" name="email" value="{$OUTGOING_EMAIL_VALUE}" class="form-control">
                                         </div>
@@ -52,8 +51,8 @@
                                     <div class="card-header">
                                         <div class="d-flex">
                                             <input class="form-check form-switch" type="checkbox" id="inputMailer" name="enable_mailer" switch="success" value="1" {if $ENABLE_MAILER_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                            <label class="form-label" for="inputMailer" data-on-label="Yes" data-off-label="No"></label>
-                                            <label for="inputMailer"> &nbsp;{$ENABLE_MAILER} <i class="far fa-question-circle text-warning" data-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$ENABLE_MAILER_HELP}"></i></label>
+                                            <label class="form-label" for="inputMailer" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
+                                            <label for="inputMailer"> &nbsp;{$ENABLE_MAILER} <i class="far fa-question-circle text-warning" data-toggle="tooltip" data-title="{$ENABLE_MAILER_HELP}"></i></label>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -64,7 +63,7 @@
                                         </div>
                                         <div class="form-group">
                                             <span class="badge text-info">
-                                                <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="right" title="{$INFO}" data-content="{$PASSWORD_HIDDEN}"></i>
+                                                <i class="fas fa-question-circle" data-toggle="tooltip" title="{$PASSWORD_HIDDEN}"></i>
                                             </span>
                                             <label for="inputPassword">{$PASSWORD}</label>
                                             <input class="form-control" type="password" name="password" id="inputPassword">
@@ -82,7 +81,7 @@
                                             <input class="form-control" type="text" name="port" value="{$PORT_VALUE}" id="inputPort">
                                         </div>
                                         {else}
-                                        <div class="text-center text-warning">Enable PHPMailer to change settings {$Langa}</div>
+                                        <div class="text-center text-warning">{$L_ENABLE_PHPMAILER}</div>
                                         {/if}
                                     </div>
                                 </div><br>

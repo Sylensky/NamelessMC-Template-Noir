@@ -24,20 +24,20 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                <div class="card-header">Avatar Settings</div>
+                                <div class="card-header">{$L_AVATAR_SETTINGS}</div>
                                 <div class="card-body">
                                     <form action="" method="post">
                                         <input type="hidden" name="token" value="{$TOKEN}">
                                         <div class="form-group">
                                             <label for="inputDefaultAvatar">{$DEFAULT_AVATAR}</label>
-                                            <select class="form-select" name="default_avatar" id="inputDefaultAvatar" onchange="this.form.submit()">
+                                            <select class="form-select Xselect" name="default_avatar" id="inputDefaultAvatar" onchange="this.form.submit()">
                                                 <option value="minecraft" {if $DEFAULT_AVATAR_VALUE eq "minecraft" } selected{/if}>{$MINECRAFT_AVATAR}</option>
                                                 <option value="custom" {if $DEFAULT_AVATAR_VALUE eq "custom" } selected{/if}>{$CUSTOM_AVATAR}</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputMinecraftAvatarSource">{$MINECRAFT_AVATAR_SOURCE}</label>
-                                            <select class="form-select" name="avatar_source" id="inputMinecraftAvatarSource" onchange="this.form.submit()">
+                                            <select class="form-select Xselect" name="avatar_source" id="inputMinecraftAvatarSource" onchange="this.form.submit()">
                                                 {foreach from=$MINECRAFT_AVATAR_VALUES key=name item=url}
                                                     <option value="{$name}" {if $name eq $MINECRAFT_AVATAR_VALUE} selected{/if}>{$url}</option>
                                                 {/foreach}
@@ -45,11 +45,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAvatarPerspective">{$MINECRAFT_AVATAR_PERSPECTIVE}</label>
-                                            <select class="form-select" name="avatar_perspective" id="inputAvatarPerspective" onchange="this.form.submit()"></select>
+                                            <select class="form-select Xselect" name="avatar_perspective" id="inputAvatarPerspective" onchange="this.form.submit()"></select>
                                         </div>
                                         <div class="d-flex">
                                             <input class="form-check form-switch" type="checkbox" id="inputCustomAvatars" name="custom_avatars" switch="success" value="1" {if $CUSTOM_AVATARS_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                            <label class="form-label" for="inputCustomAvatars" data-on-label="Yes" data-off-label="No"></label>
+                                            <label class="form-label" for="inputCustomAvatars" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                             <label for="inputCustomAvatars"> &nbsp;{$CUSTOM_AVATARS}</label>
                                         </div>
                                     </form>
@@ -67,7 +67,7 @@
                                             <label for="selectDefaultAvatar">{$SELECT_DEFAULT_AVATAR}</label>
                                             <select class="image-picker show-html" id="selectDefaultAvatar" name="avatar" onchange="this.form.submit()">
                                                 {foreach from=$IMAGES key=key item=item}
-                                                    <option data-img-src="{$key}" value="{$item}" {if $DEFAULT_AVATAR_IMAGE eq $item} selected{/if}>{$item} d</option>
+                                                    <option data-img-src="{$key}" value="{$item}" {if $DEFAULT_AVATAR_IMAGE eq $item} selected{/if}>{$item}</option>
                                                 {/foreach}
                                             </select>
                                         </div>
@@ -83,7 +83,7 @@
                                             <span>{$DRAG_FILES_HERE}</span>
                                         </div>
                                     </form>
-                                    <a href="#" class="btn btn-outline-primary btn-block btn-sm mt-1" onclick="location.reload();"><b>Save</b></a>
+                                    <a href="#" class="btn btn-outline-primary btn-block btn-sm mt-1" onclick="location.reload();"><b>{$L_SAVE}</b></a>
                                 </div>
                             </div>
                         </div>

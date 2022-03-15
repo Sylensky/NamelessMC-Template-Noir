@@ -28,7 +28,7 @@
                                 <div class="card-header">
                                     {$NEW_RULE}
                                     <span class="float-right">
-                                        <a class="btn btn-outline-primary btn-ssm" href="{$BACK_LINK}">{$BACK}</a>
+                                        <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                     </span>
                                 </div>
                                 <div class="card-body border-left-primary">

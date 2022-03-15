@@ -47,9 +47,9 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header">
-                                    {$LOCALE.Background_image}
+                                    {$L_BACKGROUND}
                                     <span class="float-right">
-                                        <i class="far fa-question text-warning" data-toggle="popover" data-title="{$INFO}" data-content="{$BACKGROUND_IMAGE_INFO}"></i>
+                                        <i class="far fa-question text-warning" data-toggle="tooltip" data-title="{$BACKGROUND_IMAGE_INFO}"></i>
                                     </span>
                                 </div>
                                 <div class="card-body pb-1 pt-3">
@@ -67,14 +67,14 @@
                                 <div class="card-footer">
                                     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-right">
-                                        <a href="{$RESET_LINK}" class="btn btn-danger btn-sm">{$LOCALE.Reset_Image}</a>
+                                        <a href="{$RESET_LINK}" class="btn btn-danger btn-sm">{$L_RESET_BACKGROUND}</a>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-header">{$LOCALE.Banner_image}</div>
+                                <div class="card-header">{$L_BANNER}</div>
                                 <div class="card-body pb-1 pt-3">
                                     <div class="images-extra-scroll">
                                         <form action="" method="post" style="display:inline;">
@@ -90,14 +90,14 @@
                                 <div class="card-footer">
                                     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadBannerModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-right">
-                                        <a href="{$RESET_BANNER_LINK}" class="btn btn-danger btn-sm">{$LOCALE.Reset_Image}</a>
+                                        <a href="{$RESET_BANNER_LINK}" class="btn btn-danger btn-sm">{$L_RESET_BANNER}</a>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-header">{$LOCALE.Logo_image}</div>
+                                <div class="card-header">{$L_LOGO}</div>
                                 <div class="card-body pb-1 pt-3">
                                     <div class="images-extra-scroll">
                                         <form action="" method="post" style="display:inline;">
@@ -113,14 +113,14 @@
                                 <div class="card-footer">
                                     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadLogoModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-right">
-                                        <a href="{$RESET_LOGO_LINK}" class="btn btn-danger btn-sm">{$LOCALE.Reset_Image}</a>
+                                        <a href="{$RESET_LOGO_LINK}" class="btn btn-danger btn-sm">{$L_RESET_LOGO}</a>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                                <div class="card-header">{$LOCALE.Favicon_image}</div>
+                                <div class="card-header">{$L_FAVICON}</div>
                                 <div class="card-body pb-1 pt-3">
                                     <div class="images-extra-scroll">
                                         <form action="" method="post" style="display:inline;">
@@ -136,7 +136,7 @@
                                 <div class="card-footer">
                                     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadFaviconModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-right">
-                                        <a href="{$RESET_FAVICON_LINK}" class="btn btn-danger btn-sm">{$LOCALE.Reset_Image}</a>
+                                        <a href="{$RESET_FAVICON_LINK}" class="btn btn-danger btn-sm">{$L_RESET_FAVICON}</a>
                                     </span>
                                 </div>
                             </div>

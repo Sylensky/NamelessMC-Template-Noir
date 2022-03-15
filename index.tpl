@@ -6,15 +6,7 @@
             <div id="content">
                 {include file='navbar.tpl'}
                 <div class="container-fluid">
-                    <div class="row mb-4">
-                        <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">{$DASHBOARD}</h4>
-                            </div>
-                        </div>
-                    </div>
                     {include file='includes/update.tpl'}
-
                     {if isset($DIRECTORY_WARNING)}
                     <div class="alert alert-warning">
                         {$DIRECTORY_WARNING}
@@ -27,11 +19,10 @@
                         {/if} {$stat->getContent()} {assign var="i" value=$i+1} {/foreach}
                     </div>
                     {/if}
-
                     <div class="row">
                         <div class="col-md-9">
-                            {if count($GRAPHS)}
-                            <div class="card mb-4">
+                        {if count($GRAPHS)}
+                            <div class="card">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold"><i class="far fa-chart-bar"></i> {$STATISTICS}</h6>
                                     <div class="dropdown no-arrow">
@@ -43,12 +34,11 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area" style="height: 100%">
-                                        <canvas id="graphDiv"></canvas>
-                                    </div>
+                                    <div id="chart"></div>
                                 </div>
                             </div>
-                            {/if} {if count($MAIN_ITEMS)} {assign var="i" value=0} {assign var="counter" value=0}
+                        {/if}<br>
+                        {if count($MAIN_ITEMS)} {assign var="i" value=0} {assign var="counter" value=0}
                             <div class="row justify-content-md-center">
                                 {foreach from=$MAIN_ITEMS item=item} {assign var="width" value=(12*$item->getWidth())|round:1} {assign var="counter" value=($counter+$width)} {if $counter > 12} {assign var="counter" value=0}
                             </div><br />
@@ -57,15 +47,13 @@
                                 <div class="col-md-{$width}">{$item->getContent()}</div>
                                 {assign var="i" value=$i+1} {/foreach}
                             </div>
-                            {/if}
+                        {/if}
                         </div>
-
                         <div class="col-md-3">
                             <div class="card mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold"><i class="far fa-newspaper"></i> {$NAMELESS_NEWS}</h6>
                                 </div>
-
                                 <div class="card-body">
                                     {if isset($NO_NEWS)}
                                     <div class="alert alert-warning">{$NO_NEWS}</div>
@@ -75,7 +63,6 @@
                                     <hr />{/if} {/foreach} {/if}
                                 </div>
                             </div>
-
                             {if isset($SERVER_COMPATIBILITY)}
                             <div class="card mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -112,96 +99,99 @@
     {include file='scripts.tpl'}
     {if count($GRAPHS)}
     <script type="text/javascript">
-        Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-
-            Chart.defaults.global.defaultFontColor = '#858796';
-
-            graphs = [
+        var options = {
             {foreach from=$GRAPHS item=graph}
-            {
-                type: 'line',
-                data: {
-                    labels: [{foreach from=$graph.keys key=key item=item}'{$item}',{/foreach}],
-                    datasets: [
-                        {foreach from=$graph.datasets item=dataset}
-                        {
-                            fill: true,
-                            borderColor: '{$dataset.colour}',
-                            label: '{$dataset.label}',
-                            yAxisID: '{$dataset.axis}',
-                            lineTension: 0.2,
-                            backgroundColor: "rgba(78, 115, 223, 0.00)",
-                            pointRadius: 3,
-                            pointBackgroundColor: "{$dataset.colour}",
-                            pointBorderColor: "{$dataset.colour}",
-                            pointHoverRadius: 3,
-                            pointHoverBackgroundColor: "{$dataset.colour}",
-                            pointHoverBorderColor: "{$dataset.colour}",
-                            pointHitRadius: 10,
-                            pointBorderWidth: 2,
-                            data: [ {foreach from=$dataset.data item=data name=ds} {$data}{if not $smarty.foreach.ds.last}, {/if}{/foreach} ]
-                        },
-                        {/foreach}
-                    ]
+            series: [
+                {foreach from=$graph.datasets item=dataset}
+                {
+                    name: "{$dataset.label}",
+                    data: [{foreach from=$dataset.data item=data name=ds} {$data}{if not $smarty.foreach.ds.last}, {/if}{/foreach}]
                 },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            type: 'time',
-                            gridLines: {
-                                display: false,
-                                drawBorder: false
-                            },
-                            time: {
-                                tooltipFormat: 'MMM D',
-                                unit: 'day'
-                            }
-                        }],
-                        yAxes: [
-                            {foreach from=$graph.axes key=key item=axis}
-                            {
-                                id: '{$key}',
-                                type: 'linear',
-                                position: '{$axis}'
-                            },
-                            {/foreach}
-                            {
-                                gridLines: {
-                                    color: "rgb(234, 236, 244)",
-                                    zeroLineColor: "rgb(234, 236, 244)",
-                                    drawBorder: false,
-                                    borderDash: [2],
-                                    zeroLineBorderDash: [2]
-                                }
-                            }
-                        ]
-                    },
-                    tooltips: {
-                        backgroundColor: "rgb(255,255,255)",
-                        bodyFontColor: "#858796",
-                        titleMarginBottom: 10,
-                        titleFontColor: '#6e707e',
-                        titleFontSize: 14,
-                        borderColor: '#dddfeb',
-                        borderWidth: 1,
-                        xPadding: 15,
-                        yPadding: 15,
-                        displayColors: false,
-                        caretPadding: 10
-                    }
+                {/foreach}
+            ],
+            chart: {
+                height: 500,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                width: [5, 5, 5],
+                curve: 'straight',
+                dashArray: [0, 0, 0]
+            },
+            legend: {
+                tooltipHoverFormatter: function(val, opts) {
+                    return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+                },
+                position: 'top',
+                labels: {
+                    colors: '#919bae',
+                    useSeriesColors: false
+                },
+            },
+            markers: {
+                size: 0,
+                hover: {
+                    sizeOffset: 6
                 }
             },
+            xaxis: {
+                categories: [{foreach from=$graph.keys key=key item=item}'{$item}',{/foreach}],
+                labels: {
+                    show: true,
+                    style: {
+                        colors: [{foreach from=$graph.keys key=key item=item}'#919bae',{/foreach}]
+                    },
+                },
+                tooltip: {
+                    enabled: true
+                },
+            },
+            yaxis: {
+                labels: {
+                    show: true,
+                    style: {
+                        colors: [{foreach from=$graph.keys key=key item=item}'#919bae',{/foreach}]
+                    },
+                },
+
+            },
+            tooltip: {
+                y: [{
+                        title: {
+                            formatter: function(val) {
+                                return val;
+                            }
+                        }
+                    },
+                    {
+                        title: {
+                            formatter: function(val) {
+                                return val;
+                            }
+                        }
+                    },
+                    {
+                        title: {
+                            formatter: function(val) {
+                                return val;
+                            }
+                        }
+                    }
+                ],
+            },
+            grid: {
+                borderColor: '#919bae'
+            }
             {/foreach}
-        ];
-
-        function drawChart(i) {
-            let canvas = document.getElementById('graphDiv');
-            let chart = new Chart(canvas, graphs[i]);
-        }
-
-        $(function() {
-            drawChart(0);
-        });
+        };
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
     </script>
     {/if}
     <script type="text/javascript">

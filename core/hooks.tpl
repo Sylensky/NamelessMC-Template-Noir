@@ -62,9 +62,11 @@
                                 </table>
                             </div>
                         {else}
-                            {$NO_HOOKS}
+                            <div class="text-center text-info">
+                                {$NO_HOOKS} <br><br>
+                                <a href="{$NEW_HOOK_LINK}" class="btn btn-primary btn-sm"><i class="far fa-plus-circle"></i> {$NEW_HOOK}</a>
+                            </div>
                         {/if}
-
                     </div>
                 </div>
             </div>

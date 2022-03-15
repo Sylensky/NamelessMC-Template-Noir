@@ -30,6 +30,8 @@ if (!class_exists('Noir_Panel_Template')) {
 
         public function __construct($cache, $smarty, $language, $user, $pages)
         {
+            $noir_language = new Language(ROOT_PATH . '/modules/NoirSettings/language', LANGUAGE);
+
             $this->_language = $language;
             $this->_user = $user;
             $this->_pages = $pages;
@@ -61,11 +63,40 @@ if (!class_exists('Noir_Panel_Template')) {
 
             define('PANEL_TEMPLATE_STAFF_USERS_AJAX', true);
 
-            define('Profile_Fields_Style', 'card');
-            define('Panel_Template_Style', 'card');
-            // card - table
             define('Easy_Update', '1');
             // 0 - 1
+
+            // Images
+            $smarty->assign('L_BACKGROUND', $noir_language->get('language', 'Background'));
+            $smarty->assign('L_RESET_BACKGROUND', $noir_language->get('language', 'Reset_Background'));
+            $smarty->assign('L_BANNER', $noir_language->get('language', 'Banner'));
+            $smarty->assign('L_RESET_BANNER', $noir_language->get('language', 'Reset_Banner'));
+            $smarty->assign('L_LOGO', $noir_language->get('language', 'Logo'));
+            $smarty->assign('L_RESET_LOGO', $noir_language->get('language', 'Reset_Logo'));
+            $smarty->assign('L_FAVICON', $noir_language->get('language', 'Favicon'));
+            $smarty->assign('L_RESET_FAVICON', $noir_language->get('language', 'Reset_Favicon'));
+            // API
+            $smarty->assign('L_API_SETTINGS', $noir_language->get('language', 'API_Settings'));
+            $smarty->assign('L_API_CREDENTIALS', $noir_language->get('language', 'API_Credentials'));
+
+            //Avatar
+            $smarty->assign('L_AVATAR_SETTINGS', $noir_language->get('language', 'Avatar_Settings'));
+
+            //Custom Profile Fields
+            $smarty->assign('L_CREATE_NEW_FIELD', $noir_language->get('language', 'Create_New_Field'));
+            $smarty->assign('L_SEARCH_PROFILE_FIELDS', $noir_language->get('language', 'Search_Profile_Fields'));
+            $smarty->assign('L_FIELD_INFORMATION', $noir_language->get('language', 'Field_Information'));
+            $smarty->assign('L_FIELD_SETTINGS', $noir_language->get('language', 'Field_Settings'));
+
+            // Emails
+            $smarty->assign('L_ENABLE_PHPMAILER', $noir_language->get('language', 'Enable_PHPMailer'));
+
+            //Misc
+            $smarty->assign('L_YES', $noir_language->get('language', 'Switch_Yes'));
+            $smarty->assign('L_NO', $noir_language->get('language', 'Switch_No'));
+            $smarty->assign('L_SAVE', $noir_language->get('language', 'Save'));
+            $smarty->assign('L_BACK', $noir_language->get('language', 'Back'));
+            $smarty->assign('L_CREATE', $noir_language->get('language', 'Create'));
         }
 
         public function onPageLoad()
@@ -77,22 +108,38 @@ if (!class_exists('Noir_Panel_Template')) {
                 switch (PANEL_PAGE) {
                     case 'dashboard':
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/moment/moment.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/charts/Chart.min.js' => array()
+                            'https://cdn.jsdelivr.net/npm/apexcharts' => array()
                         ));
                         $this->addJSScript('
 						    $(".stats-card i").addClass("fa-2x text-gray-300");
 						');
-                        break;
+                    break;
+                    case 'general_settings':
+                        $this->addCSSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                        ));
+                        $this->addJSScript('
+                            $(\'select\').select2();
+                            $(".S2NoSearch").select2({
+                                minimumResultsForSearch: -1
+                            });
+                        ');
+                    break;
                     case 'avatars':
                         $this->addCSSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.css' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.css' => array()
+                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.css' => array(),
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.min.js' => array()
+                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.min.js' => array(),
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array()
                         ));
 
                         $this->addJSScript('
@@ -103,13 +150,35 @@ if (!class_exists('Noir_Panel_Template')) {
                                 dictFileTooBig: "' . $this->_language->get('admin', 'file_too_big') . '"
                             };
                             $(".image-picker").imagepicker();
+                            $(".Xselect").select2({
+                                minimumResultsForSearch: -1
+                            });
 						');
                     break;
                     case 'debugging_and_maintenance':
                         $this->addJSFiles(array(
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/js/pages/debugging_and_maintenance.js' => array()
                         ));
+                        $this->addJSScript('
+                            ClassicEditor
+                                .create(document.querySelector(\'#MaintenanceMessage\'), {
+
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                });
+                        ');
+                        if (isset($_GET['log'])) {
+                            $this->addCSSFiles(array(
+                                '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css' => array()
+                            ));
+                            $this->addJSFiles(array(
+                                '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js' => array()
+                            ));
+                            $this->addJSScript('
+                                hljs.highlightAll();
+                            ');
+                        }
                     break;
                     case 'privacy_and_terms':
                         $this->addJSFiles(array(
@@ -120,19 +189,27 @@ if (!class_exists('Noir_Panel_Template')) {
                         $this->addJSScript(Input::createEditor('InputTerms'));
                     break;
                     case 'registration':
-                        $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
+                        $this->addCSSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
                         ));
 
-                        $this->addJSScript(Input::createEditor('InputRegistrationDisabledMessage'));
-
+                        $this->addJSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array()
+                        ));
                         $this->addJSScript('
-                            var changeCheckbox = document.querySelector(\'.js-check-change\');
-
-                            changeCheckbox.onchange = function() {
-                            $(\'#enableRegistration\').submit();
-						};
-						');
+                            ClassicEditor
+                                .create(document.querySelector(\'#InputRegistrationDisabledMessage\'), {
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                });
+                                $("select").select2({
+                                    minimumResultsForSearch: -1
+                                });
+                                $("#InputValidationPromoteGroup").select2({
+                                });
+                        ');
                     break;
                     case 'announcements':
                     case 'emails':
@@ -144,6 +221,11 @@ if (!class_exists('Noir_Panel_Template')) {
                             self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
                             self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
                         ));
+                        $this->addJSScript('
+                            $(document).ready(function() {
+                                $(\'.select2-selection--single\').select2();
+                            });
+                        ');
                     break;
                     case 'groups':
                         $this->addCSSFiles(array(
@@ -154,6 +236,17 @@ if (!class_exists('Noir_Panel_Template')) {
                             'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js' => array(),
                             self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
                         ));
+                        $this->addJSScript('
+                            $(document).ready(function () {
+                                $(\'.color-picker\').spectrum({
+                                    type: "component",
+                                    togglePaletteOnly: true,
+                                    hideAfterPaletteSelect: true,
+                                    showInput: true,
+                                    showInitial: true
+                                });
+                            });
+                        ');
                     break;
                     case 'template':
                         if (isset($_GET['file'])) {
@@ -177,6 +270,20 @@ if (!class_exists('Noir_Panel_Template')) {
 
                             $this->addJSScript(Input::createEditor('inputContent', true));
                         }
+                    break;
+                    case 'custom_profile_fields':
+                        $this->addCSSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                        ));
+                        $this->addJSScript('
+                            $("select").select2({
+                                minimumResultsForSearch: -1
+                            });
+                        ');
                     break;
                     case 'seo':
                         $this->addCSSFiles(array(
@@ -342,6 +449,19 @@ if (!class_exists('Noir_Panel_Template')) {
                         }
                     break;
                     case 'hooks':
+                        $this->addCSSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                        ));
+                        $this->addJSScript('
+                                $(document).ready(function() {
+                                    $(\'.select2-selection--single\').select2();
+                                });
+                        ');
+                    break;
                     case 'discord':
                     case 'security':
                         if (isset($_GET['view'])) {

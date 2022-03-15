@@ -44,20 +44,18 @@
                                             <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$DEFAULT_LANGUAGE_HELP}"></i>
                                         </span>
                                         <label for="inputDefaultLanguage">{$DEFAULT_LANGUAGE}</label>
-                                        <div class="input-group">
-                                            <select name="language" class="form-control" id="inputDefaultLanguage" onchange="this.form.submit()">
+                                        <div class="d-flex">
+                                            <select name="language" class="w-100" id="inputDefaultLanguage" onchange="this.form.submit()">
                                                 {foreach from=$DEFAULT_LANGUAGE_VALUES item=item}
                                                     <option value="{$item->id}" {if $item->is_default eq 1} selected{/if}>{$item->name}</option>
                                                 {/foreach}
                                             </select>
-                                            <div class="input-group-append">
-                                                <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$INSTALL_LANGUAGE}" href="{$INSTALL_LANGUAGE_LINK}">
-                                                    <i class="fas fa-plus-circle"></i>
-                                                </a>
-                                                <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
-                                                    <i class="fas fa-upload"></i>
-                                                </a>
-                                            </div>
+                                            <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$INSTALL_LANGUAGE}" href="{$INSTALL_LANGUAGE_LINK}">
+                                                <i class="fas fa-plus-circle"></i>
+                                            </a>
+                                            <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
+                                                <i class="fas fa-user-tag"></i>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -76,14 +74,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="inputHomepage">{$HOMEPAGE_TYPE}</label>
-                                        <select name="homepage" class="form-select" id="inputHomepage" onchange="this.form.submit()">
+                                        <select name="homepage" class="form-select S2NoSearch" id="inputHomepage" onchange="this.form.submit()">
                                             <option value="default" {if $HOMEPAGE_VALUE eq 0} selected{/if}>{$HOMEPAGE_DEFAULT}</option>
                                             <option value="portal" {if $HOMEPAGE_VALUE eq 1} selected{/if}>{$HOMEPAGE_PORTAL}</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputFormatting">{$POST_FORMATTING}</label>
-                                        <select name="formatting" class="form-select" id="inputFormatting" onchange="this.form.submit()">
+                                        <select name="formatting" class="form-select S2NoSearch" id="inputFormatting" onchange="this.form.submit()">
                                             <option value="html" {if $POST_FORMATTING_VALUE eq "html" } selected{/if}>
                                                 HTML
                                             </option>
@@ -101,14 +99,14 @@
                                             <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$USE_FRIENDLY_URLS_HELP}"></i>
                                         </span>
                                         <label for="inputFriendlyURL">{$USE_FRIENDLY_URLS}</label>
-                                        <select name="friendlyURL" class="form-select" id="inputFriendlyURL" onchange="this.form.submit()">
+                                        <select name="friendlyURL" class="form-select S2NoSearch" id="inputFriendlyURL" onchange="this.form.submit()">
                                             <option value="true" {if $USE_FRIENDLY_URLS_VALUE} selected{/if}>{$ENABLED}</option>
                                             <option value="false" {if !$USE_FRIENDLY_URLS_VALUE} selected{/if}>{$DISABLED}</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputPrivateProfile">{$PRIVATE_PROFILES}</label>
-                                        <select name="privateProfile" class="form-select" id="inputPrivateProfile" onchange="this.form.submit()">
+                                        <select name="privateProfile" class="form-select S2NoSearch" id="inputPrivateProfile" onchange="this.form.submit()">
                                             <option value="1" {if $PRIVATE_PROFILES_VALUE} selected{/if}>{$ENABLED}</option>
                                             <option value="0" {if !$PRIVATE_PROFILES_VALUE} selected{/if}>{$DISABLED}</option>
                                         </select>
@@ -122,14 +120,14 @@
                                             <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$FORCE_HTTPS_HELP}"></i>
                                         </span>
                                         <label for="inputForceHTTPS">{$FORCE_HTTPS}</label>
-                                        <select name="forceHTTPS" class="form-select" id="inputForceHTTPS" onchange="this.form.submit()">
+                                        <select name="forceHTTPS" class="form-select S2NoSearch" id="inputForceHTTPS" onchange="this.form.submit()">
                                             <option value="true" {if $FORCE_HTTPS_VALUE} selected{/if}>{$ENABLED}</option>
                                             <option value="false" {if !$FORCE_HTTPS_VALUE} selected{/if}>{$DISABLED}</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputForceWWW">{$FORCE_WWW}</label>
-                                        <select name="forceWWW" class="form-select" id="inputForceWWW" onchange="this.form.submit()">
+                                        <select name="forceWWW" class="form-select S2NoSearch" id="inputForceWWW" onchange="this.form.submit()">
                                             <option value="true" {if $FORCE_WWW_VALUE} selected{/if}>{$ENABLED}</option>
                                             <option value="false" {if !$FORCE_WWW_VALUE} selected{/if}>{$DISABLED}</option>
                                         </select>
@@ -140,14 +138,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="inputEnableNicknames">{$ENABLE_NICKNAMES}</label>
-                                        <select name="displaynames" class="form-select" id="inputEnableNicknames" onchange="this.form.submit()">
+                                        <select name="displaynames" class="form-select S2NoSearch" id="inputEnableNicknames" onchange="this.form.submit()">
                                             <option value="true" {if $ENABLE_NICKNAMES_VALUE eq "true" } selected{/if}>{$ENABLED}</option>
                                             <option value="false" {if $ENABLE_NICKNAMES_VALUE eq "false" } selected{/if}>{$DISABLED}</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputLoginMethod">{$LOGIN_METHOD}</label>
-                                        <select name="login_method" class="form-select" id="inputLoginMethod" onchange="this.form.submit()">
+                                        <select name="login_method" class="form-select S2NoSearch" id="inputLoginMethod" onchange="this.form.submit()">
                                             <option value="email" {if $LOGIN_METHOD_VALUE eq "email" } selected{/if}>{$EMAIL}</option>
                                             <option value="username" {if $LOGIN_METHOD_VALUE eq "username" } selected{/if}>{$USERNAME}</option>
                                             <option value="email_or_username" {if $LOGIN_METHOD_VALUE eq "email_or_username" } selected{/if}>{$EMAIL_OR_USERNAME}</option>

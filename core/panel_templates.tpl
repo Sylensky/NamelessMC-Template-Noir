@@ -36,8 +36,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        {if $smarty.const.Panel_Template_Style eq "card"}
-                        {foreach from=$TEMPLATE_LIST item=template}
+                    {foreach from=$TEMPLATE_LIST item=template}
                         <div class="col-xl-3 col-md-4 col-sm-6">
                             <div class="card">
                                 <div class="card-body">
@@ -73,54 +72,6 @@
                             </div>
                         </div>
                         {/foreach}
-                        {else $smarty.const.Panel_Template_Style eq "table"}
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-body np">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <colgroup>
-                                                <col width="75%">
-                                                <col width="25%">
-                                            </colgroup>
-                                            {foreach from=$TEMPLATE_LIST item=template}
-                                            <tr>
-                                                <td>
-                                                    <strong>{$template.name}</strong> <small>{$template.version}</small>
-                                                    {if $template.version_mismatch}
-                                                    &nbsp;
-                                                    <button role="button" class="btn btn-sm btn-warning" data-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"><i class="fa fa-exclamation-triangle"></i></button>
-                                                    {/if}
-                                                    <br />
-                                                    <small>{$template.author_x}</small>
-                                                </td>
-                                                <td>
-                                                    <div class="float-md-right">
-                                                        {if $template.enabled}
-                                                        {if $template.deactivate_link}
-                                                        <a class="btn btn-danger btn-sm" href="{$template.deactivate_link}">{$DEACTIVATE}</a>
-                                                        {else}
-                                                        <button role="button" class="btn btn-success btn-sm" disabled>{$ACTIVE}</button>
-                                                        {/if}
-                                                        {if $template.default}
-                                                        <button role="button" class="btn btn-success btn-sm" disabled>{$DEFAULT}</button>
-                                                        {else}
-                                                        <a class="btn btn-primary btn-sm" href="{$template.default_link}">{$MAKE_DEFAULT}</a>
-                                                        {/if}
-                                                        {else}
-                                                        <a class="btn btn-primary btn-sm" href="{$template.activate_link}">{$ACTIVATE}</a>
-                                                        <button role="button" onclick="showDeleteModal('{$template.delete_link}')" class="btn btn-danger btn-sm">{$DELETE}</button>
-                                                        {/if}
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            {/foreach}
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/if}
                     </div>
                 </div>
             </div>
