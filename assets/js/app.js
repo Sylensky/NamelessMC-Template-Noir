@@ -12,17 +12,6 @@ $(document).ready(function () {
     validate: true
   });
 });
-
-$(document).ready(function () {
-  $('.color-picker').spectrum({
-      type: "component",
-      togglePaletteOnly: true,
-      hideAfterPaletteSelect: true,
-      showInput: true,
-      showInitial: true
-  });
-});
-
 $(document).ready(function () {
   $('[data-toggle="popover"]')
   .popover({
