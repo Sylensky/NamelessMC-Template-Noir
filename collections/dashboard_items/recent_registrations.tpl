@@ -22,6 +22,8 @@
             </div>
             {assign var=i value=($i+1)} {/foreach}
         </div>
+        {else}
+            <div class="text-info text-center">{$NO_REGISTRATIONS}</div>
         {/if}
     </div>
 </div>
