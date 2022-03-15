@@ -32,6 +32,20 @@
         "Liberation Mono", "Courier New", monospace;
 }
 
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: #1d222e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #858796;
+}
+
+::-webkit-scrollbar-corner {
+    background: #1d222e;
+}
+
 *,
 ::after,
 ::before {
@@ -126,6 +140,7 @@ ul ol,
 ul ul {
     margin-bottom: 0;
 }
+
 /*  */
 dt {
     font-weight: 700;
@@ -196,8 +211,10 @@ samp {
 }
 
 pre {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    /* margin-top: 0; */
+    /* margin: 0px; */
+    /* margin-bottom: 1rem; */
+    margin: -21px 0px -42px 0px !important;
     overflow: auto;
     -ms-overflow-style: scrollbar;
 }
@@ -13968,4 +13985,67 @@ a.ck.ck-button.ck-disabled {
 [dir=ltr] .ck.ck-splitbutton:hover>.ck-splitbutton__arrow:not(.ck-disabled):after {
     left: -1px;
     background: transparent !important;
+}
+
+/* Error Logs */
+.logs {
+    height: 700px;
+    overflow: auto;
+    -ms-overflow-style: thin;
+    scrollbar-width: thin;
+}
+
+.logs::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #1d222e;
+}
+
+.logs::-webkit-scrollbar-thumb {
+    background: #858796;
+}
+
+.logs::-webkit-scrollbar-corner {
+    background: #1d222e;
+}
+
+/* Charts */
+.apexcharts-tooltip {
+    background-color: #1d222e !important;
+    border-color: #1d222e !important;
+    box-shadow: none !important;
+}
+
+.apexcharts-tooltip-title {
+    background-color: #1d222e !important;
+    border-bottom: 1px solid rgb(42 48 65) !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.apexcharts-active {
+    background-color: #1d222e !important;
+    color: #919bae !important;
+    border: 0 !important;
+}
+
+.apexcharts-menu {
+    background: #1d222e !important;
+    border: 1px solid #1d222e !important;
+    border-radius: 0px !important;
+    padding: 3px;
+}
+
+.apexcharts-menu-item:hover {
+    color: #0bb197 !important;
+    background-color: transparent !important;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+    fill: #0bb197 !important;
 }
