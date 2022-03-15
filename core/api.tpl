@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                <div class="card-header">API Credentials
+                                <div class="card-header">{$L_API_CREDENTIALS}
                                     <span class="float-right">
                                         <a class="btn btn-primary btn-ssm" href="{$API_ENDPOINTS_LINK}">{$API_ENDPOINTS}</a>
                                         <a class="btn btn-primary btn-ssm" href="{$GROUP_SYNC_LINK}">{$GROUP_SYNC}</a>
@@ -64,27 +64,27 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card">
-                                <div class="card-header">API Settings</div>
+                                <div class="card-header">{$L_API_SETTINGS}</div>
                                 <div class="card-body">
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" id="enable_api" name="enable_api" switch="success" value="1" {if $API_ENABLED eq 1}checked{/if} onchange="this.form.submit()">
-                                        <label class="form-label" for="enable_api" data-on-label="Yes" data-off-label="No"></label>
+                                        <label class="form-label" for="enable_api" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                         <label for="enable_api"> &nbsp;{$ENABLE_API}</label>
                                     </div>
                                     {if $API_ENABLED}
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="verification" id="verification" switch="success" {if $EMAIL_VERIFICATION_VALUE eq 1}checked{/if} onchange="this.form.submit()">
-                                        <label class="form-label" for="verification" data-on-label="Yes" data-off-label="No"></label>
+                                        <label class="form-label" for="verification" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                         <label for="verification"> &nbsp;{$EMAIL_VERIFICATION}</label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="api_verification" id="api_verification" switch="success" {if $API_VERIFICATION_VALUE eq 1}checked{/if} onchange="this.form.submit()">
-                                        <label class="form-label" for="api_verification" data-on-label="Yes" data-off-label="No"></label>
+                                        <label class="form-label" for="api_verification" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                         <label for="api_verification"> &nbsp;{$API_VERIFICATION} <i class="far fa-question-circle text-warning" data-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$API_VERIFICATION_INFO}"></i></label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="username_sync" id="username_sync" switch="success" {if $USERNAME_SYNC_VALUE eq 1} checked{/if} onchange="this.form.submit()">
-                                        <label class="form-label" for="username_sync" data-on-label="Yes" data-off-label="No"></label>
+                                        <label class="form-label" for="username_sync" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                         <label for="username_sync"> &nbsp;{$USERNAME_SYNC} <i class="far fa-question-circle text-warning" data-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$USERNAME_SYNC_INFO}"></i></label>
                                     </div>
                                     {/if}
