@@ -34,7 +34,7 @@
                     <hr class="hx mt-1">
                     <div class="row">
                         {foreach from=$MODULE_LIST item=module}
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="row">

@@ -12,7 +12,6 @@
                             <h4 class="mb-sm-0">{$USERS}</h4>
                             <div class="page-title-right d-none d-sm-block">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
                                     <li class="breadcrumb-item active">{$USER_MANAGEMENT}</li>
                                     <li class="breadcrumb-item active">{$USERS}</li>
                                 </ol>

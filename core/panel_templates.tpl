@@ -12,7 +12,6 @@
                                 <h4 class="mb-sm-0">{$PANEL_TEMPLATES}</h4>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
                                         <li class="breadcrumb-item active">{$LAYOUT}</li>
                                         <li class="breadcrumb-item active">{$PANEL_TEMPLATES}</li>
                                     </ol>
@@ -35,9 +34,10 @@
                             {/if}
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
                     {foreach from=$TEMPLATE_LIST item=template}
-                        <div class="col-xl-3 col-md-4 col-sm-6">
+                        <div class="col-sm-12 col-md-6 col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     {$template.name} - {$template.version}

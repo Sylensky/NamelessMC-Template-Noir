@@ -57,8 +57,8 @@
                                                 </td>
                                                 <td>
                                                     <div class="float-md-right">
-                                                        <div class="btn btn-secondary btn-sm"><i class="far fa-arrows-alt"></i></div>
-                                                        <a href="{$group.edit_link}" class="btn btn-info btn-sm"><i class="far fa-edit fa-fw"></i></a>
+                                                        <div class="btn btn-outline-info btn-sm"><i class="far fa-arrows-alt"></i></div>
+                                                        <a href="{$group.edit_link}" class="btn btn-outline-warning btn-sm"><i class="far fa-edit fa-fw"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>

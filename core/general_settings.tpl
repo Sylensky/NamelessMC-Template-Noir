@@ -12,7 +12,6 @@
                             <h4 class="mb-sm-0">{$GENERAL_SETTINGS}</h4>
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
                                     <li class="breadcrumb-item active">{$CONFIGURATION}</li>
                                     <li class="breadcrumb-item active">{$GENERAL_SETTINGS}</li>
                                 </ol>
@@ -41,7 +40,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$DEFAULT_LANGUAGE_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$DEFAULT_LANGUAGE_HELP}"></i>
                                         </span>
                                         <label for="inputDefaultLanguage">{$DEFAULT_LANGUAGE}</label>
                                         <div class="d-flex">
@@ -53,7 +52,7 @@
                                             <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$INSTALL_LANGUAGE}" href="{$INSTALL_LANGUAGE_LINK}">
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
-                                            <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
+                                            <a class="btn btn-xma-outline text-warning" data-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
                                                 <i class="fas fa-user-tag"></i>
                                             </a>
                                         </div>
@@ -96,7 +95,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$USE_FRIENDLY_URLS_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$USE_FRIENDLY_URLS_HELP}"></i>
                                         </span>
                                         <label for="inputFriendlyURL">{$USE_FRIENDLY_URLS}</label>
                                         <select name="friendlyURL" class="form-select S2NoSearch" id="inputFriendlyURL" onchange="this.form.submit()">
@@ -117,7 +116,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="{$INFO}" data-content="{$FORCE_HTTPS_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$FORCE_HTTPS_HELP}"></i>
                                         </span>
                                         <label for="inputForceHTTPS">{$FORCE_HTTPS}</label>
                                         <select name="forceHTTPS" class="form-select S2NoSearch" id="inputForceHTTPS" onchange="this.form.submit()">
@@ -168,20 +167,16 @@
         {include file='footer.tpl'}
     </div>
     <div class="modal fade" id="languageModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">{$ARE_YOU_SURE}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
+                <div class="modal-body text-center text-warning">
                     {$UPDATE_USER_LANGUAGES_INFO}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{$NO}</button>
-                    <a href="{$UPDATE_USER_LANGUAGES_LINK}" class="btn btn-primary float-right">{$YES}</a>
+                    <a href="{$UPDATE_USER_LANGUAGES_LINK}" class="btn btn-primary btn-sm">{$YES}</a>
+                    <span class="float-right">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
+                    </span>
                 </div>
             </div>
         </div>
