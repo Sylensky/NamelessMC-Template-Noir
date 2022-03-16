@@ -3631,7 +3631,6 @@ input[type="submit"].btn-block {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -5003,10 +5002,6 @@ textarea.form-control-lg {
     margin-top: -1px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-.nav-pills .nav-link {
-    border-radius: 0.35rem;
 }
 
 .nav-pills .nav-link.active,
@@ -6978,7 +6973,6 @@ a.close.disabled {
 .tooltip-inner {
     max-width: 200px;
     padding: 0.25rem 0.5rem;
-    color: #fff;
     text-align: center;
     background-color: #000;
     border-radius: 0.35rem;
@@ -7007,10 +7001,9 @@ a.close.disabled {
     line-break: auto;
     font-size: .76563rem;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #000;
     background-clip: padding-box;
     border: 1px solid #252b3b;
-    border-radius: .4rem
 }
 
 .popover .popover-arrow {
@@ -7122,14 +7115,12 @@ a.close.disabled {
 }
 
 .popover-header {
-    padding: .5rem .75rem;
+    padding: .3rem .75rem;
     margin-bottom: 0;
     font-size: .875rem;
-    color: #252b3b;
-    background-color: #f5f5f5;
+    background-color: #000;
     border-bottom: 1px solid #252b3b;
-    border-top-left-radius: calc(.4rem - 1px);
-    border-top-right-radius: calc(.4rem - 1px)
+    text-align: center;
 }
 
 .popover-header:empty {
@@ -14048,4 +14039,19 @@ a.ck.ck-button.ck-disabled {
 .apexcharts-theme-light .apexcharts-reset-icon:hover svg,
 .apexcharts-theme-light .apexcharts-menu-icon:hover svg {
     fill: #0bb197 !important;
+}
+
+a.nav-link.pill {
+    background-color: rgb(42 48 65);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+a.nav-link.pill:hover {
+    background-color: #0bb197 !important;
+    color: #fff !important;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
 }
