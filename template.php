@@ -262,6 +262,35 @@ if (!class_exists('Noir_Panel_Template')) {
                                 self::$PUBLIC_PATH . '/assets/plugins/codemirror/mode/properties/properties.js' => array()
                             ));
                         }
+                        switch ($_GET['action']) {
+                            case 'settings':
+                                $this->addCSSFiles(array(
+                                    self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array(),
+                                    'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css' => array()
+                                ));
+
+                                $this->addJSFiles(array(
+                                    self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                                    'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js' => array(),
+                                    self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
+                                ));
+                                $this->addJSScript('
+                                    $("select").select2({
+                                        minimumResultsForSearch: -1
+                                    });
+
+                                    $(document).ready(function () {
+                                        $(\'.color-picker\').spectrum({
+                                            type: "text",
+                                            showPalette: false,
+                                            showInput: true,
+                                            showInitial: true
+                                        });
+                                    });
+                                ');
+                            break;
+                        }
+                    break;
                     case 'custom_pages':
                         if (isset($_GET['action'])) {
                             $this->addJSFiles(array(
