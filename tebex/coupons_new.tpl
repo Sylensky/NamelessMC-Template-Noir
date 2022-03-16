@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$CREATING_COUPON}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <button role="button" class="btn btn-warning" onclick="showCancelModal()">{$CANCEL}</button>
                         </div>
                         <hr />

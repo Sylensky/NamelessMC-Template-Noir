@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-header">
                         {$COUNT_ACCOUNTS}
-                        <span class="float-right">
+                        <span class="float-end">
                             <a class="btn btn-outline-warning btn-ssm" href="{$BACK_LINK}">{$BACK}</a>
                          </span>
                     </div>

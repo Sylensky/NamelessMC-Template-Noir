@@ -56,7 +56,7 @@
                                                 <small>| {$item.parent_forum}</small>{/if}<br />{$item.description}
                                             </td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     {if $item.up_link}
                                                         <form action="{$item.up_link}" method="post" style="display: inline">
                                                             <input type="hidden" name="token" value="{$TOKEN}" />

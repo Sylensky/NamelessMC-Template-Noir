@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-header">
                         <span class="font-size-22">{$REACTIONS}</span>
-                        <span class="float-right">
+                        <span class="float-end">
                             <a href="{$NEW_REACTION_LINK}" class="btn btn-primary btn-sm">{$NEW_REACTION}</a>
                         </span>
                     </div>

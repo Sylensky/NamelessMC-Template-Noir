@@ -10,7 +10,7 @@
             <div class="card-header ama">
                 <div class="mb-0">
                     <span style="{$report.reported_style}"><img class="rounded user-img" src="{$report.reported_avatar}" alt="{$report.reported_username}"> {$report.reported_nickname}</span>
-                    <span class="float-right">
+                    <span class="float-end">
                     {if $report.type eq 0}
                         <span class="badge badge-info">{$WEBSITE}</span>
                     {else}

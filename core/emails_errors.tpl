@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="font-size-22">{$EMAIL_ERRORS}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <button type="button" class="btn btn-warning btn-sm mr-3" onclick="showPurgeModal()">{$PURGE_BUTTON}</button>
                                 <a href="{$BACK_LINK}" class="btn btn-primary btn-sm">{$BACK}</a>
                             </span>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="{$PURGE_LINK}" class="btn btn-primary btn-sm"">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="" id="deleteLink" class="btn btn-primary btn-sm">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>

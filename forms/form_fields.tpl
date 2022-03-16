@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$EDITING_FORM}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
 							<a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
                         </div>
 						<hr>
@@ -70,7 +70,7 @@
                                         <th style="width:35%">{$FIELD_NAME}</th>
                                         <th style="width:25%">{$TYPE}</th>
                                         <th style="width:25%">{$REQUIRED}</th>
-                                        <th style="width:15%"><div class="float-md-right">{$ACTIONS}</div></th>
+                                        <th style="width:15%"><div class="float-end">{$ACTIONS}</div></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -80,7 +80,7 @@
                                             <td>{$field.type}</td>
                                             <td>{if $field.required eq 1}<i class="fa fa-check-circle text-success"></i>{else}<i class="fa fa-times-circle text-danger"></i>{/if}</td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     <a class="btn btn-warning btn-sm" href="{$field.edit_link}"><i class="fas fa-edit fa-fw"></i></a>
                                                     <button class="btn btn-danger btn-sm" type="button" onclick="showDeleteModal('{$field.delete_link}')"><i class="fas fa-trash fa-fw"></i></button>
                                                 </div>

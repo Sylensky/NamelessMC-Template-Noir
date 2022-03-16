@@ -25,7 +25,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a class="btn btn-primary btn-sm" style="margin-bottom: 10px" href="{$NEW_GROUP_LINK}">{$NEW_GROUP}</a>
-                                <span class="float-right">
+                                <span class="float-end">
                                     <a class="btn btn-primary btn-sm" style="margin-bottom: 10px" href="{$GROUP_SYNC_LINK}"><i class="far fa-external-link-alt"></i> {$GROUP_SYNC}</a>
                                 </span>
                             </div>
@@ -56,7 +56,7 @@
                                                     {/if}
                                                 </td>
                                                 <td>
-                                                    <div class="float-md-right">
+                                                    <div class="float-end">
                                                         <div class="btn btn-outline-info btn-sm"><i class="far fa-arrows-alt"></i></div>
                                                         <a href="{$group.edit_link}" class="btn btn-outline-warning btn-sm"><i class="far fa-edit fa-fw"></i></a>
                                                     </div>

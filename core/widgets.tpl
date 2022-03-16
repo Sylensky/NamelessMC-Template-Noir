@@ -47,7 +47,7 @@
                                     <small>{$widget.description}</small>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="float-md-right">
+                                    <div class="float-end">
                                         {if $widget.enabled}
                                             <form action="{$widget.disable_link}" method="post" style="display: inline">
                                                 <input type="hidden" name="token" value="{$TOKEN}" />

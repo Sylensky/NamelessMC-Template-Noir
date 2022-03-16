@@ -41,7 +41,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$FORUM_TITLE_VALUE}</h5>
                             </div>
                             <div class="col-md-3">
-                                <span class="float-md-right"><button class="btn btn-warning"
+                                <span class="float-end"><button class="btn btn-warning"
                                                                      onclick="showCancelModal()">{$CANCEL}</button></span>
                             </div>
                         </div>

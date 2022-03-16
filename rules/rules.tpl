@@ -45,7 +45,7 @@
                                             <tr>
                                                 <td><strong>{$RULES_CATAGORY_NAME}</strong></td>
                                                 <td><strong>
-                                                        <div class="float-md-right">{$RULES_ACTION}</div>
+                                                        <div class="float-end">{$RULES_ACTION}</div>
                                                     </strong></td>
                                             </tr>
                                             {foreach from=$CATAGORY_LIST item=catagory}
@@ -54,7 +54,7 @@
                                                         <strong>{$catagory.name}</strong>
                                                     </td>
                                                     <td>
-                                                        <div class="float-md-right">
+                                                        <div class="float-end">
                                                             <a class="btn btn-warning btn-sm" href="{$catagory.edit_link}"><i
                                                                     class="fas fa-edit fa-fw"></i></a>
                                                             <button class="btn btn-danger btn-sm" type="button"
@@ -79,7 +79,7 @@
                                             <tr>
                                                 <td><strong>{$RULES_BUTTON_NAME}</strong></td>
                                                 <td><strong>
-                                                        <div class="float-md-right">{$RULES_ACTION}</div>
+                                                        <div class="float-end">{$RULES_ACTION}</div>
                                                     </strong></td>
                                             </tr>
                                             {foreach from=$BUTTON_LIST item=button}
@@ -88,7 +88,7 @@
                                                         <strong>{$button.name}</strong>
                                                     </td>
                                                     <td>
-                                                        <div class="float-md-right">
+                                                        <div class="float-end">
                                                             <a class="btn btn-warning btn-sm" href="{$button.edit_link}"><i
                                                                     class="fas fa-edit fa-fw"></i></a>
                                                             <button class="btn btn-danger btn-sm" type="button"

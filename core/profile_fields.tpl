@@ -36,7 +36,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <span class="text-info SFields">{$field.name}</span>
-                                <span class="float-right">
+                                <span class="float-end">
                                     <a class="btn btn-outline-warning btn-ssm" data-toggle="tooltip" data-html="true" data-placement="top" title="Edit - <b>{$field.name}</b>" href="{$field.edit_link}"><i class="far fa-pen"></i></a>
                                 </span>
                             </div>

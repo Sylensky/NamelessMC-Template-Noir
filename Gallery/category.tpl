@@ -63,7 +63,7 @@
 							<button class="btn btn-primary" type="button" onclick="showAddModal()">{$ADD_NEW_CATEGORY} <i
 									class="fa fa-plus-circle">
 								</i></button>
-							<a style="display:inline" href="{$CAT_BACK_LINK}" class="btn btn-warning float-md-right">{$BACK}</a>
+							<a style="display:inline" href="{$CAT_BACK_LINK}" class="btn btn-warning float-end">{$BACK}</a>
 						</div>
 						<hr>
 						<h4 class="text-center">{$CATEGORY_SETTINGS}</h4>
@@ -77,7 +77,7 @@
 													<strong><a href="{$category.edit_link}">{$category.name}</strong>
 												</td>
 												<td>
-													<div class="float-md-right">
+													<div class="float-end">
 														<a class="btn btn-warning btn-sm" href="{$category.edit_link}"><i
 																class="fas fa-edit fa-fw"></i></a>
 														<button class="btn btn-danger btn-sm" type="button"

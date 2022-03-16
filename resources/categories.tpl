@@ -51,7 +51,7 @@
                                     {assign var="i" value=1}
                                     {foreach from=$CATEGORIES_LIST item=category}
                                         <a href="{$category.edit_link}">{$category.name}</a>
-                                        <div class="float-md-right">
+                                        <div class="float-end">
                                             {if $i > 1}
                                                 <a href="{$category.order_up}" class="btn btn-primary"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
                                             {/if}

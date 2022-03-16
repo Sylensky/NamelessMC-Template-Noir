@@ -30,7 +30,7 @@
                                         <a href="{$MASS_MESSAGE_LINK}" class="btn btn-primary btn-sm">{$MASS_MESSAGE}</a>
                                         {/if}
                                         <a href="{$EDIT_EMAIL_MESSAGES_LINK}" class="btn btn-primary btn-sm">{$EDIT_EMAIL_MESSAGES}</a>
-                                        <span class="float-right">
+                                        <span class="float-end">
                                             <a href="{$SEND_TEST_EMAIL_LINK}" class="btn btn-info btn-sm">{$SEND_TEST_EMAIL}</a>
                                             <a href="{$EMAIL_ERRORS_LINK}" class="btn btn-warning btn-sm">{$EMAIL_ERRORS}</a>
                                         </span>

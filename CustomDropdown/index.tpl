@@ -71,7 +71,7 @@
 													<strong>{$dropdown.dropdown_title}</strong>
 												</td>
 												<td>
-													<div class="float-md-right">
+													<div class="float-end">
 
 														{if $dropdown.enabled == 1}
 															<a class="btn btn-danger btn-sm" title="{$DISABLE}" href="{$dropdown.enabled_link}"><i

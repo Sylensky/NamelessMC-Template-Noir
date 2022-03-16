@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$EDITING_FORM}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
                         </div>
                         <hr>
@@ -109,7 +109,7 @@
                         </br>
                         
                         <h5 style="display:inline">{$FIELDS}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <a href="{$NEW_FIELD_LINK}" class="btn btn-primary">{$NEW_FIELD}</a>
                         </div>
                         <hr>
@@ -123,7 +123,7 @@
                                     {$field.type}
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="float-md-right">
+                                    <div class="float-end">
                                         <a class="btn btn-warning btn-sm" href="{$field.edit_link}"><i class="fas fa-edit fa-fw"></i></a>
                                         <button class="btn btn-danger btn-sm" type="button" onclick="showDeleteModal('{$field.delete_link}')"><i class="fas fa-trash fa-fw"></i></button>
                                     </div>

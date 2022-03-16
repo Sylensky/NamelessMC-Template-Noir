@@ -45,7 +45,7 @@
                                     <div class="card-header">
                                         {$category.name}
                                         {if isset($category.edit_link)}
-                                            <span class="float-md-right">
+                                            <span class="float-end">
                                                     <a href="{$category.edit_link}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
                                                 </span>
                                         {/if}
@@ -55,7 +55,7 @@
                                             {foreach from=$category.subcategories item=subcategory name=categories_loop}
                                                 {$subcategory.name}
                                                 {if isset($subcategory.edit_link)}
-                                                    <span class="float-md-right">
+                                                    <span class="float-end">
                                                             <a href="{$subcategory.edit_link}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
                                                         </span>
                                                 {/if}

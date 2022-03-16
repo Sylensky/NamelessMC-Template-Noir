@@ -50,7 +50,7 @@
                                             {foreach from=$category.packages item=package name=package_loop}
                                                 {$package.name} <small>{$package.id_x}</small>
                                                 {if isset($package.edit_link)}
-                                                    <span class="float-md-right">
+                                                    <span class="float-end">
                                                             <a href="{$package.edit_link}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
                                                         </span>
                                                 {/if}

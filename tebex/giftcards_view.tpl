@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$VIEWING_GIFT_CARD}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <a class="btn btn-primary" href="{$BACK_LINK}">{$BACK}</a>
                         </div>
                         <hr />

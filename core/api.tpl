@@ -27,7 +27,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">{$L_API_CREDENTIALS}
-                                    <span class="float-right">
+                                    <span class="float-end">
                                         <a class="btn btn-primary btn-ssm" href="{$API_ENDPOINTS_LINK}">{$API_ENDPOINTS}</a>
                                         <a class="btn btn-primary btn-ssm" href="{$GROUP_SYNC_LINK}">{$GROUP_SYNC}</a>
                                     </span>

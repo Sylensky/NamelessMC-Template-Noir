@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$EDITING_FORM}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
                         </div>
                         <hr>

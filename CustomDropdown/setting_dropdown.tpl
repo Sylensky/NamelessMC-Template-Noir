@@ -37,7 +37,7 @@
 							<div class="card">
 								<div class="card-body">
 									<h5 style="display:inline">{$DROPDOWN_NAME}</h5>
-									<div class="float-md-right">
+									<div class="float-end">
 										<a style="display:inline" href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
 									</div>
 								</div>
@@ -99,7 +99,7 @@
 														<strong>{$dropdown_page.title}</strong>
 													</td>
 													<td>
-														<div class="float-md-right form-inline">
+														<div class="float-end form-inline">
 
 															<a class="btn btn-warning btn-sm mr-sm-2" title="{$EDIT}" href="{$dropdown_page.edit_link}"><i
 																	class="fas fa-edit fa-fw"></i></a>

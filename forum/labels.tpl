@@ -51,7 +51,7 @@
                                         {$label.enabled_forums}
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="float-md-right">
+                                        <div class="float-end">
                                             <a href="{$label.edit_link}" class="btn btn-info btn-sm">{$EDIT}</a>
                                             <button onclick="showDeleteModal('{$label.delete_link}')"
                                                     class="btn btn-danger btn-sm">{$DELETE}</button>

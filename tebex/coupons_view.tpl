@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$VIEWING_COUPON}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             {if isset($DELETE_COUPON)}
                                 <button type="button" onclick="showDeleteModal()" class="btn btn-danger">{$DELETE_COUPON}</button>
                             {/if}

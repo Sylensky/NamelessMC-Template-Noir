@@ -42,11 +42,11 @@
 								<div class="float-md-left mr-sm-2">
 									<a style="display:inline" href="{$ADD_CATEGORY_LINK}" class="btn btn-primary">{$CATEGORY_SETTINGS}</a>
 								</div>
-								<div class="float-md-right mr-sm-2">
+								<div class="float-end mr-sm-2">
 									<a style="display:inline" href="{$GALLERY_SETTINGS_LINK}"
 										class="btn btn-success">{$GALLERY_SETTINGS}</a>
 								</div>
-								<div class="float-md-right mr-sm-2">
+								<div class="float-end mr-sm-2">
 									<a style="display:inline" href="{$CAROUSEL_SETINGS_LINK}"
 										class="btn btn-success">{$CAROUSEL_SETINGS}</a>
 								</div>

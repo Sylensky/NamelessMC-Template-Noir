@@ -44,7 +44,7 @@
 									<a href="{$VIEW_URL}{$poll->id}" class="btn btn-link">
 										{$poll->subject}
 									</a>
-									<div class="float-right">
+									<div class="float-end">
 
 										{if $poll->status == 1}
 											<button type="submit" form="status{$poll->id}" class="btn mr-sm-2 btn-sm btn-success"><i

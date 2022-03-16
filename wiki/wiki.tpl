@@ -50,7 +50,7 @@
                                                     <strong>{$wiki_page->getTitle()}</strong>
                                                 </td>
                                                 <td>
-                                                    <div class="float-md-right">
+                                                    <div class="float-end">
                                                         <a class="btn btn-warning btn-sm" href="{$wiki_page->getEditLink()}"><i
                                                                     class="fas fa-edit fa-fw"></i></a>
                                                         <a class="btn btn-success btn-sm" href="{$wiki_page->getOriginalLink()}"><i

@@ -79,8 +79,8 @@
                         <div class="col-md-12">
                             <hr>
                             <input type="submit" class="btn btn-outline-primary" value="{$L_SAVE}">
-                            <a class="btn btn-outline-danger float-right ml-3" href="#" onclick="showDeleteModal()">{$DELETE}</a>
-                            <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">{$L_BACK}</a>
+                            <a class="btn btn-outline-danger float-end ml-3" href="#" onclick="showDeleteModal()">{$DELETE}</a>
+                            <a class="btn btn-outline-warning float-end" href="{$CANCEL_LINK}">{$L_BACK}</a>
                         </div>
                     </form>
                 </div>
@@ -95,13 +95,13 @@
                     {$CONFIRM_DELETE}
                 </div>
                 <div class="modal-footer">
-                    <form class="float-left" action="" method="post">
+                    <form class="float-start" action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="id" value="{$FIELD_ID}">
                         <input type="submit" class="btn btn-primary btn-sm" value="{$YES}">
                     </form>
-                    <span class="float-right">
+                    <span class="float-end">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                     </span>
                 </div>

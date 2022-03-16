@@ -35,7 +35,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <h5 style="display:inline">{$NEW_PAGE}</h5>
-                            <div class="float-md-right"><a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a></div>
+                            <div class="float-end"><a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a></div>
                             <hr />
                             <!-- Success and Error Alerts -->
                             {include file='includes/alerts.tpl'}

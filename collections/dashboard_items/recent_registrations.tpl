@@ -10,7 +10,7 @@
                 <div class="card-header ama">
                     <div class="mb-0">
                         <span style="{$registration.style}"><img src="{$registration.avatar}" class="rounded user-img" alt="{$registration.username}"> {$registration.nickname}</span>
-                        <span class="float-right">{$registration.groups[0]}</span>
+                        <span class="float-end">{$registration.groups[0]}</span>
                     </div>
                     <div class="collapse" id="CRegistration{$i}" aria-labelledby="HRegistration{$i}" data-parent="#ARegistration">
                         <hr>

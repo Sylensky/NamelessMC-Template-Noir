@@ -54,7 +54,7 @@
                                         <tr data-id="{$server.id}">
                                             <td><strong>{$server.name}</strong> ({$server.server_id})</td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     <div class="btn btn-secondary"><i class="fas fa-arrows-alt"></i></div>
                                                     <a href="{$server.edit_link}" class="btn btn-info">{$EDIT}</a>
                                                     <button onclick="showDeleteModal('{$server.delete_link}')"

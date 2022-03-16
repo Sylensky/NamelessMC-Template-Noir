@@ -25,7 +25,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="font-size-22">{$SEND_TEST_EMAIL}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                             </span>
                         </div>

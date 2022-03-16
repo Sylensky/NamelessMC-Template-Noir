@@ -35,7 +35,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$NEW_PAYMENT}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                             <button type="button" onclick="showCancelModal()" class="btn btn-warning">{$CANCEL}</button>
                         </div>
                         <hr />

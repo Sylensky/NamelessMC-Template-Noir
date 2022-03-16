@@ -44,7 +44,7 @@
                                     <div class="card-header">
                                         <div class="mb-0">
                                             <span style="{$punishment.issued_by_style}">{$punishment.issued_by_nickname}</span> - <span data-toggle="tooltip" data-title="{$punishment.date_full}">{$punishment.date_friendly}</span>
-                                            <span class="float-right">
+                                            <span class="float-end">
                                                 {if $punishment.type_numeric == 1}
                                                     <span class="badge badge-danger">{$punishment.type}</span>
                                                 {elseif $punishment.type_numeric == 2 || $punishment.type_numeric == 4}
@@ -126,7 +126,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="submit" class="btn btn-success btn-sm" value="{$SUBMIT}">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">{$CANCEL}</button>
                             </span>
                         </div>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="submit" class="btn btn-success btn-sm" value="{$SUBMIT}">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">{$CANCEL}</button>
                             </span>
                         </div>
@@ -186,7 +186,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="submit" class="btn btn-success btn-sm" value="{$SUBMIT}">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">{$CANCEL}</button>
                             </span>
                         </div>
@@ -210,7 +210,7 @@
                         <form action="" method="post" id="revokeForm">
                             <input type="hidden" name="token" value="{$TOKEN}" />
                             <input type="submit" class="btn btn-success btn-sm" value="{$YES}">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">{$NO}</button>
                             </span>
                         </form>

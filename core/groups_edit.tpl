@@ -40,7 +40,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$GROUP_NAME}</h5>
                             </div>
                             <div class="col-md-3">
-                                    <span class="float-md-right">{if isset($PERMISSIONS)}
+                                    <span class="float-end">{if isset($PERMISSIONS)}
 
                                             <a href="{$PERMISSIONS_LINK}" class="btn btn-primary">{$PERMISSIONS}</a>
                                         {/if}

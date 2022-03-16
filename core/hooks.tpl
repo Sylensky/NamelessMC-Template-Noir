@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <span>{$HOOKS_INFO}</span>
-                                <span class="float-right">
+                                <span class="float-end">
                                     <a href="{$NEW_HOOK_LINK}" class="btn btn-primary btn-sm"><i class="far fa-plus-circle"></i> {$NEW_HOOK}</a>
                                 </span>
                             </div>
@@ -42,7 +42,7 @@
                                     <tr>
                                         <th>{$NAME}</th>
                                         <th>{$LINK}</th>
-                                        <th class="float-md-right">Actions</th>
+                                        <th class="float-end">Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -51,7 +51,7 @@
                                             <td>{$hook.name}</td>
                                             <td><a href="{$hook.edit_link}">{$hook.url}</a></td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     <a class="btn btn-outline-success btn-sm" href="{$hook.edit_link}"><i class="far fa-edit fa-fw"></i></a>
                                                     <button class="btn btn-outline-danger btn-sm" type="button" onclick="showDeleteModal('{$hook.delete_link}')"><i class="far fa-trash fa-fw"></i></button>
                                                 </div>

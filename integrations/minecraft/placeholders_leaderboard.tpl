@@ -41,7 +41,7 @@
                                     <p style="margin-top: 7px; margin-bottom: 7px;">{$PLACEHOLDER_LEADERBOARD_INFO}</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="float-md-right"><a href="{$BACK_LINK}" class="btn btn-primary">{$BACK}</a></span>
+                                    <span class="float-end"><a href="{$BACK_LINK}" class="btn btn-primary">{$BACK}</a></span>
                                 </div>
                             </div>
                             <hr />

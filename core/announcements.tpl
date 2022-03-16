@@ -39,7 +39,7 @@
                                     <p style="margin-top: 7px; margin-bottom: 7px;">{$ANNOUCEMENTS_INFO}</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="float-md-right"><a href="{$NEW_LINK}" class="btn btn-primary"><i class="fas fa-plus-circle"></i> {$NEW}</a></span>
+                                    <span class="float-end"><a href="{$NEW_LINK}" class="btn btn-primary"><i class="fas fa-plus-circle"></i> {$NEW}</a></span>
                                 </div>
                             </div>
                             {if isset($ALL_ANNOUNCEMENTS)}

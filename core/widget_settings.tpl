@@ -41,7 +41,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$EDITING_WIDGET}</h5>
                             </div>
                             <div class="col-md-3">
-                                    <span class="float-md-right">
+                                    <span class="float-end">
                                         {if isset($SETTINGS)}<a href="{$SETTINGS_LINK}"
                                                                 class="btn btn-success">{$SETTINGS}</a>{/if}
                                         <a href="{$BACK_LINK}" class="btn btn-primary">{$BACK}</a>

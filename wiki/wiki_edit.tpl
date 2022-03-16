@@ -35,7 +35,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <h5 style="display:inline">{$EDIT_PAGE}</h5>
-                            <div class="float-md-right"><a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a></div>
+                            <div class="float-end"><a href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a></div>
                             <hr />
                             <!-- Success and Error Alerts -->
                             {include file='includes/alerts.tpl'}
@@ -50,7 +50,7 @@
                                                         <strong>{$wiki_page.title}</strong>
                                                     </td>
                                                     <td>
-                                                        <div class="float-md-right">
+                                                        <div class="float-end">
                                                             <a class="btn btn-warning btn-sm" href="{$wiki_page.edit_link}"><i
                                                                         class="fas fa-edit fa-fw"></i></a>
                                                             <a class="btn btn-success btn-sm" href="{$wiki_page.originalLink}"><i

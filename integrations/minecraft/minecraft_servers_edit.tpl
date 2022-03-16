@@ -42,7 +42,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$EDITING_SERVER}</h5>
                             </div>
                             <div class="col-md-3">
-                                <span class="float-md-right"><button onclick="showCancelModal()"
+                                <span class="float-end"><button onclick="showCancelModal()"
                                                                      class="btn btn-warning">{$CANCEL}</button></span>
                             </div>
                         </div>

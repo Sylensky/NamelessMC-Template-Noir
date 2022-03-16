@@ -37,7 +37,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="{$DOWNLOAD_LINK}" class="btn btn-primary">{$DOWNLOAD}</a>
-                                <span class="float-right">
+                                <span class="float-end">
                                     <button class="btn btn-info" type="button" onclick="showConfirmModal()">{$UPDATE}</button>
                                 </span>
                             </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="modal-footer">
                     <a href="{$UPGRADE_LINK}" class="btn btn-primary btn-sm">{$UPDATE}</a>
-                    <span class="float-right">
+                    <span class="float-end">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$CANCEL}</button>
                     </span>
                 </div>

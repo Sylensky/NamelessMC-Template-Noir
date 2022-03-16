@@ -55,7 +55,7 @@
                             {/if}
                             <span class="pull-right" data-toggle="tooltip" data-original-title="{$CREATED_DATE}">{$CREATED_DATE_FRIENDLY}</span>
                             {if $DELETE_LINK}
-                                <button class="btn btn-danger btn-sm float-right" type="button" onclick="showDeleteSubmissionModal('{$DELETE_LINK}')"><i class="fas fa-trash fa-fw"></i></button>
+                                <button class="btn btn-danger btn-sm float-end" type="button" onclick="showDeleteSubmissionModal('{$DELETE_LINK}')"><i class="fas fa-trash fa-fw"></i></button>
                             {/if}
                           </div>
                           <div class="card-body">
@@ -74,7 +74,7 @@
                                 <a href="{$comment.profile}" style="{$comment.style}" target="_blank"><img src="{$comment.avatar}" class="rounded" style="max-height:25px;max-width:25px;" alt="{$comment.username}" /> {$comment.username}{if $comment.anonymous} ({$ANONYMOUS}){/if}</a>:
                                 <span class="pull-right" data-toggle="tooltip" data-original-title="{$comment.date}">{$comment.date_friendly}</span>
                                 {if $comment.delete_link}
-                                    <button class="btn btn-danger btn-sm float-right" type="button" onclick="showDeleteCommentModal('{$comment.delete_link}')"><i class="fas fa-trash fa-fw"></i></button>
+                                    <button class="btn btn-danger btn-sm float-end" type="button" onclick="showDeleteCommentModal('{$comment.delete_link}')"><i class="fas fa-trash fa-fw"></i></button>
                                 {/if}
                               </div>
                                 <div class="card-body">

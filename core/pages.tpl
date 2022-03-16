@@ -52,7 +52,7 @@
                                                 <strong>{$custom_page.title}</strong>
                                             </td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     <a class="btn btn-warning btn-sm" href="{$custom_page.edit_link}"><i
                                                                 class="fas fa-edit fa-fw"></i></a>
                                                     <button class="btn btn-danger btn-sm" type="button"

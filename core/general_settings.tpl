@@ -174,7 +174,7 @@
                 </div>
                 <div class="modal-footer">
                     <a href="{$UPDATE_USER_LANGUAGES_LINK}" class="btn btn-primary btn-sm">{$YES}</a>
-                    <span class="float-right">
+                    <span class="float-end">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                     </span>
                 </div>

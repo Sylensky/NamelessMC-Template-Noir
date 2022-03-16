@@ -61,7 +61,7 @@
 							<button class="btn btn-primary" type="button" onclick="showAddModal()">{$ADD_IFRAME} <i
 									class="fa fa-plus-circle">
 								</i></button>
-							<div class="float-md-right">
+							<div class="float-end">
 								<a style="display:inline" href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 													<strong><a href="{$iframe.edit_link}">{$iframe.name}</strong>
 												</td>
 												<td>
-													<div class="float-md-right">
+													<div class="float-end">
 														<a class="btn btn-warning btn-sm" href="{$iframe.edit_link}"><i
 																class="nav-icon fas fa-edit fa-fw"></i></a>
 														<button class="btn btn-danger btn-sm" type="button"

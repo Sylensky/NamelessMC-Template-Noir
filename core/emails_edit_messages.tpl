@@ -28,7 +28,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <span class="font-size-22">{$SELECT_LANGUAGE}</span>
-                                        <span class="float-right">
+                                        <span class="float-end">
                                             <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                         </span>
                                     </div>
@@ -51,7 +51,7 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <span class="font-size-20">{$item[1]}</span>
-                                                <span class="float-right">
+                                                <span class="float-end">
                                                     <a class="btn btn-info btn-sm" data-toggle="tooltip" title="{$PREVIEW_INFO}" onclick="window.open('{$BACK_LINK}&action=preview&email={$item[0]}', 'newwindow', 'width=700,height=375'); return false;">
                                                         <i class="far fa-eye text-white"></i>
                                                     </a>
@@ -83,7 +83,7 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <span class="font-size-22">{$OPTIONS}</span>
-                                                <span class="float-right">
+                                                <span class="float-end">
                                                     <input type="submit" class="btn btn-primary btn-sm" value="Save">
                                                 </span>
                                             </div>

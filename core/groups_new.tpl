@@ -40,7 +40,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$CREATING_NEW_GROUP}</h5>
                             </div>
                             <div class="col-md-3">
-                                    <span class="float-md-right">
+                                    <span class="float-end">
                                         <button role="button" class="btn btn-warning"
                                                 onclick="showCancelModal()">{$CANCEL}</button>
                                     </span>

@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="font-size-22">{$EDITING_REACTION}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="#" class="btn btn-danger btn-sm" onclick="showDeleteModal()">{$DELETE}</a>
                             </span>
                         </div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="card-footer">
                             <input type="submit" value="Save" class="btn btn-primary">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="#" class="btn btn-warning btn-sm mr-2" onclick="showCancelModal()">{$CANCEL}</a>
                             </span>
                         </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="{$CANCEL_LINK}" class="btn btn-primary">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>
@@ -91,7 +91,7 @@
                             <input type="hidden" name="token" value="{$TOKEN}" />
                             <input type="submit" class="btn btn-primary btn-sm" value="{$YES}" />
                         </form>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>

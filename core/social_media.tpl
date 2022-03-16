@@ -27,7 +27,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-youtube"></i> YouTube
-                                <span class="float-right">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
+                                <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
                             </div>
                                 <div class="card-body">
                                     <label for="InputYoutube">{$YOUTUBE_URL}</label>
@@ -47,7 +47,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-facebook"></i> Facebook
-                                <span class="float-right">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
+                                <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
                             </div>
                                 <div class="card-body">
                                     <label for="InputFacebook">{$FACEBOOK_URL}</label>
@@ -67,7 +67,7 @@
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-twitter"></i> Twitter
-                                <span class="float-right">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
+                                <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
                             </div>
                                 <div class="card-body">
                                     <label for="InputYoutube">{$TWITTER_URL}</label>
@@ -93,7 +93,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <i class="fab fa-discord"></i> Discord
-                                    <span class="float-right">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
+                                    <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">

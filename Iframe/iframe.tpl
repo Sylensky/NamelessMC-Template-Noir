@@ -72,7 +72,7 @@
 													<strong><a href="{$page.setting_link}">{$page.name}</strong>
 												</td>
 												<td>
-													<div class="float-md-right">
+													<div class="float-end">
 														<a class="btn btn-primary btn-sm" href="{$page.setting_link}"><i
 																class="nav-icon fas fa-sliders-h fa-fw"></i></a>
 														<a class="btn btn-warning btn-sm" href="{$page.edit_link}"><i

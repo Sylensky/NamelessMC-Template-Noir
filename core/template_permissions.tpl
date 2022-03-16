@@ -21,11 +21,10 @@
                         </div>
                         {include file='includes/update.tpl'}
                     </div>
-
                     <div class="card">
                         <div class="card-header">
                             <span class="font-size-20">{$EDITING_TEMPLATE}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="{$BACK_LINK}" class="btn btn-primary btn-sm">{$BACK}</a>
                             </span>
                         </div>

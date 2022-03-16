@@ -118,7 +118,7 @@
                            <strong>{$item.name}</strong>
                         </td>
                         <td>
-                           <div class="float-md-right">
+                           <div class="float-end">
 
                              <a class="btn btn-primary btn-sm" href="/panel/socialize/channels?edit={$item.id}"><i class="fas fa-tag"></i></a>
 

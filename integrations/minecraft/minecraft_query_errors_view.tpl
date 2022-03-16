@@ -42,7 +42,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$VIEWING_ERROR}</h5>
                             </div>
                             <div class="col-md-3">
-                                    <span class="float-md-right">
+                                    <span class="float-end">
                                         <button onclick="showDeleteModal()" class="btn btn-danger">{$DELETE}</button>
                                         <a class="btn btn-primary" href="{$BACK_LINK}">{$BACK}</a>
                                     </span>

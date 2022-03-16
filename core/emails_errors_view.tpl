@@ -25,7 +25,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="font-size-22">{$VIEWING_ERROR}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a class="btn btn-danger btn-sm" href="#" onclick="showDeleteModal()">{$DELETE_ERROR}</a>
                                 {if $TYPE_ID eq 1}
                                     {if isset($VALIDATE_USER_TEXT)}
@@ -94,7 +94,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="{$DELETE_ERROR_LINK}" class="btn btn-primary btn-sm">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>

@@ -48,7 +48,7 @@
                                         </small>{/if}</h5>
                             </div>
                             <div class="col-md-3">
-                                <span class="float-md-right"><a href="{$REPORTS_LINK}"
+                                <span class="float-end"><a href="{$REPORTS_LINK}"
                                                                 class="btn btn-primary">{$BACK}</a></span>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                             <div class="form-group">
                                 <input type="hidden" name="token" value="{$TOKEN}">
                                 <input type="submit" value="{$SUBMIT}" class="btn btn-primary">
-                                <div class="float-md-right">
+                                <div class="float-end">
                                     {if isset($CLOSE_REPORT)}
                                         <a href="{$CLOSE_LINK}" class="btn btn-danger">{$CLOSE_REPORT}</a>
                                     {else}

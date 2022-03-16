@@ -27,7 +27,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                         {$EDITING_USER}
-                        <span class="float-right">
+                        <span class="float-end">
                                 {if isset($DELETE_USER)}
                                     <a class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="{$DELETE_USER}" href="#" onclick="showDeleteModal()"><i class="far fa-trash"></i></a>
                                 {/if}
@@ -134,7 +134,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">{$GROUPS}
-                                <span class="float-right">
+                                <span class="float-end">
                                     <i class="icon far fa-info-circle text-warning" data-toggle="tooltip" data-placement="top" title="{$GROUPS_INFO}"></i>
                                 </span>
                                 </div>
@@ -167,7 +167,7 @@
                             <input type="hidden" name="token" value="{$TOKEN}">
                             <input type="hidden" name="action" value="update">
                             <input type="submit" value="{$SUBMIT}" class="btn btn-primary btn-sm">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="{$BACK_LINK}" class="btn btn-warning btn-sm">{$BACK}</a>
                             </span>
                         </div>

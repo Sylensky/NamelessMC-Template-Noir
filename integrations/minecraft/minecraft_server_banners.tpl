@@ -50,7 +50,7 @@
                                         <tr>
                                             <td>{$server.name}</td>
                                             <td>
-                                                <div class="float-md-right">
+                                                <div class="float-end">
                                                     <a href="{$server.edit_link}" class="btn btn-warning">{$EDIT}</a>
                                                     <a href="{$server.view_link}" class="btn btn-info">{$VIEW}</a>
                                                 </div>

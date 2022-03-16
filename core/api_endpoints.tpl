@@ -24,7 +24,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             {$ENDPOINTS_INFO}
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                             </span>
                         </div>

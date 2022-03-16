@@ -10,7 +10,7 @@
                 <div class="card-header ama">
                     <div class="mb-0">
                             <span style="{$punishment.punished_style}"><img src="{$punishment.punished_avatar}" class="rounded user-img" alt="{$punishment.punished_username}"> {$punishment.punished_nickname}</span>
-                            <span class="float-right">
+                            <span class="float-end">
                                 {if $punishment.type eq 1}
                                     <span class="badge badge-danger">{$BAN}</span>
                                 {elseif $punishment.type eq 2}

@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a class="btn btn-outline-primary" href="{$INSTALL_TEMPLATE_LINK}">{$INSTALL_TEMPLATE}</a>
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a class="btn btn-outline-primary" href="{$VIEW_ALL_TEMPLATES_LINK}" target="_blank"><i class="far fa-external-link"></i> {$VIEW_ALL_TEMPLATES}</a>
                             </span>
                         </div>
@@ -44,16 +44,16 @@
                                     &nbsp;
                                     <i class="far fa-exclamation-triangle text-warning" data-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"></i>
                                     {/if}
-                                    <span class="float-right">{$template.author_x}</span>
+                                    <span class="float-end">{$template.author_x}</span>
                                 </div>
                                 <div class="card-footer">
                                     {if $template.enabled}
                                     {if $template.deactivate_link}
-                                    <span class="float-right">
+                                    <span class="float-end">
                                         <a class="btn btn-warning btn-sm" href="{$template.deactivate_link}">{$DEACTIVATE}</a>
                                     </span>
                                     {else}
-                                    <span class="float-right">
+                                    <span class="float-end">
                                         <button role="button" class="btn btn-success btn-sm" disabled>{$ACTIVE}</button>
                                     </span>
                                     {/if}
@@ -64,7 +64,7 @@
                                     {/if}
                                     {else}
                                     <a class="btn btn-primary btn-sm" href="{$template.activate_link}">{$ACTIVATE}</a>
-                                    <span class="float-right">
+                                    <span class="float-end">
                                         <button role="button" onclick="showDeleteModal('{$template.delete_link}')" class="btn btn-danger btn-sm"><i class="far fa-trash"></i></button>
                                     </span>
                                     {/if}
@@ -92,7 +92,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="#" id="deleteLink" class="btn btn-primary btn-sm">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>

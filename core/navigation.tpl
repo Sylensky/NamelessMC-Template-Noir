@@ -53,7 +53,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         {$item.title|escape}
-                                        <span class="float-right">{$item.order}</span>
+                                        <span class="float-end">{$item.order}</span>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">

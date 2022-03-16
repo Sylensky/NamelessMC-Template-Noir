@@ -26,7 +26,7 @@
                         <span class="font-size-20">
                         <a onclick="showPurgeModal()" class="c-pointer" data-toggle="tooltip" data-placement="top" title="{$PURGE_LOG}"><i class="fas fa-trash text-danger"></i></a> {$LOG_NAME}
                         </span>
-                        <span class="float-right">
+                        <span class="float-end">
                             <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                         </span>
                     </div>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="modal-footer">
                     <a href="{$PURGE_LOG_LINK}" class="btn btn-primary btn-sm">{$YES}</a>
-                    <span class="float-right">
+                    <span class="float-end">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{$NO}</button>
                     </span>
                 </div>

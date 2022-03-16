@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="d-row mt-4">
                                             <button class="btn btn-outline-primary waves-effect waves-light" type="submit">{$SUBMIT}</button>
-                                            <span class="float-right">
+                                            <span class="float-end">
                                                 <a class="btn btn-outline-warning waves-effect waves-light" href="{$SITE_HOME}">{$CANCEL}</a>
                                             </span>
                                         </div>

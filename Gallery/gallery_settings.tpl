@@ -36,7 +36,7 @@
               <div class="container">
 
 
-                <div class="float-md-right">
+                <div class="float-end">
                   <a style="display:inline" href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
                 </div>
 

@@ -29,7 +29,7 @@
 								<h1 class="m-0 text-dark">{$TITLE}</h1>
 							</div>
 						</div>
-						<div class="float-md-right mr-sm-2">
+						<div class="float-end mr-sm-2">
 							<a style="display:inline" href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
 						</div>
 					</div>

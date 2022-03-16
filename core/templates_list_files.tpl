@@ -41,7 +41,7 @@
                                 <h5 style="margin-top: 7px; margin-bottom: 7px;">{$EDITING_TEMPLATE}</h5>
                             </div>
                             <div class="col-md-3">
-                                    <span class="float-md-right">
+                                    <span class="float-end">
                                         {if $PERMISSIONS_LINK}<a class="btn btn-info"
                                                                  href="{$PERMISSIONS_LINK}">{$PERMISSIONS}</a>{/if}
                                         <a href="{$BACK_LINK}" class="btn btn-primary">{$BACK}</a>
@@ -64,7 +64,7 @@
                                         <tr>
                                             <td>
                                                 <i class="fa fa-folder"></i> {$dir.name}
-                                                <div class="float-right">
+                                                <div class="float-end">
                                                     <a href="{$dir.link}" class="btn btn-primary btn-sm"><i
                                                                 class="fas fa-search fa-fw"></i></a>
                                                 </div>
@@ -77,7 +77,7 @@
                                         <tr>
                                             <td>
                                                 <i class="fa fa-file"></i> {$file.name}
-                                                <div class="float-right">
+                                                <div class="float-end">
                                                     <a href="{$file.link}" class="btn btn-primary btn-sm"><i
                                                                 class="fas fa-edit fa-fw"></i></a>
                                                 </div>

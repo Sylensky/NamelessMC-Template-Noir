@@ -50,7 +50,7 @@
                                         {$label_type.name}
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="float-md-right">
+                                        <div class="float-end">
                                             <a href="{$label_type.edit_link}" class="btn btn-info btn-sm">{$EDIT}</a>
                                             <button onclick="showDeleteModal('{$label_type.delete_link}')"
                                                     class="btn btn-danger btn-sm">{$DELETE}</button>

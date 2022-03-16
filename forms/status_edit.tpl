@@ -36,7 +36,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <h5 style="display:inline">{$EDITING_STATUS}</h5>
-                        <div class="float-md-right">
+                        <div class="float-end">
                           <button class="btn btn-warning" onclick="showCancelModal()" type="button">{$CANCEL}</button>
                         </div>
                         <hr />

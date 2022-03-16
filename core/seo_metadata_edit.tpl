@@ -27,7 +27,7 @@
                             <input type="hidden" name="token" value="{$TOKEN}">
                             <div class="card-header">
                                 {$EDITING_PAGE}
-                                <span class="float-right">
+                                <span class="float-end">
                                     <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                 </span>
                             </div>

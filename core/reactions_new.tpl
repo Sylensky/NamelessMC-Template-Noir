@@ -52,7 +52,7 @@
                         </div>
                         <div class="card-footer">
                             <input type="submit" value="Save" class="btn btn-primary btn-s">
-                            <span class="float-right">
+                            <span class="float-end">
                                 <a href="#" class="btn btn-warning btn-sm" onclick="showCancelModal()">{$CANCEL}</a>
                             </span>
                         </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="{$CANCEL_LINK}" class="btn btn-primary">{$YES}</a>
-                        <span class="float-right">
+                        <span class="float-end">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">{$NO}</button>
                         </span>
                     </div>

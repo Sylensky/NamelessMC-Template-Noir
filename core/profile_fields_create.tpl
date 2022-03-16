@@ -79,7 +79,7 @@
                             <hr>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-outline-primary" value="{$L_CREATE}">
-                                <a class="btn btn-outline-warning float-right" href="{$CANCEL_LINK}">{$L_BACK}</a>
+                                <a class="btn btn-outline-warning float-end" href="{$CANCEL_LINK}">{$L_BACK}</a>
                             </div>
                         </div>
                     </form>
