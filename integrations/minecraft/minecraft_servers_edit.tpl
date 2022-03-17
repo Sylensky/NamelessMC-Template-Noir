@@ -66,7 +66,7 @@
 
                             <div class="form-group">
                                 <label for="InputAddress">{$SERVER_ADDRESS}</label> <span class="badge badge-info"><i
-                                            class="fa fa-question-circle" data-container="body" data-toggle="popover"
+                                            class="fa fa-question-circle" data-container="body" data-bs-toggle="popover"
                                             data-placement="top" title="{$INFO}"
                                             data-content="{$SERVER_ADDRESS_INFO}"></i></span>
                                 <input name="server_address" placeholder="{$SERVER_ADDRESS}" id="InputAddress"
@@ -75,7 +75,7 @@
 
                             <div class="form-group">
                                 <label for="inputPort">{$SERVER_PORT}</label> <span class="badge badge-info"><i
-                                            class="fa fa-question-circle" data-container="body" data-toggle="popover"
+                                            class="fa fa-question-circle" data-container="body" data-bs-toggle="popover"
                                             data-placement="top" title="{$INFO}" data-content="{$SERVER_PORT_INFO}"></i></span>
                                 <input name="server_port" placeholder="{$SERVER_PORT}" id="inputPort"
                                        value="{$SERVER_PORT_VALUE}" class="form-control">
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <label for="InputParentServer">{$PARENT_SERVER}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     title="{$INFO}"
                                                                     data-content="{$PARENT_SERVER_INFO}"></i></span>
                                 <select id="InputParentServer" class="form-control" name="parent_server">
@@ -102,7 +102,7 @@
                             <div class="form-group">
                                 <label for="inputBungeeInstance">{$BUNGEE_INSTANCE}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     title="{$INFO}"
                                                                     data-content="{$BUNGEE_INSTANCE_INFO}"></i></span>
                                 <input type="hidden" name="bungee_instance" value="0">
@@ -126,7 +126,7 @@
                             <div class="form-group">
                                 <label for="inputStatusQueryEnabled">{$ENABLE_STATUS_QUERY}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     data-html="true" title="{$INFO}"
                                                                     data-content="{$ENABLE_STATUS_QUERY_INFO}"></i></span>
                                 <input type="hidden" name="status_query_enabled" value="0">
@@ -136,7 +136,7 @@
                             <div class="form-group">
                                 <label for="inputShowIPOnStatus">{$SHOW_IP_ON_STATUS_PAGE}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     data-html="true" title="{$INFO}"
                                                                     data-content="{$SHOW_IP_ON_STATUS_PAGE_INFO}"></i></span>
                                 <input type="hidden" name="show_ip_enabled" value="0">
@@ -155,7 +155,7 @@
                             <div class="form-group">
                                 <label for="inputQueryEnabled">{$ENABLE_PLAYER_LIST}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     data-html="true" title="{$INFO}"
                                                                     data-content="{$ENABLE_PLAYER_LIST_INFO}"></i></span>
                                 <input type="hidden" name="query_enabled" value="0">
@@ -164,7 +164,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputQueryPort">{$SERVER_QUERY_PORT}</label> <span class="badge badge-info"><i
-                                            class="fa fa-question-circle" data-container="body" data-toggle="popover"
+                                            class="fa fa-question-circle" data-container="body" data-bs-toggle="popover"
                                             data-placement="top" data-html="true" title="{$INFO}"
                                             data-content="{$SERVER_QUERY_PORT_INFO}"></i></span>
                                 <input name="query_port" placeholder="{$SERVER_QUERY_PORT}" id="inputQueryPort"

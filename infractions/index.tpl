@@ -66,7 +66,7 @@
                                 <label for="inputPassword">{$PASSWORD}</label>
                                 <span class="badge badge-info"><i class="fa fa-question-circle"
                                                                   data-container="body"
-                                                                  data-toggle="popover"
+                                                                  data-bs-toggle="popover"
                                                                   title="{$INFO}"
                                                                   data-content="{$PASSWORD_HIDDEN}"></i></span>
                                 <input class="form-control" type="password" name="password" id="inputPassword">

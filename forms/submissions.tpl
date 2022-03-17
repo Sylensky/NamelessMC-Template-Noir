@@ -100,7 +100,7 @@
                                           {else}
                                             <i class="fa fa-user"></i> {$submission.user_name}
                                           {/if}
-                                          <br /><span data-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.created_at}</span>
+                                          <br /><span data-bs-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.created_at}</span>
                                         </td>
                                         <td>
                                           {if !empty($submission.updated_by_avatar)}
@@ -108,7 +108,7 @@
                                           {else}
                                             <i class="fa fa-user"></i> {$submission.updated_by_name}
                                           {/if}
-                                          <br /><span data-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.updated_at}</span>
+                                          <br /><span data-bs-toggle="tooltip" data-original-title="{$submission.reported_at_full}">{$submission.updated_at}</span>
                                         </td>
                                         <td><h5>{$submission.status}</h5></td>
                                         <td><a href="{$submission.link}" class="btn btn-primary">{$VIEW} &raquo;</a></td>

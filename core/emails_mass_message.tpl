@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputContent">{$CONTENT}
-                                    <i class="fas fa-question-circle text-info" data-container="body" data-toggle="popover" data-placement="top" data-content="{$REPLACEMENT_INFO}"></i>
+                                    <i class="fas fa-question-circle text-info" data-container="body" data-bs-toggle="popover" data-placement="top" data-content="{$REPLACEMENT_INFO}"></i>
                                 </label>
                                 {if isset($MARKDOWN)}
                                 <div class="field">
@@ -48,7 +48,7 @@
                         <div class="card-footer">
                             <input type="submit" class="btn btn-primary btn-sm" value="Send" onclick="$('#loading').css('visibility', 'visible');">
                             <span class="float-end">
-                                <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
+                                <a href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                             </span>
                         </div>
                     </div><br>

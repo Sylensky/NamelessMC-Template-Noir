@@ -80,12 +80,12 @@
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="api_verification" id="api_verification" switch="success" {if $API_VERIFICATION_VALUE eq 1}checked{/if} onchange="this.form.submit()">
                                         <label class="form-label" for="api_verification" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="api_verification"> &nbsp;{$API_VERIFICATION} <i class="far fa-question-circle text-warning" data-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$API_VERIFICATION_INFO}"></i></label>
+                                        <label for="api_verification"> &nbsp;{$API_VERIFICATION} <i class="far fa-question-circle text-warning" data-bs-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$API_VERIFICATION_INFO}"></i></label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="username_sync" id="username_sync" switch="success" {if $USERNAME_SYNC_VALUE eq 1} checked{/if} onchange="this.form.submit()">
                                         <label class="form-label" for="username_sync" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="username_sync"> &nbsp;{$USERNAME_SYNC} <i class="far fa-question-circle text-warning" data-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$USERNAME_SYNC_INFO}"></i></label>
+                                        <label for="username_sync"> &nbsp;{$USERNAME_SYNC} <i class="far fa-question-circle text-warning" data-bs-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$USERNAME_SYNC_INFO}"></i></label>
                                     </div>
                                     {/if}
                                 </div>

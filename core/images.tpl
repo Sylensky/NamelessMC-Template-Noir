@@ -49,7 +49,7 @@
                                 <div class="card-header">
                                     {$L_BACKGROUND}
                                     <span class="float-end">
-                                        <i class="far fa-question text-warning" data-toggle="tooltip" data-title="{$BACKGROUND_IMAGE_INFO}"></i>
+                                        <i class="far fa-question text-warning" data-bs-toggle="tooltip" data-title="{$BACKGROUND_IMAGE_INFO}"></i>
                                     </span>
                                 </div>
                                 <div class="card-body pb-1 pt-3">
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadModal">{$UPLOAD_NEW_IMAGE}</button>
+                                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-target="#uploadModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-end">
                                         <a href="{$RESET_LINK}" class="btn btn-danger btn-sm">{$L_RESET_BACKGROUND}</a>
                                     </span>
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadBannerModal">{$UPLOAD_NEW_IMAGE}</button>
+                                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-target="#uploadBannerModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-end">
                                         <a href="{$RESET_BANNER_LINK}" class="btn btn-danger btn-sm">{$L_RESET_BANNER}</a>
                                     </span>
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadLogoModal">{$UPLOAD_NEW_IMAGE}</button>
+                                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-target="#uploadLogoModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-end">
                                         <a href="{$RESET_LOGO_LINK}" class="btn btn-danger btn-sm">{$L_RESET_LOGO}</a>
                                     </span>
@@ -134,7 +134,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#uploadFaviconModal">{$UPLOAD_NEW_IMAGE}</button>
+                                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-target="#uploadFaviconModal">{$UPLOAD_NEW_IMAGE}</button>
                                     <span class="float-end">
                                         <a href="{$RESET_FAVICON_LINK}" class="btn btn-danger btn-sm">{$L_RESET_FAVICON}</a>
                                     </span>

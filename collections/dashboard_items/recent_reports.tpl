@@ -6,7 +6,7 @@
         {if count($REPORTS)}
         <div id="AReports">
             {assign var=i value=1} {foreach from=$REPORTS item=report}
-        <div class="card mb-1 c-pointer " id="HReports{$i}" data-toggle="collapse" data-target="#CReports{$i}" aria-expanded="true" aria-controls="CReports{$i}">
+        <div class="card mb-1 c-pointer " id="HReports{$i}" data-bs-toggle="collapse" data-bs-target="#CReports{$i}" aria-expanded="true" aria-controls="CReports{$i}">
             <div class="card-header ama">
                 <div class="mb-0">
                     <span style="{$report.reported_style}"><img class="rounded user-img" src="{$report.reported_avatar}" alt="{$report.reported_username}"> {$report.reported_nickname}</span>
@@ -18,9 +18,9 @@
                     {/if}
                     </span>
                 </div>
-                <div class="collapse" id="CReports{$i}" aria-labelledby="HReports{$i}" data-parent="#AReports">
+                <div class="collapse" id="CReports{$i}" aria-labelledby="HReports{$i}" data-bs-parent="#AReports">
                     <hr>
-                        <b>{$CREATED}</b> <span data-toggle="tooltip" data-title="{$report.time_full}">{$report.time}</span><br>
+                        <b>{$CREATED}</b> <span data-bs-toggle="tooltip" title="{$report.time_full}">{$report.time}</span><br>
                         <b>{$REPORTED_BY}</b> <span style="{$report.reporter_style}"><img class="rounded user-img" src="{$report.reporter_avatar}"  alt="{$report.reporter_username}"> {$report.reporter_nickname}</span><br>
                         <b>{$REASON}</b> {$report.reason}
                     <hr>

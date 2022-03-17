@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 <body id="page-top">
     <div id="wrapper">
-        {include file='sidebar.tpl'}
+    {include file='sidebar.tpl'}
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 {include file='navbar.tpl'}
@@ -11,7 +11,8 @@
                     <div class="alert alert-warning">
                         {$DIRECTORY_WARNING}
                     </div>
-                    {/if} {if count($DASHBOARD_STATS)} {assign var="i" value=0}
+                    {/if}
+                    {if count($DASHBOARD_STATS)} {assign var="i" value=0}
                     <div class="row">
                         {foreach from=$DASHBOARD_STATS item=stat} {if $i % 4 eq 0}
                     </div>
@@ -26,7 +27,7 @@
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold"><i class="far fa-chart-bar"></i> {$STATISTICS}</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i></a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i></a>
                                         <div class="dropdown-menu dropdown-menu-right animated--fade-in" aria-labelledby="dropdownMenuLink">
                                             {assign var="i" value=0} {foreach from=$GRAPHS key=key item=graph}
                                             <a class="dropdown-item" href="#" onclick="drawChart({$i})">{$key}</a> {assign var="i" value=$i+1} {/foreach}
@@ -59,7 +60,7 @@
                                     <div class="alert alert-warning">{$NO_NEWS}</div>
                                     {else} {foreach from=$NEWS item=item name=newsarray}
                                     <a href="#" onclick="confirmLeaveSite('{$item.url}')">{$item.title}</a>
-                                    <br /><small>{$item.author} | <span data-toggle="tooltip" data-title="{$item.date}">{$item.date_friendly}</span></small> {if not $smarty.foreach.newsarray.last}
+                                    <br /><small>{$item.author} | <span data-bs-toggle="tooltip" title="{$item.date}">{$item.date_friendly}</span></small> {if not $smarty.foreach.newsarray.last}
                                     <hr />{/if} {/foreach} {/if}
                                 </div>
                             </div>

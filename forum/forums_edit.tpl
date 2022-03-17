@@ -111,7 +111,7 @@
 
                             <div class="form-group">
                                 <label for="InputHooks">{$INCLUDE_IN_HOOK} <span class="badge badge-info"
-                                                                                 data-toggle="popover"
+                                                                                 data-bs-toggle="popover"
                                                                                  data-title="{$INFO}"
                                                                                  data-content="{$HOOK_SELECT_INFO}"><i
                                                 class="fa fa-question"></i></label>
@@ -124,7 +124,7 @@
 
                             <div class="form-group">
                                 <label for="InputDefaultLabels">{$DEFAULT_LABELS} <span class="badge badge-info"
-                                                                                        data-toggle="popover"
+                                                                                        data-bs-toggle="popover"
                                                                                         data-title="{$INFO}"
                                                                                         data-content="{$DEFAULT_LABELS_INFO}"><i
                                                 class="fa fa-question"></i></label>

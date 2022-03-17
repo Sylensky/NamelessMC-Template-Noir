@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="label_html">{$LABEL_TYPE_HTML}</label> <span class="badge badge-info"><i
-                                            class="fas fa-question-circle" data-container="body" data-toggle="popover"
+                                            class="fas fa-question-circle" data-container="body" data-bs-toggle="popover"
                                             data-placement="top" title="{$INFO}"
                                             data-content="{$LABEL_TYPE_HTML_INFO}"></i></span><br />
                                 <input type="text" name="label_html"

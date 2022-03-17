@@ -84,7 +84,7 @@
                             {if $DISCORD_INTEGRATION}
                                 <div class="form-group">
                                     <label for="InputDiscordRoleID">{$DISCORD_ROLE_ID} <span class="badge badge-info"
-                                                                                             data-toggle="popover"
+                                                                                             data-bs-toggle="popover"
                                                                                              data-title="{$INFO}"
                                                                                              data-content="{$ID_INFO|escape}"><i
                                                     class="fa fa-question"></i></label>

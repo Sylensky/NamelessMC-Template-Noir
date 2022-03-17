@@ -91,7 +91,7 @@
                             </form>
 
                             <h5>{$VOID_GIFT_CARD}</h5>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">{$VOID_GIFT_CARD}</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-target="#deleteModal">{$VOID_GIFT_CARD}</button>
 
                             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">

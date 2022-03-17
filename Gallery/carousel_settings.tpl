@@ -65,7 +65,7 @@
 
 							<div class="form-group">
 								<label>{$CAROUSEL_PAGINATION}</label>
-								<button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top"
+								<button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-placement="top"
 									title="{$PAGINATION_HELP}">
 									<i class="fa fa-question-circle" aria-hidden="true"></i>
 								</button>

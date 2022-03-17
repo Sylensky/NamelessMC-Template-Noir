@@ -99,7 +99,7 @@
                             <div class="form-group">
                                 <label for="inputExternalQuery">{$EXTERNAL_QUERY}</label> <span
                                         class="badge badge-info"><i class="fa fa-question-circle" data-container="body"
-                                                                    data-toggle="popover" data-placement="top"
+                                                                    data-bs-toggle="popover" data-placement="top"
                                                                     title="{$INFO}"
                                                                     data-content="{$EXTERNAL_QUERY_INFO}"></i></span>
                                 <input type="hidden" name="external_query" value="0">

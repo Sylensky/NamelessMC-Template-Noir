@@ -39,7 +39,7 @@
                                         <div class="form-group">
                                             <label for="InputOutgoingEmail">{$OUTGOING_EMAIL}</label>
                                             <span class="badge text-info">
-                                                <i class="fas fa-question-circle" data-toggle="tooltip" title="{$OUTGOING_EMAIL_INFO}"></i>
+                                                <i class="fas fa-question-circle" data-bs-toggle="tooltip" title="{$OUTGOING_EMAIL_INFO}"></i>
                                             </span>
                                             <input type="text" id="InputOutgoingEmail" name="email" value="{$OUTGOING_EMAIL_VALUE}" class="form-control">
                                         </div>
@@ -52,7 +52,7 @@
                                         <div class="d-flex">
                                             <input class="form-check form-switch" type="checkbox" id="inputMailer" name="enable_mailer" switch="success" value="1" {if $ENABLE_MAILER_VALUE eq 1} checked{/if} onchange="this.form.submit()">
                                             <label class="form-label" for="inputMailer" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                            <label for="inputMailer"> &nbsp;{$ENABLE_MAILER} <i class="far fa-question-circle text-warning" data-toggle="tooltip" data-title="{$ENABLE_MAILER_HELP}"></i></label>
+                                            <label for="inputMailer"> &nbsp;{$ENABLE_MAILER} <i class="far fa-question-circle text-warning" data-bs-toggle="tooltip" data-title="{$ENABLE_MAILER_HELP}"></i></label>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="form-group">
                                             <span class="badge text-info">
-                                                <i class="fas fa-question-circle" data-toggle="tooltip" title="{$PASSWORD_HIDDEN}"></i>
+                                                <i class="fas fa-question-circle" data-bs-toggle="tooltip" title="{$PASSWORD_HIDDEN}"></i>
                                             </span>
                                             <label for="inputPassword">{$PASSWORD}</label>
                                             <input class="form-control" type="password" name="password" id="inputPassword">

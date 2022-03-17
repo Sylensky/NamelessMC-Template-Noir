@@ -59,7 +59,7 @@
                             </div>
                             <div class="card mb-3">
                                 <div class="card-header">
-                                    {$VALIDATE_PROMOTE_GROUP} <i class="far fa-question-circle text-warning" data-toggle="tooltip" title="{$VALIDATE_PROMOTE_GROUP_INFO}"></i>
+                                    {$VALIDATE_PROMOTE_GROUP} <i class="far fa-question-circle text-warning" data-bs-toggle="tooltip" title="{$VALIDATE_PROMOTE_GROUP_INFO}"></i>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">

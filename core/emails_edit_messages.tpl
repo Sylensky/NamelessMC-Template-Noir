@@ -29,7 +29,7 @@
                                     <div class="card-header">
                                         <span class="font-size-22">{$SELECT_LANGUAGE}</span>
                                         <span class="float-end">
-                                            <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
+                                            <a href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                         </span>
                                     </div>
                                     <div class="card-body">
@@ -52,7 +52,7 @@
                                             <div class="card-header">
                                                 <span class="font-size-20">{$item[1]}</span>
                                                 <span class="float-end">
-                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="{$PREVIEW_INFO}" onclick="window.open('{$BACK_LINK}&action=preview&email={$item[0]}', 'newwindow', 'width=700,height=375'); return false;">
+                                                    <a class="btn btn-info btn-sm" data-bs-toggle="tooltip" title="{$PREVIEW_INFO}" onclick="window.open('{$BACK_LINK}&action=preview&email={$item[0]}', 'newwindow', 'width=700,height=375'); return false;">
                                                         <i class="far fa-eye text-white"></i>
                                                     </a>
                                                     <input type="submit" class="btn btn-primary btn-sm" value="Save">

@@ -40,7 +40,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$DEFAULT_LANGUAGE_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-bs-toggle="tooltip" title="{$DEFAULT_LANGUAGE_HELP}"></i>
                                         </span>
                                         <label for="inputDefaultLanguage">{$DEFAULT_LANGUAGE}</label>
                                         <div class="d-flex">
@@ -49,10 +49,10 @@
                                                     <option value="{$item->id}" {if $item->is_default eq 1} selected{/if}>{$item->name}</option>
                                                 {/foreach}
                                             </select>
-                                            <a class="btn btn-xma-outline" data-toggle="tooltip" title="{$INSTALL_LANGUAGE}" href="{$INSTALL_LANGUAGE_LINK}">
+                                            <a class="btn btn-xma-outline" data-bs-toggle="tooltip" title="{$INSTALL_LANGUAGE}" href="{$INSTALL_LANGUAGE_LINK}">
                                                 <i class="fas fa-plus-circle"></i>
                                             </a>
-                                            <a class="btn btn-xma-outline text-warning" data-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
+                                            <a class="btn btn-xma-outline text-warning" data-bs-toggle="tooltip" title="{$UPDATE_USER_LANGUAGES}" onclick="showLanguageModal()">
                                                 <i class="fas fa-user-tag"></i>
                                             </a>
                                         </div>
@@ -95,7 +95,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$USE_FRIENDLY_URLS_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-bs-toggle="tooltip" title="{$USE_FRIENDLY_URLS_HELP}"></i>
                                         </span>
                                         <label for="inputFriendlyURL">{$USE_FRIENDLY_URLS}</label>
                                         <select name="friendlyURL" class="form-select S2NoSearch" id="inputFriendlyURL" onchange="this.form.submit()">
@@ -116,7 +116,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class="badge text-info">
-                                            <i class="fas fa-question-circle" data-toggle="tooltip" title="{$FORCE_HTTPS_HELP}"></i>
+                                            <i class="fas fa-question-circle" data-bs-toggle="tooltip" title="{$FORCE_HTTPS_HELP}"></i>
                                         </span>
                                         <label for="inputForceHTTPS">{$FORCE_HTTPS}</label>
                                         <select name="forceHTTPS" class="form-select S2NoSearch" id="inputForceHTTPS" onchange="this.form.submit()">

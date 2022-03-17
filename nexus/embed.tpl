@@ -33,7 +33,7 @@
                         <i
                             class="fas fa-question-circle"
                             data-container="body"
-                            data-toggle="popover"
+                            data-bs-toggle="popover"
                             data-placement="top"
                             title=""
                             placeholder="https://example.com/img/logo.png"
@@ -51,7 +51,7 @@
                 <label for="opal_embed_keywords" style="margin-top: 5px;">
                     {$EMBED_KEYWORDS_LABEL}
                     <span class="badge badge-info">
-                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="{$EMBED_KEYWORDS_INFO_LABEL}" data-original-title="{$INFO_LABEL}"></i>
+                        <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-content="{$EMBED_KEYWORDS_INFO_LABEL}" data-original-title="{$INFO_LABEL}"></i>
                     </span>
                 </label>
                 <div class="input-group">

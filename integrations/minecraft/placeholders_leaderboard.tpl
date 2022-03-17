@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <label for="leaderboard_enabled">
                                         {$LEADERBOARD_ENABLED}
-                                        <span class="badge badge-info" data-toggle="popover" data-title="{$INFO}" data-content="{$ENABLED_INFO}"><i class="fa fa-question"></i>
+                                        <span class="badge badge-info" data-bs-toggle="popover" data-title="{$INFO}" data-content="{$ENABLED_INFO}"><i class="fa fa-question"></i>
                                     </label>
                                     <input type="checkbox" class="js-switch" name="leaderboard_enabled" {if $PLACEHOLDER->leaderboard eq 1} checked {/if}>
                                 </div>

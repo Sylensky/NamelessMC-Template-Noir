@@ -36,30 +36,32 @@
                         {foreach from=$MODULE_LIST item=module}
                         <div class="col-sm-12 col-md-6 col-xl-4">
                             <div class="card">
-                                <div class="card-header">
-                                    <div class="row">
-                                        <span class="col">
-                                        {if $module.version_mismatch}<i class="far fa-exclamation-triangle fa-sm text-warning" data-toggle="popover" data-title="{$WARNING}" data-content="{$module.version_mismatch}"></i>{/if}
-                                            <strong>{$module.name}</strong> <span class="font-size-10 text-info">{$module.version}</span>
-                                            <br> <small>{$AUTHOR} {$module.author}</small>
+                                <div class="card-body p-3">
+                                    <div>
+                                        {if $module.version_mismatch}
+                                            <i class="far fa-exclamation-triangle fa-sm text-warning" data-bs-toggle="popover" title="{$WARNING}" data-bs-content="{$module.version_mismatch}"></i>
+                                        {/if}
+                                        <span class="">
+                                        <strong>{$module.name}</strong> <span class="font-size-10 text-info">{$module.version}</span>
+                                            <span class="float-end">
+                                                {if $module.enabled}
+                                                {if $module.disable_link}
+                                                <form action="{$module.disable_link}" method="post">
+                                                    <input type="hidden" name="token" value="{$TOKEN}" />
+                                                    <input type="submit" class="btn btn-danger btn-sm" value="{$DISABLE}" />
+                                                </form>
+                                                {else}
+                                                <a class="btn btn-warning btn-sm disabled"><i class="fa fa-lock"></i></a>
+                                                {/if}
+                                                {else}
+                                                <form action="{$module.enable_link}" method="post">
+                                                    <input type="hidden" name="token" value="{$TOKEN}" />
+                                                    <input type="submit" class="btn btn-primary btn-sm" value="{$ENABLE}" />
+                                                </form>
+                                                {/if}
+                                            </span>
                                         </span>
-                                        <span class="col float-end">
-                                            {if $module.enabled}
-                                            {if $module.disable_link}
-                                            <form action="{$module.disable_link}" method="post">
-                                                <input type="hidden" name="token" value="{$TOKEN}" />
-                                                <input type="submit" class="btn btn-danger btn-sm" value="{$DISABLE}" />
-                                            </form>
-                                            {else}
-                                            <a class="btn btn-warning btn-sm disabled"><i class="fa fa-lock"></i></a>
-                                            {/if}
-                                            {else}
-                                            <form action="{$module.enable_link}" method="post">
-                                                <input type="hidden" name="token" value="{$TOKEN}" />
-                                                <input type="submit" class="btn btn-primary btn-sm" value="{$ENABLE}" />
-                                            </form>
-                                            {/if}
-                                        </span>
+                                        <br> <small>{$AUTHOR} {$module.author}</small>
                                     </div>
                                 </div>
                             </div>

@@ -2,10 +2,10 @@
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
-    <a href="{$SITE_HOME}" target="_blank" class="btn btn-primary" data-toggle="tooltip" title="{$VIEW_SITE}"><i class="far fa-eye"></i></a>
+    <a href="{$SITE_HOME}" target="_blank" class="btn btn-primary" data-bs-toggle="tooltip" title="{$VIEW_SITE}"><i class="far fa-eye"></i></a>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 {if $NOTICES|count > 0}
                 <span class="badge badge-danger badge-counter">{$NOTICES|count}</span>

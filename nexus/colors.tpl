@@ -27,7 +27,7 @@
                         <i
                             class="fas fa-question-circle"
                             data-container="body"
-                            data-toggle="popover"
+                            data-bs-toggle="popover"
                             data-placement="top"
                             title=""
                             data-content="{$COLORS_INFO_LABEL}"
@@ -45,7 +45,7 @@
                         <i
                             class="fas fa-question-circle"
                             data-container="body"
-                            data-toggle="popover"
+                            data-bs-toggle="popover"
                             data-placement="top"
                             title=""
                             data-content="{$COLORS_INFO_LABEL}"

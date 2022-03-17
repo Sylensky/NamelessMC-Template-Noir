@@ -94,13 +94,13 @@
                             </div>
                             {if $DISCORD_INTEGRATION}
                                 <div class="form-group">
-                                    <label for="InputDiscordRoleID">{$DISCORD_ROLE_ID} <span class="badge badge-info" data-toggle="popover" data-title="{$INFO}" data-content="{$ID_INFO|escape}"><i class="fa fa-question"></i></label>
+                                    <label for="InputDiscordRoleID">{$DISCORD_ROLE_ID} <span class="badge badge-info" data-bs-toggle="popover" data-title="{$INFO}" data-content="{$ID_INFO|escape}"><i class="fa fa-question"></i></label>
                                     <input type="number" min="1" class="form-control" id="InputDiscordRoleID" name="discord_role_id" value="{$DISCORD_ROLE_ID_VALUE}">
                                 </div>
                             {/if}
                             <div class="form-group">
                                 <label for="InputTfa">{$FORCE_TFA} <span class="badge badge-warning"
-                                                                         data-toggle="popover" data-title="{$WARNING}"
+                                                                         data-bs-toggle="popover" data-title="{$WARNING}"
                                                                          data-content="{$FORCE_TFA_WARNING|escape}"><i
                                                 class="fa fa-exclamation-triangle"></i></label>
                                 <input type="hidden" name="tfa" value="0">

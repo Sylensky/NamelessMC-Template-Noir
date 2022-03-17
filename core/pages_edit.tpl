@@ -97,7 +97,7 @@
                                        class="js-switch"{if $TARGET_VALUE eq 1} checked{/if} />
                             </div>
                             <div class="form-group">
-                                <label for="inputUnsafeHTML">{$UNSAFE_HTML}</label> <span data-toggle="popover"
+                                <label for="inputUnsafeHTML">{$UNSAFE_HTML}</label> <span data-bs-toggle="popover"
                                                                                           data-content="{$UNSAFE_HTML_WARNING}"
                                                                                           class="badge badge-warning"><i
                                             class="fas fa-exclamation-triangle"></i></span>

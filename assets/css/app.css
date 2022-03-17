@@ -7121,13 +7121,16 @@ a.close.disabled {
     border-left-color: #fff
 }
 
+.bs-popover-auto[data-popper-text^=center]>.popover-header {
+    text-align: center !important;
+}
+
 .popover-header {
     padding: .3rem .75rem;
     margin-bottom: 0;
     font-size: .875rem;
     background-color: rgb(57 63 82);
     border-bottom: 1px solid #252b3b;
-    text-align: center;
 }
 
 .popover-header:empty {
@@ -12072,7 +12075,7 @@ a:focus {
         display: inline;
     }
 
-    .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+    .sidebar .nav-item .nav-link[data-bs-toggle="collapse"]::after {
         width: 1rem;
         text-align: center;
         float: right;
@@ -12083,7 +12086,7 @@ a:focus {
         font-family: "Font Awesome 5 Free", "Font Awesome 5 Pro";
     }
 
-    .sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
+    .sidebar .nav-item .nav-link[data-bs-toggle="collapse"].collapsed::after {
         content: "\f105";
     }
 
@@ -12153,7 +12156,7 @@ a:focus {
         margin-right: 0;
     }
 
-    .sidebar.toggled .nav-item .nav-link[data-toggle="collapse"]::after {
+    .sidebar.toggled .nav-item .nav-link[data-bs-toggle="collapse"]::after {
         display: none;
     }
 
@@ -12202,7 +12205,7 @@ a:focus {
     color: #6e707e;
 }
 
-.sidebar-light .nav-item .nav-link[data-toggle="collapse"]::after {
+.sidebar-light .nav-item .nav-link[data-bs-toggle="collapse"]::after {
     color: #b7b9cc;
 }
 
@@ -12258,7 +12261,7 @@ a:focus {
     color: #fff;
 }
 
-.sidebar-dark .nav-item .nav-link[data-toggle="collapse"]::after {
+.sidebar-dark .nav-item .nav-link[data-bs-toggle="collapse"]::after {
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -12357,13 +12360,13 @@ a:focus {
     line-height: 1.5;
 }
 
-.card .card-header[data-toggle="collapse"] {
+.card .card-header[data-bs-toggle="collapse"] {
     text-decoration: none;
     position: relative;
     padding: 0.75rem 3.25rem 0.75rem 1.25rem;
 }
 
-.card .card-header[data-toggle="collapse"]::after {
+.card .card-header[data-bs-toggle="collapse"]::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -12375,11 +12378,11 @@ a:focus {
     color: #d1d3e2;
 }
 
-.card .card-header[data-toggle="collapse"].collapsed {
+.card .card-header[data-bs-toggle="collapse"].collapsed {
     border-radius: 0.35rem;
 }
 
-.card .card-header[data-toggle="collapse"].collapsed::after {
+.card .card-header[data-bs-toggle="collapse"].collapsed::after {
     content: "\f105";
 }
 

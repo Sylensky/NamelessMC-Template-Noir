@@ -37,7 +37,7 @@
                                         <b>{$REGISTERED}</b><br />{$REGISTERED_VALUE}
                                     </li>
                                     <li class="list-group-item">
-                                        <b>{$LAST_SEEN}</b><br /><span data-toggle="tooltip" data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
+                                        <b>{$LAST_SEEN}</b><br /><span data-bs-toggle="tooltip" data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
                                     </li>
                                 </ul>
                             </div>

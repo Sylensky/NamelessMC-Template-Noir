@@ -55,22 +55,22 @@
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" id="inputRequired" name="required" switch="success">
                                         <label class="form-label" for="inputRequired" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="inputRequired"> &nbsp;{$REQUIRED} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$REQUIRED_HELP}"></i></label>
+                                        <label for="inputRequired"> &nbsp;{$REQUIRED} <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover" title="{$INFO}" data-content="{$REQUIRED_HELP}"></i></label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" id="inputEditable" name="editable" switch="success">
                                         <label class="form-label" for="inputEditable" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="inputEditable"> &nbsp;{$EDITABLE} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$EDITABLE_HELP}"></i></label>
+                                        <label for="inputEditable"> &nbsp;{$EDITABLE} <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover" title="{$INFO}" data-content="{$EDITABLE_HELP}"></i></label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" id="inputPublic" name="public" switch="success">
                                         <label class="form-label" for="inputPublic" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="inputPublic"> &nbsp;{$PUBLIC} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$PUBLIC_HELP}"></i></label>
+                                        <label for="inputPublic"> &nbsp;{$PUBLIC} <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover" title="{$INFO}" data-content="{$PUBLIC_HELP}"></i></label>
                                     </div>
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" id="inputForum" name="forum" switch="success">
                                         <label class="form-label" for="inputForum" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="inputForum"> &nbsp;{$DISPLAY_FIELD_ON_FORUM} <i class="fas fa-question-circle" data-container="body" data-toggle="popover" title="{$INFO}" data-content="{$DISPLAY_FIELD_ON_FORUM_HELP}"></i></label>
+                                        <label for="inputForum"> &nbsp;{$DISPLAY_FIELD_ON_FORUM} <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover" title="{$INFO}" data-content="{$DISPLAY_FIELD_ON_FORUM_HELP}"></i></label>
                                     </div>
                                 </div>
                             </div>

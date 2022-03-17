@@ -60,7 +60,7 @@
                                             src="{$REPORTER_USER_AVATAR}" class="rounded"
                                             style="max-width:25px;max-height:25px;"
                                             alt="{$REPORTER_USER}" /> {$REPORTER_USER}</a>:
-                                <span class="pull-right" data-toggle="tooltip"
+                                <span class="pull-right" data-bs-toggle="tooltip"
                                       data-original-title="{$REPORT_DATE}">{$REPORT_DATE_FRIENDLY}</span>
                             </div>
                             <div class="card-body">
@@ -82,7 +82,7 @@
                                                     src="{$comment.avatar}" class="rounded"
                                                     style="max-height:25px;max-width:25px;"
                                                     alt="{$comment.username}" /> {$comment.username}</a>:
-                                        <span class="pull-right" data-toggle="tooltip"
+                                        <span class="pull-right" data-bs-toggle="tooltip"
                                               data-original-title="{$comment.date}">{$comment.date_friendly}</span>
                                     </div>
                                     <div class="card-body">

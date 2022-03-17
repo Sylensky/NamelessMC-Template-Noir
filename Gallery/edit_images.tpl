@@ -30,7 +30,7 @@
 							</div>
 						</div>
 						<div class="float-end mr-sm-2">
-							<button style="display:inline" class="btn btn btn-danger" type="button" data-toggle="modal"
+							<button style="display:inline" class="btn btn btn-danger" type="button" data-bs-toggle="modal"
 								data-target="#delete_modal{$ID}">{$REMOVE} <i class="fas fa-trash fa-fw"></i></button>
 							<a style="display:inline" href="{$BACK_LINK}" class="btn btn-warning">{$BACK}</a>
 						</div>

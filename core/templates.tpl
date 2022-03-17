@@ -38,11 +38,11 @@
                                     {$template.name} - {$template.version}
                                     {if $template.default_warning}
                                     &nbsp;
-                                    <i class="far fa-exclamation-triangle text-danger" data-toggle="popover" data-title="{$WARNING}" data-content="{$template.default_warning}"></i>
+                                    <i class="far fa-exclamation-triangle text-danger" data-bs-toggle="popover" data-title="{$WARNING}" data-content="{$template.default_warning}"></i>
                                     {/if}
                                     {if $template.version_mismatch}
                                     &nbsp;
-                                    <i class="far fa-exclamation-triangle text-warning" data-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"></i>
+                                    <i class="far fa-exclamation-triangle text-warning" data-bs-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"></i>
                                     {/if}
                                     <span class="float-end">{$template.author_x}</span>
                                 </div>

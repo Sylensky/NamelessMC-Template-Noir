@@ -29,19 +29,19 @@
                         {$EDITING_USER}
                         <span class="float-end">
                                 {if isset($DELETE_USER)}
-                                    <a class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="{$DELETE_USER}" href="#" onclick="showDeleteModal()"><i class="far fa-trash"></i></a>
+                                    <a class="btn btn-outline-danger btn-sm" data-bs-toggle="tooltip" data-placement="top" title="{$DELETE_USER}" href="#" onclick="showDeleteModal()"><i class="far fa-trash"></i></a>
                                 {/if}
                                 {if isset($RESEND_ACTIVATION_EMAIL)}
-                                    <a class="btn btn-outline-warning btn-sm ml-1" data-toggle="tooltip" data-placement="top" title="{$RESEND_ACTIVATION_EMAIL}" href="{$RESEND_ACTIVATION_EMAIL_LINK}"><i class="far fa-reply"></i></a>
+                                    <a class="btn btn-outline-warning btn-sm ml-1" data-bs-toggle="tooltip" data-placement="top" title="{$RESEND_ACTIVATION_EMAIL}" href="{$RESEND_ACTIVATION_EMAIL_LINK}"><i class="far fa-reply"></i></a>
                                 {/if}
                                 {if isset($UPDATE_MINECRAFT_USERNAME)}
-                                    <a class="btn btn-outline-success btn-sm ml-1" data-toggle="tooltip" data-placement="top" title="{$UPDATE_MINECRAFT_USERNAME}" href="{$UPDATE_MINECRAFT_USERNAME_LINK}"><i class="far fa-check-double"></i></a>
+                                    <a class="btn btn-outline-success btn-sm ml-1" data-bs-toggle="tooltip" data-placement="top" title="{$UPDATE_MINECRAFT_USERNAME}" href="{$UPDATE_MINECRAFT_USERNAME_LINK}"><i class="far fa-check-double"></i></a>
                                 {/if}
                                 {if isset($UPDATE_UUID)}
-                                    <a class="btn btn-outline-success btn-sm ml-1" data-toggle="tooltip" data-placement="top" title="{$UPDATE_UUID}" href="{$UPDATE_UUID_LINK}"><i class="far fa-fingerprint"></i></a>
+                                    <a class="btn btn-outline-success btn-sm ml-1" data-bs-toggle="tooltip" data-placement="top" title="{$UPDATE_UUID}" href="{$UPDATE_UUID_LINK}"><i class="far fa-fingerprint"></i></a>
                                 {/if}
                                 {if isset($VALIDATE_USER)}
-                                    <a class="btn btn-outline-warning btn-sm ml-1" data-toggle="tooltip" data-placement="top" title="{$VALIDATE_USER}" href="#" onclick="validateUser()"><i class="far fa-user-check"></i></a>
+                                    <a class="btn btn-outline-warning btn-sm ml-1" data-bs-toggle="tooltip" data-placement="top" title="{$VALIDATE_USER}" href="#" onclick="validateUser()"><i class="far fa-user-check"></i></a>
                                 {/if}
                             </span>
                         </div>
@@ -135,7 +135,7 @@
                             <div class="card">
                                 <div class="card-header">{$GROUPS}
                                 <span class="float-end">
-                                    <i class="icon far fa-info-circle text-warning" data-toggle="tooltip" data-placement="top" title="{$GROUPS_INFO}"></i>
+                                    <i class="icon far fa-info-circle text-warning" data-bs-toggle="tooltip" data-placement="top" title="{$GROUPS_INFO}"></i>
                                 </span>
                                 </div>
                                 <div class="card-body">

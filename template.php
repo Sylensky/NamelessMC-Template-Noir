@@ -18,16 +18,13 @@ if (!class_exists('Noir_Panel_Template')) {
         public static $AUTHOR = '<a href="https://teemocell.dev" target=_blank">TeemoCell</a>';
         public static $VERSION = '1.0.0';
         public static $NAMELESS_VERSION = '2.0.0-pr12';
-
         public static $PATH;
         public static $PUBLIC_PATH;
 
         // Private variable to store user
         private $_user, $_pages;
-
         /** @var Language */
         private $_language;
-
         public function __construct($cache, $smarty, $language, $user, $pages)
         {
             $noir_language = new Language(ROOT_PATH . '/modules/NoirSettings/language', LANGUAGE);
@@ -211,6 +208,8 @@ if (!class_exists('Noir_Panel_Template')) {
                                 $("#InputValidationPromoteGroup").select2({
                                 });
                         ');
+                    break;
+                    case 'modules':
                     break;
                     case 'announcements':
                     case 'emails':

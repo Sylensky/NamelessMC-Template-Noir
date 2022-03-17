@@ -42,7 +42,7 @@
                                 <div class="card-body">
                                     {$template.name} - {$template.version}
                                     {if $template.version_mismatch}
-                                    <i class="fa fa-exclamation-triangle text-warning" data-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"></i>
+                                    <i class="fa fa-exclamation-triangle text-warning" data-bs-toggle="popover" data-title="{$WARNING}" data-content="{$template.version_mismatch}"></i>
                                     {/if}
                                     <span class="float-end">{$template.author_x}</span>
                                 </div>

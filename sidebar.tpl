@@ -12,10 +12,10 @@
         {else}
             {if isset($item.items)}
                 <li class="nav-item{if ($PAGE eq $name) || ($PARENT_PAGE eq $name)} active{/if}">
-                    <a class="nav-link {if isset($PARENT_PAGE) && $PARENT_PAGE eq $name}{else}collapsed{/if}{if isset($PARENT_PAGE) && $PARENT_PAGE eq $name} active{/if}" href="#" data-toggle="collapse" data-target="#{$item.title|strip:'&nbsp;'}" aria-expanded="true" aria-controls="{$item.title|strip:'&nbsp;'}">
+                    <a class="nav-link {if isset($PARENT_PAGE) && $PARENT_PAGE eq $name}{else}collapsed{/if}{if isset($PARENT_PAGE) && $PARENT_PAGE eq $name} active{/if}" href="#" data-bs-toggle="collapse" data-bs-target="#{$item.title|strip:'&nbsp;'}" aria-expanded="true" aria-controls="{$item.title|strip:'&nbsp;'}">
                         {$item.icon}<span>{$item.title}</span>
                     </a>
-                    <div id="{$item.title|strip:'&nbsp;'}" class="collapse{if isset($PARENT_PAGE) && $PARENT_PAGE eq $name} show{/if}" aria-labelledby="{$item.title|strip:'&nbsp;'}" data-parent="#accordionSidebar">
+                    <div id="{$item.title|strip:'&nbsp;'}" class="collapse{if isset($PARENT_PAGE) && $PARENT_PAGE eq $name} show{/if}" aria-labelledby="{$item.title|strip:'&nbsp;'}" data-bs-parent="#accordionSidebar">
                         <div class="py-2 collapse-inner">
                             {if count($item.items)}
                                 {foreach from=$item.items key=subKey item=subItem}

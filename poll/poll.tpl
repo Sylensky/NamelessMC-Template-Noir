@@ -56,7 +56,7 @@
 										<div class="btn-group">
 											<a href="{$EDIT_URL}{$poll->id}" class="btn mr-sm-2 btn-sm btn-warning"><i
 													class="fas fa-edit fa-fw"></i></a>
-											<button class="btn mr-sm-2 btn-sm btn-danger" type="button" data-toggle="modal"
+											<button class="btn mr-sm-2 btn-sm btn-danger" type="button" data-bs-toggle="modal"
 												data-target="#delete_modal{$poll->id}"><i class="fas fa-trash fa-fw"></i></button>
 										</div>
 									</div>

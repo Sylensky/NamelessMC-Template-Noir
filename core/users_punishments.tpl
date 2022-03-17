@@ -42,11 +42,11 @@
                     <div class="row">
                     {assign var=i value=1}{foreach from=$RESULTS item=result}
                         <div class="col-md-6">
-                            <div class="card mb-1 c-pointer" id="HPunishment{$i}}" data-toggle="collapse" data-target="#CPunishment{$i}" aria-expanded="true" aria-controls="CPunishment{$i}">
+                            <div class="card mb-1 c-pointer" id="HPunishment{$i}}" data-bs-toggle="collapse" data-target="#CPunishment{$i}" aria-expanded="true" aria-controls="CPunishment{$i}">
                                 <div class="card-header ama">
                                     <div class="mb-0">
                                         <span style="{$result.style}"><img src="{$result.avatar}" class="rounded user-img" alt="{$result.nickname}"> {$result.nickname}</span>
-                                        <span> - <span data-toggle="tooltip" data-title="{$result.time_full}">{$result.time}</span></span>
+                                        <span> - <span data-bs-toggle="tooltip" data-title="{$result.time_full}">{$result.time}</span></span>
                                         <span class="float-end">
                                             {if $result.type_numeric == 1}
                                             <span class="badge badge-danger">{$result.type}</span>

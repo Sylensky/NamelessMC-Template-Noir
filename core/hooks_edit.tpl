@@ -30,7 +30,7 @@
                                     <div class="card-header">
                                         <span class="font-size-20">Editing Webhook <span class="text-info">{$HOOK_NAME_VALUE}</span></span>
                                         <span class="float-end">
-                                            <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
+                                            <a href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                         </span>
                                     </div>
                                     <div class="card-body">
@@ -57,7 +57,7 @@
                                     <div class="card-header">
                                         <span class="font-size-20">{$HOOK_EVENTS}</span>
                                         <span class="float-end">
-                                            <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
+                                            <a href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                                         </span>
                                     </div>
                                     <div class="card-body">

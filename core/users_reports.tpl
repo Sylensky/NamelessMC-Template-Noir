@@ -66,7 +66,7 @@
                                                             style="max-height:25px;max-width:25px;"
                                                             alt="{$report.user_reported}"
                                                             class="rounded"> {$report.user_reported}</a><br /><span
-                                                        data-toggle="tooltip"
+                                                        data-bs-toggle="tooltip"
                                                         data-original-title="{$report.reported_at_full}">{$report.reported_at}</span>
                                             </td>
                                             <td><a href="{$report.updated_by_profile}"
@@ -75,7 +75,7 @@
                                                             style="max-height:25px;max-width:25px;"
                                                             alt="{$report.updated_by}"
                                                             class="rounded"> {$report.updated_by}</a><br /><span
-                                                        data-toggle="tooltip"
+                                                        data-bs-toggle="tooltip"
                                                         data-original-title="{$report.updated_at_full}">{$report.updated_at}</span>
                                             </td>
                                             <td><i class="fa fa-comments" aria-hidden="true"></i> {$report.comments}

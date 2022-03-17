@@ -24,10 +24,10 @@
                 <div class="card">
                     <div class="card-header">
                         <span class="font-size-20">
-                        <a onclick="showPurgeModal()" class="c-pointer" data-toggle="tooltip" data-placement="top" title="{$PURGE_LOG}"><i class="fas fa-trash text-danger"></i></a> {$LOG_NAME}
+                        <a onclick="showPurgeModal()" class="c-pointer" data-bs-toggle="tooltip" data-placement="top" title="{$PURGE_LOG}"><i class="fas fa-trash text-danger"></i></a> {$LOG_NAME}
                         </span>
                         <span class="float-end">
-                            <a href="{$BACK_LINK}" data-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
+                            <a href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$BACK}"><i class="fas fa-arrow-left"></i></a>
                         </span>
                     </div>
                     <div class="card-body p-0 m-0">

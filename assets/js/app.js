@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-bs-toggle="tooltip"]').tooltip();
 });
 
 $(document).ready(function () {
@@ -12,27 +12,28 @@ $(document).ready(function () {
     validate: true
   });
 });
+
 $(document).ready(function () {
-  $('[data-toggle="popover"]')
-  .popover({
-    trigger: "manual",
-    html: true,
-  })
-  .on("mouseenter", function () {
-    var _this = this;
-    $(this).popover("show");
-    $(".popover").on("mouseleave", function () {
-      $(_this).popover("hide");
-    });
-  })
-  .on("mouseleave", function () {
-    var _this = this;
-    setTimeout(function () {
-      if (!$(".popover:hover").length) {
+  $('[data-bs-toggle="popover"]')
+    .popover({
+      trigger: "manual",
+      html: true,
+    })
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
         $(_this).popover("hide");
-      }
-    }, 100);
-  });
+      });
+    })
+    .on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 100);
+    });
 });
 
 if ($(".settings-dropdown").length) {
@@ -81,7 +82,7 @@ if ($(".sidebar").length) {
           s(".sidebar").addClass("toggled"),
           s(".sidebar .collapse").collapse("hide"));
     }),
-    s("body.fixed-nav .sidebar").on( "mousewheel DOMMouseScroll wheel",
+    s("body.fixed-nav .sidebar").on("mousewheel DOMMouseScroll wheel",
       function (e) {
         if (768 < s(window).width()) {
           var o = e.originalEvent,

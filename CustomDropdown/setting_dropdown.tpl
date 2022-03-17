@@ -110,7 +110,7 @@
 																	<input type="hidden" name="token" value="{$TOKEN}">
 																	<input type="hidden" class="btn btn-primary" name="deletePage"
 																		value="{$dropdown_page.id}">
-																	<button class="btn btn-danger btn-sm" title="{$REMOVE}" type="button" data-toggle="modal"
+																	<button class="btn btn-danger btn-sm" title="{$REMOVE}" type="button" data-bs-toggle="modal"
 																		data-target="#confirm-submit{$dropdown_page.id}"><i
 																			class="fas fa-trash fa-fw"></i></button>
 																</div>

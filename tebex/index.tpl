@@ -39,7 +39,7 @@
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="inputSecretKey">{$SERVER_KEY}</label>
-                                <span class="badge badge-info" data-html="true" data-toggle="popover" title="{$INFO}" data-content="{$SERVER_KEY_INFO}"><i class="fas fa-question-circle"></i></span>
+                                <span class="badge badge-info" data-html="true" data-bs-toggle="popover" title="{$INFO}" data-content="{$SERVER_KEY_INFO}"><i class="fas fa-question-circle"></i></span>
                                 <input id="inputSecretKey" name="server_key" class="form-control" placeholder="{$SERVER_KEY}" value="{$SERVER_KEY_VALUE}">
                             </div>
 

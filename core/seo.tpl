@@ -39,7 +39,7 @@
                                                     <label for="InputAPIKey">{$API_KEY}</label>
                                                     <input type="text" class="form-control" name="analyticsid" id="inputAnalyticsId" placeholder="Google Analytics ID" value="{$GOOGLE_ANALYTICS_VALUE}" onchange="this.form.submit()">
                                                     <div class="input-group-append">
-                                                        <a href="https://support.google.com/analytics/answer/1008080?hl=en#zippy=%2Cin-this-article" target="_blank" class="btn btn-primary text-white" data-toggle="tooltip" title="Set up the Analytics global site tag"><i class="far fa-info-square"></i></a>
+                                                        <a href="https://support.google.com/analytics/answer/1008080?hl=en#zippy=%2Cin-this-article" target="_blank" class="btn btn-primary text-white" data-bs-toggle="tooltip" title="Set up the Analytics global site tag"><i class="far fa-info-square"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,7 +94,7 @@
                                                     <tr>
                                                         <td><a href="{$EDIT_LINK|replace:'{x}':$item.id}">{$key|escape}</a></td>
                                                         <td class="text-right">
-                                                            <a href="{$EDIT_LINK|replace:'{x}':$item.id}" class="btn btn-outline-success btn-ssm" data-toggle="tooltip" title="Edit"><i class="far fa-pen"></i></a>
+                                                            <a href="{$EDIT_LINK|replace:'{x}':$item.id}" class="btn btn-outline-success btn-ssm" data-bs-toggle="tooltip" title="Edit"><i class="far fa-pen"></i></a>
                                                         </td>
                                                     </tr>
                                                 {/foreach}

@@ -12,16 +12,16 @@
                                 <h4 class="mb-sm-0">{$VIEWING_USER}</h4>
                                 <div class="page-title-right">
                                     {if isset($RESET_AVATAR)}
-                                    <button data-toggle="modal" data-target="#resetAvatarModal" class="btn btn-warning btn-sm" {if ($HAS_AVATAR !=true)} disabled {/if}>{$RESET_AVATAR} </button>
+                                    <button data-bs-toggle="modal" data-target="#resetAvatarModal" class="btn btn-warning btn-sm" {if ($HAS_AVATAR !=true)} disabled {/if}>{$RESET_AVATAR} </button>
                                     {/if}
                                     {if isset($WARN)}
-                                    <a href="#" data-toggle="modal" data-target="#warnModal" class="btn btn-warning btn-sm">{$WARN}</a>
+                                    <a href="#" data-bs-toggle="modal" data-target="#warnModal" class="btn btn-warning btn-sm">{$WARN}</a>
                                     {/if}
                                     {if isset($BAN)}
-                                    <a href="#" data-toggle="modal" data-target="#banModal" class="btn btn-danger btn-sm">{$BAN}</a>
+                                    <a href="#" data-bs-toggle="modal" data-target="#banModal" class="btn btn-danger btn-sm">{$BAN}</a>
                                     {/if}
                                     {if isset($BAN_IP)}
-                                    <a href="#" data-toggle="modal" data-target="#banIPModal" class="btn btn-danger btn-sm">{$BAN_IP}</a>
+                                    <a href="#" data-bs-toggle="modal" data-target="#banIPModal" class="btn btn-danger btn-sm">{$BAN_IP}</a>
                                     {/if}
                                     <a href="{$BACK_LINK}" class="btn btn-primary btn-sm">{$BACK}</a>
                                 </div>
@@ -43,7 +43,7 @@
                                 <div class="card mb-1">
                                     <div class="card-header">
                                         <div class="mb-0">
-                                            <span style="{$punishment.issued_by_style}">{$punishment.issued_by_nickname}</span> - <span data-toggle="tooltip" data-title="{$punishment.date_full}">{$punishment.date_friendly}</span>
+                                            <span style="{$punishment.issued_by_style}">{$punishment.issued_by_nickname}</span> - <span data-bs-toggle="tooltip" data-title="{$punishment.date_full}">{$punishment.date_friendly}</span>
                                             <span class="float-end">
                                                 {if $punishment.type_numeric == 1}
                                                     <span class="badge badge-danger">{$punishment.type}</span>
@@ -56,7 +56,7 @@
                                                     <span class="badge badge-success">{$REVOKED}</span>
                                                 {/if}
                                                 {if $punishment.revoked == 0 && $punishment.revoke_link != 'none'}
-                                                <a href="#" class="ml-2 text-danger" data-toggle="tooltip" data-title="{$REVOKE}" onclick="showRevokeModal('{$punishment.revoke_link}', '{$punishment.confirm_revoke_punishment|replace:"'":"\'"}')"><i class="far fa-trash-alt"></i></a>
+                                                <a href="#" class="ml-2 text-danger" data-bs-toggle="tooltip" data-title="{$REVOKE}" onclick="showRevokeModal('{$punishment.revoke_link}', '{$punishment.confirm_revoke_punishment|replace:"'":"\'"}')"><i class="far fa-trash-alt"></i></a>
                                                 {/if}
                                             </span>
                                         </div>

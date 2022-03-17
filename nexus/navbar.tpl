@@ -16,7 +16,7 @@
             <div class="form-group">
                 <label for="nav_fixed">{$NAVIGATION_MENU_LABEL}
                     <span class="badge badge-info">
-                        <i class="fas fa-question-circle" data-container="body" data-toggle="popover"
+                        <i class="fas fa-question-circle" data-container="body" data-bs-toggle="popover"
                             data-placement="top" title="" data-content="{$NAVIGATION_MENU_INFO_LABEL}"
                             data-original-title="{$INFO}"></i>
                     </span>

@@ -68,7 +68,7 @@
 									</button>
 									<div class="float-end">
 										<div class="btn-group">
-											<button class="btn mr-sm-2 btn-sm btn-danger" type="button" data-toggle="modal"
+											<button class="btn mr-sm-2 btn-sm btn-danger" type="button" data-bs-toggle="modal"
 												data-target="#delete_modal{$poll_op->id}"><i class="fas fa-trash fa-fw"></i></button>
 										</div>
 									</div>

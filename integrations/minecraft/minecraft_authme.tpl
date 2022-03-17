@@ -99,7 +99,7 @@
                                 <div class="form-group">
                                     <label for="inputDBPassword">{$AUTHME_DB_PASSWORD}</label> <span
                                             class="badge badge-info"><i class="fa fa-question-circle"
-                                                                        data-container="body" data-toggle="popover"
+                                                                        data-container="body" data-bs-toggle="popover"
                                                                         data-placement="top" title="{$INFO}"
                                                                         data-content="{$AUTHME_DB_PASSWORD_HIDDEN}"></i></span>
                                     <input type="password" class="form-control" name="db_password">
@@ -112,7 +112,7 @@
                                 <div class="form-group">
                                     <label for="inputAuthmeSync">{$AUTHME_PASSWORD_SYNC}</label> <span
                                             class="badge badge-info"><i class="fa fa-question-circle"
-                                                                        data-container="body" data-toggle="popover"
+                                                                        data-container="body" data-bs-toggle="popover"
                                                                         data-placement="top" title="{$INFO}"
                                                                         data-content="{$AUTHME_PASSWORD_SYNC_HELP}"></i></span>
                                     <input type="hidden" name="authme_sync" value="0">
