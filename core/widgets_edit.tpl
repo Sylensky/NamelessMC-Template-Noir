@@ -1,130 +1,85 @@
 {include file='header.tpl'}
-
 <body id="page-top">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$WIDGETS}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$LAYOUT}</li>
-                        <li class="breadcrumb-item active">{$WIDGETS}</li>
-                    </ol>
-                </div>
-
-                <!-- Update Notification -->
-                {include file='includes/update.tpl'}
-
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h5 style="margin-top: 7px; margin-bottom: 7px;">{$EDITING_WIDGET}</h5>
-                            </div>
-                            <div class="col-md-3">
-                                    <span class="float-end">
-                                        {if isset($SETTINGS)}<a href="{$SETTINGS_LINK}"
-                                                                class="btn btn-success">{$SETTINGS}</a>{/if}
-                                        <a href="{$BACK_LINK}" class="btn btn-primary">{$BACK}</a>
-                                    </span>
+    <div id="wrapper">
+        {include file='sidebar.tpl'}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {include file='navbar.tpl'}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">{$EDITING_WIDGET}</h4>
+                                <div class="page-title-right">
+                                    {if isset($SETTINGS)}
+                                    <a href="{$SETTINGS_LINK}" class="btn btn-outline-success">{$SETTINGS}</a>
+                                    {/if}
+                                    <a href="{$BACK_LINK}" class="btn btn-outline-primary">{$BACK}</a>
+                                </div>
                             </div>
                         </div>
-                        <hr />
-
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
-                        <form action="" method="post">
-
-                            <div class="form-group">
-                                <label for="inputOrder">{$WIDGET_ORDER}</label>
-                                <input id="inputOrder" name="order" type="number" class="form-control" value="{$ORDER}">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="inputLocation">{$WIDGET_LOCATION}</label>
-                                <select name="location" class="form-control" id="inputLocation">
-                                    <option value="right" {if $LOCATION eq 'right' } selected{/if}>{$RIGHT}</option>
-                                    <option value="left" {if $LOCATION eq 'left' } selected{/if}>{$LEFT}</option>
-                                </select>
-                            </div>
-
-                            {foreach from=$POSSIBLE_PAGES key=module item=module_pages}
-                                {if count($module_pages)}
-                                    <div class="table table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                            <tr>
-                                                <th>{$MODULE} {$MODULE_SEPERATOR} {$module|escape}</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            {foreach from=$module_pages key=page item=value}
-                                                <tr>
-                                                    <td>
-                                                        <label for="{$page|escape}"
-                                                               style="font-weight: normal;">{($page|escape)|ucfirst}</label>
-                                                        <div class="float-end">
-                                                            <input class="js-switch" type="checkbox" name="pages[]"
-                                                                   id="{$page|escape}"
-                                                                   value="{$page|escape}" {if in_array($page, $ACTIVE_PAGES)} checked{/if}>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            {/foreach}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                {/if}
-                            {/foreach}
-
-                            <div class="form-group">
-                                <input type="hidden" name="token" value="{$TOKEN}">
-                                <input type="submit" class="btn btn-primary" value="{$SUBMIT}">
-                            </div>
-                        </form>
-
+                        {include file='includes/update.tpl'}
                     </div>
+                    <form class="" action="" method="post">
+                    <div class="row">
+                        <input type="hidden" name="token" value="{$TOKEN}">
+                        <div class="col-sm-12 col-md-6 col-xl-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="font-size-22">General Settings</span>
+                                    <span class="float-end">
+                                        <input type="submit" class="btn btn-primary btn-sm" value="{$L_SAVE}">
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="inputOrder">{$WIDGET_ORDER}</label>
+                                        <input data-toggle="touchspin" id="inputOrder" name="order" type="text" value="{$ORDER}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputLocation">{$WIDGET_LOCATION}</label>
+                                        <select name="location" class="form-control S2NoSearch" id="inputLocation" onchange="this.form.submit()">
+                                            <option value="right" {if $LOCATION eq 'right' } selected{/if}>{$RIGHT}</option>
+                                            <option value="left" {if $LOCATION eq 'left' } selected{/if}>{$LEFT}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-xl-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="font-size-22">Widget Page Settings</span>
+                                </div>
+                                <div class="card-body">
+                                    {foreach from=$POSSIBLE_PAGES key=module item=module_pages}
+                                    {if count($module_pages)}
+                                    <span class="text-primary font-size-20">{$MODULE} {$MODULE_SEPERATOR} {$module|escape}</span>
+                                    {foreach from=$module_pages key=page item=value}
+                                        <div class="ms-2 card-header p-1 mb-1">
+                                            <label class="m-0" for="{$page|escape}"><i class="fas fa-file text-info" data-bs-toggle="tooltip" title="{if in_array($page, $ACTIVE_PAGES)} Hide {else} Show {/if} on <span class='text-warning'>{($page|escape)}</span> page"></i> {($page|escape)|ucfirst}</label>
+                                            <span class="float-end">
+                                                <div class="d-flex">
+                                                    <input class="form-check form-switch m-0" type="checkbox" id="{$page|escape}" name="pages[]" switch="bool" value="{$page|escape}" {if in_array($page, $ACTIVE_PAGES)} checked{/if} onchange="this.form.submit()">
+                                                    <label class="form-label m-0" for="{$page|escape}" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
+                                                    <label class="m-0" for="{$page|escape}"> &nbsp;{$ENABLE_API}</label>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    {/foreach}
+                                    <hr>
+                                    {/if}
+                                    {/foreach}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 </div>
-
-                <!-- Spacing -->
-                <div style="height:1rem;"></div>
-
-                <!-- End Page Content -->
             </div>
-
-            <!-- End Main Content -->
+            {include file='footer.tpl'}
         </div>
-
-        {include file='footer.tpl'}
-
-        <!-- End Content Wrapper -->
     </div>
-
-    <!-- End Wrapper -->
-</div>
-
-{include file='scripts.tpl'}
-
+    {include file='scripts.tpl'}
 </body>
-
 </html>
