@@ -276,6 +276,32 @@ if (!class_exists('Noir_Panel_Template')) {
                             $this->addJSScript(Input::createEditor('inputContent', true));
                         }
                     break;
+                    case 'widgets':
+                        if ($_GET['action'] == 'edit') {
+                            $this->addCSSFiles(array(
+                                self::$PATH . '/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css' => array()
+                            ));
+                            $this->addJSFiles(array(
+                                self::$PATH . '/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js' => array()
+                            ));
+                            $this->addJSScript('
+                                $(\'[data-toggle="touchspin"]\').TouchSpin();
+                            ');
+                        }
+                        $this->addCSSFiles(array(
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PATH . '/plugins/select2/select2.min.js' => array()
+                        ));
+                        $this->addJSScript('
+                            $(\'select\').select2();
+                            $(".S2NoSearch").select2({
+                                minimumResultsForSearch: -1
+                            });
+                        ');
+                    break;
                     case 'custom_profile_fields':
                         $this->addCSSFiles(array(
                             self::$PATH . '/plugins/select2/select2.min.css' => array()
