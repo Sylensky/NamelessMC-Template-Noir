@@ -12,5 +12,10 @@
         {$css}
         {/foreach}
 
-        <link rel="stylesheet" href="/custom/panel_templates/Noir/assets/css/app.css">
+        <link rel="stylesheet" href="{$ASSETSPATH}/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+        <link rel="stylesheet" href="{$ASSETSPATH}/plugins/toastr/toastr.min.css">
+        <link rel="stylesheet" href="{$ASSETSPATH}/css/app.css">
     </head>

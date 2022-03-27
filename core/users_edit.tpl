@@ -14,7 +14,6 @@
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
                                     <li class="breadcrumb-item active">{$USER_MANAGEMENT}</li>
-                                    <li class="breadcrumb-item active">{$USERS}</li>
                                     <li class="breadcrumb-item active">{$EDITING_USER}</li>
                                 </ol>
                             </div>
@@ -22,7 +21,6 @@
                     </div>
                 </div>
                 {include file='includes/update.tpl'}
-                {include file='includes/alerts.tpl'}
                 <form role="form" action="" method="post">
                     <div class="card mb-4">
                         <div class="card-header">
@@ -166,7 +164,7 @@
                         <div class="card-footer">
                             <input type="hidden" name="token" value="{$TOKEN}">
                             <input type="hidden" name="action" value="update">
-                            <input type="submit" value="{$SUBMIT}" class="btn btn-primary btn-sm">
+                            <input type="submit" value="{$L_SAVE}" class="btn btn-primary btn-sm">
                             <span class="float-end">
                                 <a href="{$BACK_LINK}" class="btn btn-warning btn-sm">{$BACK}</a>
                             </span>

@@ -19,10 +19,8 @@ if (!class_exists('Noir_Panel_Template')) {
         public static $VERSION = '1.0.0';
         public static $NAMELESS_VERSION = '2.0.0-pr12';
         public static $PATH;
-        public static $PUBLIC_PATH;
 
         // Private variable to store user
-        private $_user, $_pages;
         /** @var Language */
         private $_language;
         public function __construct($cache, $smarty, $language, $user, $pages)
@@ -36,28 +34,9 @@ if (!class_exists('Noir_Panel_Template')) {
 
             parent::__construct(self::$NAME, self::$VERSION, self::$NAMELESS_VERSION, self::$AUTHOR);
 
-            self::$PATH = ROOT_PATH . '/custom/panel_templates/' . self::$NAME;
-            self::$PUBLIC_PATH = (defined('CONdFIG_PATH') ? CONFIG_PATH : '') . '/custom/panel_templates/' . self::$NAME;
+            self::$PATH = '/custom/panel_templates/' . self::$NAME . '/assets';
 
-
-            $this->addCSSFiles(array(
-				self::$PUBLIC_PATH . '/assets/plugins/bootstrap-duallistbox/bootstrap-duallistbox.css' => array(),
-				self::$PUBLIC_PATH . '/assets/plugins/bootstrap/css/bootstrap.min.css' => array(),
-                'https://pro.fontawesome.com/releases/v5.15.4/css/all.css' => array(),
-                'https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css' => array(),
-                'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' => array(),
-                self::$PUBLIC_PATH . '/assets/plugins/toastr/toastr.min.css' => array()
-            ));
-
-            $this->addJSFiles(array(
-				self::$PUBLIC_PATH . '/assets/plugins/jquery/jquery.min.js' => array(),
-                self::$PUBLIC_PATH . '/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' => array(),
-				self::$PUBLIC_PATH . '/assets/plugins/bootstrap-duallistbox//jquery.bootstrap-duallistbox.js' => array(),
-                self::$PUBLIC_PATH . '/assets/js/app.js' => array(),
-                self::$PUBLIC_PATH . '/assets/js/jquery.cookie.js' => array(),
-                self::$PUBLIC_PATH . '/assets/plugins/toastr/toastr.min.js' => array(),
-                self::$PUBLIC_PATH . '/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js' => array()
-            ));
+            $smarty->assign('ASSETSPATH', self::$PATH);
 
             define('PANEL_TEMPLATE_STAFF_USERS_AJAX', true);
 
@@ -99,9 +78,6 @@ if (!class_exists('Noir_Panel_Template')) {
 
         public function onPageLoad()
         {
-            $NoirSettings = self::getConfig();
-            $this->_smarty->assign('NS', $NoirSettings);
-
             if (defined('PANEL_PAGE')) {
                 switch (PANEL_PAGE) {
                     case 'dashboard':
@@ -114,11 +90,11 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'general_settings':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array(),
                         ));
                         $this->addJSScript('
                             $(\'select\').select2();
@@ -129,15 +105,15 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'avatars':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.css' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.css' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/dropzone/dropzone.min.css' => array(),
+                            self::$PATH . '/plugins/image-picker/image-picker.css' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array()
+                            self::$PATH . '/plugins/dropzone/dropzone.min.js' => array(),
+                            self::$PATH . '/plugins/image-picker/image-picker.min.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array()
                         ));
 
                         $this->addJSScript('
@@ -155,7 +131,7 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'debugging_and_maintenance':
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
+                            self::$PATH . '/plugins/ckeditor5/build/ckeditor.js' => array(),
                         ));
                         $this->addJSScript('
                             ClassicEditor
@@ -180,7 +156,7 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'privacy_and_terms':
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
+                            self::$PATH . '/plugins/ckeditor/ckeditor.js' => array()
                         ));
 
                         $this->addJSScript(Input::createEditor('InputPrivacy'));
@@ -188,12 +164,12 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'registration':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array()
+                            self::$PATH . '/plugins/ckeditor5/build/ckeditor.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array()
                         ));
                         $this->addJSScript('
                             ClassicEditor
@@ -214,12 +190,12 @@ if (!class_exists('Noir_Panel_Template')) {
                     case 'announcements':
                     case 'emails':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/ckeditor5/build/ckeditor.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array(),
+                            self::$PATH . '/plugins/ckeditor5/build/ckeditor.js' => array(),
                         ));
                         $this->addJSScript('
                             $(document).ready(function() {
@@ -234,7 +210,7 @@ if (!class_exists('Noir_Panel_Template')) {
 
                         $this->addJSFiles(array(
                             'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
+                            self::$PATH . '/js/jquery-ui.min.js' => array()
                         ));
                         $this->addJSScript('
                             $(document).ready(function () {
@@ -251,28 +227,28 @@ if (!class_exists('Noir_Panel_Template')) {
                     case 'template':
                         if (isset($_GET['file'])) {
                             $this->addCSSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/lib/codemirror.css' => array()
+                                self::$PATH . '/plugins/codemirror/lib/codemirror.css' => array()
                             ));
 
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/lib/codemirror.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/mode/smarty/smarty.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/mode/css/css.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/mode/javascript/javascript.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/plugins/codemirror/mode/properties/properties.js' => array()
+                                self::$PATH . '/plugins/codemirror/lib/codemirror.js' => array(),
+                                self::$PATH . '/plugins/codemirror/mode/smarty/smarty.js' => array(),
+                                self::$PATH . '/plugins/codemirror/mode/css/css.js' => array(),
+                                self::$PATH . '/plugins/codemirror/mode/javascript/javascript.js' => array(),
+                                self::$PATH . '/plugins/codemirror/mode/properties/properties.js' => array()
                             ));
                         }
                         switch ($_GET['action']) {
                             case 'settings':
                                 $this->addCSSFiles(array(
-                                    self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array(),
+                                    self::$PATH . '/plugins/select2/select2.min.css' => array(),
                                     'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css' => array()
                                 ));
 
                                 $this->addJSFiles(array(
-                                    self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                                    self::$PATH . '/plugins/select2/select2.min.js' => array(),
                                     'https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js' => array(),
-                                    self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
+                                    self::$PATH . '/js/jquery-ui.min.js' => array()
                                 ));
                                 $this->addJSScript('
                                     $("select").select2({
@@ -294,7 +270,7 @@ if (!class_exists('Noir_Panel_Template')) {
                     case 'custom_pages':
                         if (isset($_GET['action'])) {
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
+                                self::$PATH . '/plugins/ckeditor/ckeditor.js' => array()
                             ));
 
                             $this->addJSScript(Input::createEditor('inputContent', true));
@@ -302,11 +278,11 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'custom_profile_fields':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array(),
                         ));
                         $this->addJSScript('
                             $("select").select2({
@@ -316,12 +292,12 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'seo':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/css/dataTables.bootstrap4.min.css' => array()
+                            self::$PATH . '/css/dataTables.bootstrap4.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/dataTables/jquery.dataTables.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/js/dataTables.bootstrap4.min.js' => array()
+                            self::$PATH . '/plugins/dataTables/jquery.dataTables.min.js' => array(),
+                            self::$PATH . '/js/dataTables.bootstrap4.min.js' => array()
                         ));
 
                         $this->addJSScript('
@@ -347,57 +323,61 @@ if (!class_exists('Noir_Panel_Template')) {
                         ');
                     break;
                     case 'users':
+                        $this->addCSSFiles(array(
+                            self::$PATH . '/plugins/bootstrap-duallistbox/bootstrap-duallistbox.css' => array()
+                        ));
+
+                        $this->addJSFiles(array(
+                            self::$PATH . '/plugins/bootstrap-duallistbox//jquery.bootstrap-duallistbox.js' => array()
+                        ));
                         if (!defined('EDITING_USER')) {
                             $this->addCSSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/css/dataTables.bootstrap4.min.css' => array(),
-                                self::$PUBLIC_PATH . '/assets/css/bootstrap-duallistbox.css' => array()
+                                self::$PATH . '/css/dataTables.bootstrap4.min.css' => array(),
                             ));
 
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/dataTables/jquery.dataTables.min.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/plugins/dataTables/jquery.bootstrap-duallistbox.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/js/dataTables.bootstrap4.min.js' => array()
+                                self::$PATH . '/js/dataTables.bootstrap4.min.js' => array(),
+                                self::$PATH . '/plugins/dataTables/jquery.dataTables.min.js' => array()
                             ));
 
                             $this->addJSScript('
-							$(document).ready(function() {
-								var usersTable = $(\'.dataTables-users\').DataTable({
-									columnDefs: [
-										{ targets: [0], sClass: "hide" },
-										{ "width": "50%", target: 1 },
-										{ "width": "25%", target: 2 },
-										{ "width": "25%", target: 3 }
-									],
-									responsive: true,
-									processing: true,
-									serverSide: true,
-									ajax: "' . URL::build('/queries/admin_users') . '",
-									columns: [
-										{ data: "id" },
-										{ data: "username" },
-										{ data: "groupName" },
-										{ data: "joined" }
-									],
-									language: {
-										"lengthMenu": "' . $this->_language->get('table', 'display_records_per_page') . '",
-										"zeroRecords": "' . $this->_language->get('table', 'nothing_found') . '",
-										"info": "' . $this->_language->get('table', 'page_x_of_y') . '",
-										"infoEmpty": "' . $this->_language->get('table', 'no_records') . '",
-										"infoFiltered": "' . $this->_language->get('table', 'filtered') . '",
-										"search": "' . $this->_language->get('general', 'search') . '",
-										"paginate": {
-										    "next": "' . $this->_language->get('general', 'next') . '",
-										    "previous": "' . $this->_language->get('general', 'previous') . '"
-										}
-									}
-								});
+                                $(document).ready(function() {
+                                    var usersTable = $(\'.dataTables-users\').DataTable({
+                                        columnDefs: [
+                                            { targets: [0], sClass: "hide" },
+                                            { "width": "50%", target: 1 },
+                                            { "width": "25%", target: 2 },
+                                            { "width": "25%", target: 3 }
+                                        ],
+                                        responsive: true,
+                                        processing: true,
+                                        serverSide: true,
+                                        ajax: "' . URL::build('/queries/admin_users') . '",
+                                        columns: [
+                                            { data: "id" },
+                                            { data: "username" },
+                                            { data: "groupName" },
+                                            { data: "joined" }
+                                        ],
+                                        language: {
+                                            "lengthMenu": "' . $this->_language->get('table', 'display_records_per_page') . '",
+                                            "zeroRecords": "' . $this->_language->get('table', 'nothing_found') . '",
+                                            "info": "' . $this->_language->get('table', 'page_x_of_y') . '",
+                                            "infoEmpty": "' . $this->_language->get('table', 'no_records') . '",
+                                            "infoFiltered": "' . $this->_language->get('table', 'filtered') . '",
+                                            "search": "' . $this->_language->get('general', 'search') . '",
+                                            "paginate": {
+                                                "next": "' . $this->_language->get('general', 'next') . '",
+                                                "previous": "' . $this->_language->get('general', 'previous') . '"
+                                            }
+                                        }
+                                    });
 
-								$(\'.dataTables-users tbody\').on(\'click\', \'tr\', function(){
-									window.location.href = "' . URL::build('/panel/user/') . '" + usersTable.row(this).data().id;
-								});
-							});
+                                    $(\'.dataTables-users tbody\').on(\'click\', \'tr\', function(){
+                                        window.location.href = "' . URL::build('/panel/user/') . '" + usersTable.row(this).data().id;
+                                    });
+                                });
 							');
-
                         }
                     break;
                     case 'minecraft':
@@ -439,7 +419,7 @@ if (!class_exists('Noir_Panel_Template')) {
 
                         } else if (MINECRAFT_PAGE == 'servers') {
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
+                                self::$PATH . '/js/jquery-ui.min.js' => array()
                             ));
                         } else if (MINECRAFT_PAGE == 'query_errors') {
                             $this->addCSSStyle('
@@ -460,7 +440,7 @@ if (!class_exists('Noir_Panel_Template')) {
                         } else if (MINECRAFT_PAGE == 'server_banners') {
                             if (isset($_GET['edit'])) {
                                 $this->addCSSFiles(array(
-                                    self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.css' => array()
+                                    self::$PATH . '/plugins/image-picker/image-picker.css' => array()
                                 ));
 
                                 $this->addCSSStyle('
@@ -470,7 +450,7 @@ if (!class_exists('Noir_Panel_Template')) {
 								');
 
                                 $this->addJSFiles(array(
-                                    self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.min.js' => array()
+                                    self::$PATH . '/plugins/image-picker/image-picker.min.js' => array()
                                 ));
 
                                 $this->addJSScript('$(".image-picker").imagepicker();');
@@ -479,11 +459,11 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'hooks':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.css' => array()
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/select2/select2.min.js' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.js' => array(),
                         ));
                         $this->addJSScript('
                                 $(document).ready(function() {
@@ -495,12 +475,12 @@ if (!class_exists('Noir_Panel_Template')) {
                     case 'security':
                         if (isset($_GET['view'])) {
                             $this->addCSSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/css/dataTables.bootstrap4.min.css' => array()
+                                self::$PATH . '/css/dataTables.bootstrap4.min.css' => array()
                             ));
 
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/dataTables/jquery.dataTables.min.js' => array(),
-                                self::$PUBLIC_PATH . '/assets/js/dataTables.bootstrap4.min.js' => array()
+                                self::$PATH . '/plugins/dataTables/jquery.dataTables.min.js' => array(),
+                                self::$PATH . '/js/dataTables.bootstrap4.min.js' => array()
                             ));
 
                             $this->addJSScript('
@@ -527,13 +507,13 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'images':
                         $this->addCSSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.css' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.css' => array()
+                            self::$PATH . '/plugins/dropzone/dropzone.min.css' => array(),
+                            self::$PATH . '/plugins/image-picker/image-picker.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/plugins/dropzone/dropzone.min.js' => array(),
-                            self::$PUBLIC_PATH . '/assets/plugins/image-picker/image-picker.min.js' => array(),
+                            self::$PATH . '/plugins/dropzone/dropzone.min.js' => array(),
+                            self::$PATH . '/plugins/image-picker/image-picker.min.js' => array(),
                         ));
 
                         $this->addJSScript('
@@ -578,31 +558,20 @@ if (!class_exists('Noir_Panel_Template')) {
                         if (isset($_GET['forum'])) {
 
                             $this->addJSFiles(array(
-                                self::$PUBLIC_PATH . '/assets/plugins/ckeditor/ckeditor.js' => array()
+                                self::$PATH . '/plugins/ckeditor/ckeditor.js' => array()
                             ));
 
                             $this->addJSScript(Input::createEditor('InputPlaceholder', true));
                         }
 
                         $this->addJSFiles(array(
-                            self::$PUBLIC_PATH . '/assets/js/jquery-ui.min.js' => array()
+                            self::$PATH . '/js/jquery-ui.min.js' => array()
                         ));
 
                     break;
                     case 'forum_settings':
                 }
             }
-        }
-
-        public static function getConfig()
-        {
-            $configFile = __DIR__ . '/settings/config.json';
-
-            $configData = file_get_contents($configFile);
-            if (!$configData) {
-                $configData = '{}';
-            }
-            return json_decode($configData, 1);
         }
     }
 }
