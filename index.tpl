@@ -41,12 +41,9 @@
                         {/if}<br>
                         {if count($MAIN_ITEMS)} {assign var="i" value=0} {assign var="counter" value=0}
                             <div class="row justify-content-md-center">
-                                {foreach from=$MAIN_ITEMS item=item} {assign var="width" value=(12*$item->getWidth())|round:1} {assign var="counter" value=($counter+$width)} {if $counter > 12} {assign var="counter" value=0}
-                            </div><br />
-                            <div class="row justify-content-md-center">
-                                {/if}
-                                <div class="col-md-{$width}">{$item->getContent()}</div>
-                                {assign var="i" value=$i+1} {/foreach}
+                                {foreach from=$MAIN_ITEMS item=item}
+                                <div class="col-sm-12 col-md-12 col-xl-4">{$item->getContent()}</div>
+                                {/foreach}
                             </div>
                         {/if}
                         </div>
