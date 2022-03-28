@@ -22,7 +22,7 @@
                     {include file='includes/update.tpl'}
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-12 col-md-12 col-xl-6">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
@@ -75,32 +75,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-sm-12 col-md-12 col-xl-6">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">{$PAGE_METADATA}</div>
                                     <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="SEO" class="table table-bordered table-striped dataTables-pages">
-                                                <thead>
+                                        <table id="SEO" class="table table-bordered table-striped dataTables-pages">
+                                            <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {foreach from=$PAGE_LIST key=key item=item}
                                                 <tr>
-                                                    <th></th>
-                                                    <th></th>
+                                                    <td><a href="{$EDIT_LINK|replace:'{x}':$item.id}">{$key|escape}</a></td>
+                                                    <td class="text-right">
+                                                        <a href="{$EDIT_LINK|replace:'{x}':$item.id}" class="btn btn-outline-success btn-ssm" data-bs-toggle="tooltip" title="Edit"><i class="far fa-pen"></i></a>
+                                                    </td>
                                                 </tr>
-                                                </thead>
-                                                <tbody>
-                                                {foreach from=$PAGE_LIST key=key item=item}
-                                                    <tr>
-                                                        <td><a href="{$EDIT_LINK|replace:'{x}':$item.id}">{$key|escape}</a></td>
-                                                        <td class="text-right">
-                                                            <a href="{$EDIT_LINK|replace:'{x}':$item.id}" class="btn btn-outline-success btn-ssm" data-bs-toggle="tooltip" title="Edit"><i class="far fa-pen"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                {/foreach}
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            {/foreach}
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

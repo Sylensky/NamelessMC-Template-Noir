@@ -22,7 +22,7 @@
                         {include file='includes/update.tpl'}
                     </div>
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-sm-12 col-md-12 col-xl-8">
                             <div class="card">
                                 <div class="card-body">
                                     <form id="enableRegistration" action="" method="post">
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card mb-3">
                                 <div class="card-header">
                                     Registration

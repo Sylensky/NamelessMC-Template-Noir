@@ -24,12 +24,13 @@
                 <form action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-12 col-xl-6">
                             <div class="card">
-                                <div class="card-header">{$L_API_CREDENTIALS}
+                                <div class="card-header">
+                                <span class="font-size-20">{$L_API_CREDENTIALS}</span>
                                     <span class="float-end">
-                                        <a class="btn btn-primary btn-ssm" href="{$API_ENDPOINTS_LINK}">{$API_ENDPOINTS}</a>
-                                        <a class="btn btn-primary btn-ssm" href="{$GROUP_SYNC_LINK}">{$GROUP_SYNC}</a>
+                                        <a class="btn btn-outline-primary btn-sm" href="{$API_ENDPOINTS_LINK}">{$API_ENDPOINTS}</a>
+                                        <a class="btn btn-outline-primary btn-sm" href="{$GROUP_SYNC_LINK}">{$GROUP_SYNC}</a>
                                     </span>
                                 </div>
                                 <div class="card-body">
@@ -62,15 +63,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-12 col-xl-6">
                             <div class="card">
-                                <div class="card-header">{$L_API_SETTINGS}</div>
+                                <div class="card-header">
+                                    <span class="font-size-20">{$L_API_SETTINGS}</span>
+                                    <span class="float-end">
+                                        <div class="d-flex">
+                                            <input class="form-check form-switch" type="checkbox" id="enable_api" name="enable_api" switch="success" value="1" {if $API_ENABLED eq 1}checked{/if} onchange="this.form.submit()">
+                                            <label class="form-label" for="enable_api" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
+                                            <label for="enable_api"> &nbsp;{$ENABLE_API}</label>
+                                        </div>
+                                    </span>
+                                </div>
                                 <div class="card-body">
-                                    <div class="d-flex">
-                                        <input class="form-check form-switch" type="checkbox" id="enable_api" name="enable_api" switch="success" value="1" {if $API_ENABLED eq 1}checked{/if} onchange="this.form.submit()">
-                                        <label class="form-label" for="enable_api" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
-                                        <label for="enable_api"> &nbsp;{$ENABLE_API}</label>
-                                    </div>
                                     {if $API_ENABLED}
                                     <div class="d-flex">
                                         <input class="form-check form-switch" type="checkbox" name="verification" id="verification" switch="success" {if $EMAIL_VERIFICATION_VALUE eq 1}checked{/if} onchange="this.form.submit()">
@@ -87,6 +92,8 @@
                                         <label class="form-label" for="username_sync" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
                                         <label for="username_sync"> &nbsp;{$USERNAME_SYNC} <i class="far fa-question-circle text-warning" data-bs-toggle="popover" data-title="{$INFO}" data-placement="bottom" data-content="{$USERNAME_SYNC_INFO}"></i></label>
                                     </div>
+                                    {else}
+                                    <div class="text-warning text-center">{$ENABLE_API_FOR_URL}</div>
                                     {/if}
                                 </div>
                             </div>

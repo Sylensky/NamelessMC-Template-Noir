@@ -22,7 +22,7 @@
                         {include file='includes/update.tpl'}
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-12 col-xl-6">
                             <div class="card">
                                 <div class="card-header">{$L_AVATAR_SETTINGS}</div>
                                 <div class="card-body">
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-12 col-xl-6">
                             <div class="card">
                                 <div class="card-header">{$DEFAULT_AVATAR}</div>
                                 <div class="card-body">

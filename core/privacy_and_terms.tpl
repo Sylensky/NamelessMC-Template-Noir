@@ -7,7 +7,7 @@
                 {include file='navbar.tpl'}
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 col-xl-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                 <h4 class="mb-sm-0">{$PRIVACY_AND_TERMS}</h4>
                                 <div class="page-title-right">
@@ -23,7 +23,7 @@
                     </div>
                     <form class="row" action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 col-xl-12">
                             <div class="card">
                                 <div class="card-header">
                                     <span class="font-size-22">{$PRIVACY_POLICY}</span>
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 col-xl-12">
                             <div class="card">
                                 <div class="card-header">
                                     <span class="font-size-22">{$TERMS_AND_CONDITIONS}</span>

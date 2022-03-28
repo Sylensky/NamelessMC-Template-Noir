@@ -7,7 +7,7 @@
             {include file='navbar.tpl'}
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-sm-12 col-md-12 col-xl-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                             <h4 class="mb-sm-0">{$EDITING_PROFILE_FIELD}</h4>
                         </div>
@@ -17,7 +17,7 @@
                 <div class="row">
                     <form class="d-contents" action="" method="post">
                     <input type="hidden" name="token" value="{$TOKEN}">
-                        <div class="col-md-8">
+                        <div class="col-sm-12 col-md-12 col-xl-8">
                             <div class="card">
                                 <div class="card-header">
                                     {$L_FIELD_INFORMATION}
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header">
                                     {$L_FIELD_SETTINGS}

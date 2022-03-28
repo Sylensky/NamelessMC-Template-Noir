@@ -23,7 +23,7 @@
                     <form action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-sm-12 col-md-12 col-xl-6">
                                 <div class="card">
                                     <div class="card-header">
                                         {if isset($MASS_MESSAGE_LINK)}
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-12 col-md-12 col-xl-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex">

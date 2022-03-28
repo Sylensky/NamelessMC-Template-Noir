@@ -7,7 +7,7 @@
                 {include file='navbar.tpl'}
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 col-xl-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                 <h4 class="mb-sm-0">{$NAVIGATION}</h4>
                                 <div class="page-title-right">
@@ -22,7 +22,7 @@
                         {include file='includes/update.tpl'}
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-12 col-md-12 col-xl-12">
                             <div class="card shadow border-left-primary">
                                 <div class="card-body">
                                     <h5><i class="icon fa fa-info-circle"></i> {$INFO}</h5>
@@ -35,7 +35,7 @@
                     <form class="" action="" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-sm-12 col-md-12 col-xl-12">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="form-group">
@@ -49,7 +49,7 @@
                         <hr>
                         <div class="row">
                             {foreach from=$NAV_ITEMS key=key item=item}
-                            <div class="col-12">
+                            <div class="col-sm-12 col-md-12 col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
                                         {$item.title|escape}

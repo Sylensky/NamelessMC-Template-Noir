@@ -24,7 +24,7 @@
                     <form action="{$BACK_LINK}" method="post">
                         <input type="hidden" name="token" value="{$TOKEN}">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12 col-md-12 col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
                                         <span class="font-size-22">{$SELECT_LANGUAGE}</span>
@@ -44,7 +44,7 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-sm-12 col-md-12 col-xl-8">
                                 <div class="row">
                                     {foreach from=$EMAILS_LIST item=item}
                                     <div class="col-md-12">
@@ -77,7 +77,7 @@
                                     {/foreach}
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-12 col-md-12 col-xl-4">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="card">

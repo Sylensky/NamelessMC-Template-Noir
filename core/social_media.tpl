@@ -24,7 +24,7 @@
                 <form action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-youtube"></i> YouTube
                                 <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-facebook"></i> Facebook
                                 <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header"><i class="fab fa-twitter"></i> Twitter
                                 <span class="float-end">{if $smarty.const.Easy_Update eq 0 } <input type="submit" class="btn btn-primary btn-ssm" value="{$SUBMIT}">{/if}</span>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header">
                                     <i class="fab fa-discord"></i> Discord

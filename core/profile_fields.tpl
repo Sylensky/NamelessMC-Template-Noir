@@ -32,7 +32,7 @@
                    </div>
                     {if count($FIELDS)}
                     {foreach from=$FIELDS item=field}
-                    <div class="col-md-3 HI">
+                    <div class="col-sm-12 col-md-12 col-xl-4 HI">
                         <div class="card">
                             <div class="card-header">
                                 <span class="text-info SFields">{$field.name}</span>

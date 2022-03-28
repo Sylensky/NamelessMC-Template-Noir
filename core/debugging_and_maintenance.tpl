@@ -24,7 +24,7 @@
                 <form action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-sm-12 col-md-12 col-xl-8">
                         <div class="card">
                             <div class="card-header">
                                 {$MAINTENANCE_MODE_MESSAGE}
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-sm-12 col-md-12 col-xl-4">
                         <div class="card">
                             {if isset($ERROR_LOGS)}
                             <div class="card-header">

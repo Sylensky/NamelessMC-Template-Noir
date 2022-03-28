@@ -18,7 +18,7 @@
                 <form class="d-contents" action="" method="post">
                 <input type="hidden" name="token" value="{$TOKEN}">
                 <input type="hidden" name="action" value="update">
-                        <div class="col-md-8">
+                        <div class="col-sm-12 col-md-12 col-xl-8">
                             <div class="card">
                                 <div class="card-header">
                                     {$L_FIELD_INFORMATION}
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-12 col-md-12 col-xl-4">
                             <div class="card">
                                 <div class="card-header">
                                     {$L_FIELD_SETTINGS}
