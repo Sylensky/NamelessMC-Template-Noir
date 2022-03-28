@@ -55,6 +55,8 @@ if (!class_exists('Noir_Panel_Template')) {
             // API
             $smarty->assign('L_API_SETTINGS', $noir_language->get('language', 'API_Settings'));
             $smarty->assign('L_API_CREDENTIALS', $noir_language->get('language', 'API_Credentials'));
+            $smarty->assign('L_API_ENABLE_API', $noir_language->get('language', 'API_Enable_API'));
+            $smarty->assign('L_API_DISABLE_API', $noir_language->get('language', 'API_Disable_API'));
 
             //Avatar
             $smarty->assign('L_AVATAR_SETTINGS', $noir_language->get('language', 'Avatar_Settings'));
