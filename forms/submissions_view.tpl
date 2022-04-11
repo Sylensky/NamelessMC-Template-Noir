@@ -187,11 +187,11 @@
 <script type="text/javascript">
     function showDeleteSubmissionModal(id){
         $('#deleteSubmissionLink').attr('href', id);
-        $('#deleteSubmissionModal').modal().show();
+        $('#deleteSubmissionModal').modal('show');
     }
     function showDeleteCommentModal(id){
         $('#deleteCommentLink').attr('href', id);
-        $('#deleteCommentModal').modal().show();
+        $('#deleteCommentModal').modal('show');
     }
 </script>
 

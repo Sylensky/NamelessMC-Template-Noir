@@ -124,7 +124,7 @@
     <script type="text/javascript">
         function showDeleteModal(id) {
             $('#deleteId').attr('value', id);
-            $('#deleteModal').modal().show();
+            $('#deleteModal').modal('show');
         }
 
         function deleteAnnouncement() {

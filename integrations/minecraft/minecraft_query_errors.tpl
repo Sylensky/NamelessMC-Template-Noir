@@ -141,11 +141,11 @@
 <script type="text/javascript">
   function showDeleteModal(link) {
     $('#deleteLink').attr('href', link);
-    $('#deleteModal').modal().show();
+    $('#deleteModal').modal('show');
   }
 
   function showPurgeModal() {
-    $('#purgeModal').modal().show();
+    $('#purgeModal').modal('show');
   }
 </script>
 

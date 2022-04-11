@@ -125,7 +125,7 @@
 
 <script type="text/javascript">
   function showCancelModal() {
-    $('#cancelModal').modal().show();
+    $('#cancelModal').modal('show');
   }
 </script>
 

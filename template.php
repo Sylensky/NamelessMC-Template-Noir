@@ -76,6 +76,7 @@ if (!class_exists('Noir_Panel_Template')) {
             $smarty->assign('L_SAVE', $noir_language->get('language', 'Save'));
             $smarty->assign('L_BACK', $noir_language->get('language', 'Back'));
             $smarty->assign('L_CREATE', $noir_language->get('language', 'Create'));
+            $smarty->assign('L_DELETE', $noir_language->get('language', 'Delete'));
         }
 
         public function onPageLoad()
@@ -217,11 +218,12 @@ if (!class_exists('Noir_Panel_Template')) {
                         $this->addJSScript('
                             $(document).ready(function () {
                                 $(\'.color-picker\').spectrum({
-                                    type: "component",
+                                    type: "text",
                                     togglePaletteOnly: true,
                                     hideAfterPaletteSelect: true,
                                     showInput: true,
-                                    showInitial: true
+                                    showInitial: true,
+                                    showPalette: false,
                                 });
                             });
                         ');
@@ -260,6 +262,8 @@ if (!class_exists('Noir_Panel_Template')) {
                                     $(document).ready(function () {
                                         $(\'.color-picker\').spectrum({
                                             type: "text",
+                                            togglePaletteOnly: true,
+                                            hideAfterPaletteSelect: true,
                                             showPalette: false,
                                             showInput: true,
                                             showInitial: true
@@ -352,12 +356,22 @@ if (!class_exists('Noir_Panel_Template')) {
                     break;
                     case 'users':
                         $this->addCSSFiles(array(
-                            self::$PATH . '/plugins/bootstrap-duallistbox/bootstrap-duallistbox.css' => array()
+                            self::$PATH . '/plugins/bootstrap-duallistbox/bootstrap-duallistbox.css' => array(),
+                            self::$PATH . '/plugins/select2/select2.min.css' => array()
                         ));
 
                         $this->addJSFiles(array(
-                            self::$PATH . '/plugins/bootstrap-duallistbox//jquery.bootstrap-duallistbox.js' => array()
+                            self::$PATH . '/plugins/bootstrap-duallistbox//jquery.bootstrap-duallistbox.js' => array(),
+                            self::$PATH . '/plugins/ckeditor5/build/ckeditor.js' => array()
                         ));
+                        $this->addJSScript('
+                            ClassicEditor
+                                .create(document.querySelector(\'#XInputSignature\'), {
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                });
+                        ');
                         if (!defined('EDITING_USER')) {
                             $this->addCSSFiles(array(
                                 self::$PATH . '/css/dataTables.bootstrap4.min.css' => array(),

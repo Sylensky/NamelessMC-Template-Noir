@@ -89,12 +89,6 @@ body {
     outline: 0 !important;
 }
 
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-
 h1,
 h2,
 h3,
@@ -478,12 +472,10 @@ h6 {
 
 hr {
     border: 0;
-    border-top: 2px solid rgb(45, 52, 72);
-}
-
-hr.hx {
-    border: 0;
-    border-top: 2px solid rgb(45, 52, 72);
+    background-color: rgb(45, 52, 72);
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
 }
 
 .small,
@@ -2069,6 +2061,7 @@ pre code {
     transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    border-radius: 0rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2109,12 +2102,6 @@ pre code {
 
 .form-control::placeholder {
     color: #858796;
-    opacity: 1;
-}
-
-.form-control:disabled,
-.form-control[readonly] {
-    background-color: #eaecf4;
     opacity: 1;
 }
 
@@ -3617,26 +3604,6 @@ input[type="submit"].btn-block {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: .47rem .75rem;
-    font-size: .875rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #8590a5;
-    background-color: #252b3b;
-    background-clip: padding-box;
-    border: 1px solid #2d3448;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -6264,7 +6231,7 @@ a.badge-dark:focus {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    border-radius: 0.35rem;
+    border-radius: 0rem;
 }
 
 .list-group-item-action {
@@ -6291,6 +6258,9 @@ a.badge-dark:focus {
     display: block;
     padding: 0.75rem 1.25rem;
     border: 1px solid rgb(45 52 72);
+    color: #8590a5;
+    text-decoration: none;
+    background-color: #1d222e;
 }
 
 .list-group-item:first-child {
@@ -6803,6 +6773,8 @@ a.close.disabled {
 .modal-footer {
     padding: 0.35rem;
     background-color: rgb(45 52 72);
+    border-top: 0px;
+    justify-content: normal;
 }
 
 .modal-footer>* {

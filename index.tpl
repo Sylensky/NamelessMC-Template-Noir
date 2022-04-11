@@ -196,7 +196,7 @@
         function confirmLeaveSite(url) {
             $('#leaveSiteURL').html(url);
             $('#leaveSiteA').attr('href', url);
-            $('#confirmLeaveSiteModal').modal().show();
+            $('#confirmLeaveSiteModal').modal('show');
         }
     </script>
 </body>

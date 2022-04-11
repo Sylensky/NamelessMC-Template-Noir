@@ -137,7 +137,7 @@
 {include file='scripts.tpl'}
 <script type="text/javascript">
   function showRegenModal() {
-    $('#regenModal').modal().show();
+    $('#regenModal').modal('show');
   }
 
   function regenKey() {

@@ -175,7 +175,7 @@
 <script type="text/javascript">
     {if isset($DELETE_COUPON)}
     function showDeleteModal(){
-      $('#deleteModal').modal().show();
+      $('#deleteModal').modal('show');
     }
     {/if}
 </script>

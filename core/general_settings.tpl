@@ -185,7 +185,7 @@
 {include file='scripts.tpl'}
 <script type="text/javascript">
   function showLanguageModal() {
-    $('#languageModal').modal().show();
+    $('#languageModal').modal('show');
   }
 </script>
 </body>

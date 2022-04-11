@@ -9,12 +9,12 @@
                 <div class="row mb-4">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0">{$NICKNAME}</h4>
+                            <h4 class="mb-sm-0">Viewing user: <span style="{$USER_STYLE}">{$NICKNAME}</span></h4>
                             <div class="page-title-right">
+                                <a class="btn btn-outline-info btn-sm" href="/panel/users/" data-bs-toggle="tooltip" data-placement="top" title="{$L_BACK}"><i class="fad fa-arrow-left"></i> {$L_BACK}</a>
                                 {foreach from=$LINKS item=item}
                                 <a class="btn btn-outline-primary btn-sm" href="{($item.link|replace:'{id}':$USER_ID)|replace:'{username}':$USERNAME}">{$item.title}</a>
                                 {/foreach}
-                                <a class="btn btn-outline-warning btn-sm" href="/panel/users/">Back</a>
                             </div>
                         </div>
                     </div>
@@ -27,17 +27,16 @@
                                 <div class="text-center">
                                     <img class="profile-user-img rounded-circle" src="{$AVATAR}" alt="{$USERNAME}">
                                 </div>
-
                                 <h4 class="text-center" style="{$USER_STYLE}">{$NICKNAME}</h4>
-
                                 <p class="text-muted text-center">{foreach from=$USER_GROUPS item=item}{$item} {/foreach}</p>
-
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
-                                        <b>{$REGISTERED}</b><br />{$REGISTERED_VALUE}
+                                        <span><b>{$REGISTERED}</b></span>
+                                        <span class="float-end">{$REGISTERED_VALUE}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>{$LAST_SEEN}</b><br /><span data-bs-toggle="tooltip" data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
+                                        <b>{$LAST_SEEN}</b>
+                                        <span class="float-end" data-bs-toggle="tooltip" data-title="{$LAST_SEEN_FULL_VALUE}">{$LAST_SEEN_SHORT_VALUE}</span>
                                     </li>
                                 </ul>
                             </div>

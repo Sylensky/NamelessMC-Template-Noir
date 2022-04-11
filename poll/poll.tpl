@@ -142,7 +142,7 @@
 
 	<script type="text/javascript">
 		function showAddModal() {
-			$('#addModal').modal().show();
+			$('#addModal').modal('show');
 		}
 	</script>
 

@@ -168,7 +168,7 @@
 <script type="text/javascript">
   function showDeleteModal(link) {
     $('#deleteLink').attr('action', link);
-    $('#deleteModal').modal().show();
+    $('#deleteModal').modal('show');
   }
 </script>
 

@@ -179,14 +179,14 @@
 	<script type="text/javascript">
 		function showDeleteModal(id) {
 			$('#deleteDropdown').attr('href', id);
-			$('#deleteModal').modal().show();
+			$('#deleteModal').modal('show');
 		}
 	</script>
 
 	<script type="text/javascript">
 		function showAddModal() {
 			$('#addDropdown').attr('href');
-			$('#addModal').modal().show();
+			$('#addModal').modal('show');
 		}
 	</script>
 

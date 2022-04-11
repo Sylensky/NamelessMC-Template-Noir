@@ -1,146 +1,111 @@
 {include file='header.tpl'}
-
 <body id="page-top">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    {include file='sidebar.tpl'}
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main content -->
-        <div id="content">
-
-            <!-- Topbar -->
-            {include file='navbar.tpl'}
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{$GROUPS}</h1>
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{$PANEL_INDEX}">{$DASHBOARD}</a></li>
-                        <li class="breadcrumb-item active">{$GROUPS}</li>
-                    </ol>
-                </div>
-
-                <!-- Update Notification -->
-                {include file='includes/update.tpl'}
-
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-md-9">
-                                <h5 style="margin-top: 7px; margin-bottom: 7px;">{$PERMISSIONS}</h5>
-                            </div>
-                            <div class="col-md-3">
-                                    <span class="float-end">
-                                        <a class="btn btn-primary" href="{$BACK_LINK}">{$BACK}</a>
-                                    </span>
+    <div id="wrapper">
+        {include file='sidebar.tpl'}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {include file='navbar.tpl'}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Editing Group Permissions</h4>
+                                <div class="page-title-right">
+                                    <a class="btn btn-outline-info btn-sm" href="{$BACK_LINK}" data-bs-toggle="tooltip" data-placement="top" title="{$L_BACK}"><i class="fad fa-arrow-left"></i> {$L_BACK}</a>
+                                    <button class="btn btn-outline-success btn-sm" type="button" onclick="document.getElementById('SavePermission').submit();" data-bs-toggle="tooltip" data-placement="top" title="{$L_SAVE}"><i class="fad fa-save"></i> {$L_SAVE}</button>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Success and Error Alerts -->
-                        {include file='includes/alerts.tpl'}
-
-                        <form action="" method="post">
-                            {foreach from=$ALL_PERMISSIONS key=key item=item}
-                                <div class="table-responsive">
-                                    <table id="{$key|escape}" class="table table-striped">
-                                        <colgroup>
-                                            <col span="1" style="width:70%">
-                                            <col span="1" style="width:30%">
-                                        </colgroup>
-                                        <thead>
-                                        <tr>
-                                            <th>{$key|escape}</th>
-                                            <th><a href="#"
-                                                   onclick="selectAllPerms('{$key|escape}'); return false;">{$SELECT_ALL}</a>
-                                                | <a href="#"
-                                                     onclick="deselectAllPerms('{$key|escape}'); return false;">{$DESELECT_ALL}</a>
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        {foreach from=$item key=permission item=title}
-                                            <tr>
-                                                <td>{$title}</td>
-                                                <td><input type="checkbox" name="permissions[{$permission|escape}]"
-                                                           class="js-switch"
-                                                           value="1" {if is_array($PERMISSIONS_VALUES) && array_key_exists($permission|escape, $PERMISSIONS_VALUES)} checked{/if}>
-                                                </td>
-                                            </tr>
-                                        {/foreach}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            {/foreach}
-
-                            <div class="form-group">
-                                <input type="hidden" name="token" value="{$TOKEN}">
-                                <input type="submit" class="btn btn-primary" value="{$SUBMIT}">
+                        {include file='includes/update.tpl'}
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="input-group">
+                                <input class="form-control text-center" type="text" id="X_Search" onkeyup="XSearch()" placeholder="Search Permissions">
                             </div>
+                            <hr>
+                        </div>
+                        <form class="d-contents" id="SavePermission" action="" method="post">
+                        <input type="hidden" name="token" value="{$TOKEN}">
+                        {foreach from=$ALL_PERMISSIONS key=key item=item}
+                            <div class="col-sm-12 col-md-12 col-xl-12">
+                                <div class="card" id="{$key|escape}">
+                                    <div class="card-header">
+                                        <span class="font-size-22"> {$key|escape}</span>
+                                        <span class="float-end">
+                                            <a href="#" class="btn btn-outline-success btn-sm" onclick="selectAllPerms('{$key|escape}'); return false;" data-bs-toggle="tooltip" data-placement="top" title="{$SELECT_ALL}"><i class="far fa-check-square"></i> {$SELECT_ALL}</a>
+                                            <a href="#" class="btn btn-outline-danger btn-sm" onclick="deselectAllPerms('{$key|escape}'); return false;" data-bs-toggle="tooltip" data-placement="top" title="{$DESELECT_ALL}"><i class="far fa-times-square"></i> {$DESELECT_ALL}</a>
+                                        </span>
+                                    </div>
+                                    <div class="card-body">
+                                    {foreach from=$item key=permission item=title}
+                                        <div class="HI">
+                                            <label class="ms-2 card-header p-1 mb-1 d-block c-pointer" for="InputP[{$permission|escape}]">
+                                                <label class="m-0 c-pointer PName" for="InputP[{$permission|escape}]"><i class="fas fa-file text-info" data-bs-toggle="tooltip" title="" data-bs-original-title="Allow Group to access <span class='text-warning'>{$title}</span>"></i> {$title}</label>
+                                                <span class="float-end">
+                                                    <div class="d-flex">
+                                                        <input class="form-check form-switch" type="checkbox" name="permissions[{$permission|escape}]" id="InputP[{$permission|escape}]" switch="success" value="1" {if is_array($PERMISSIONS_VALUES) && array_key_exists($permission|escape, $PERMISSIONS_VALUES)} checked{/if}>
+                                                        <label class="form-label" for="InputP[{$permission|escape}]" data-on-label="{$L_YES}" data-off-label="{$L_NO}"></label>
+                                                    </div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    {/foreach}
+                                    </div>
+                                </div>
+                            </div>
+                        {/foreach}
                         </form>
-
                     </div>
                 </div>
-
-                <!-- Spacing -->
-                <div style="height:1rem;"></div>
-
-                <!-- End Page Content -->
             </div>
-
-            <!-- End Main Content -->
+            {include file='footer.tpl'}
         </div>
-
-        {include file='footer.tpl'}
-
-        <!-- End Content Wrapper -->
     </div>
+    {include file='scripts.tpl'}
+    <script type="text/javascript">
+        function selectAllPerms(section) {
+            var card = $('.card#' + section);
+            card.find('.form-switch').each(function() {
+                $(this).prop('checked', true);
+                onChange(this);
+            });
+            return false;
+        }
 
+        function deselectAllPerms(section) {
+            var card = $('.card#' + section);
+            card.find('.form-switch').each(function() {
+                $(this).prop('checked', false);
+                onChange(this);
+            });
+            return false;
+        }
 
-    <!-- End Wrapper -->
-</div>
+        function onChange(el) {
+            if (typeof Event === 'function' || !document.fireEvent) {
+                var event = document.createEvent('HTMLEvents');
+                event.initEvent('change', true, true);
+                el.dispatchEvent(event);
+            } else {
+                el.fireEvent('onchange');
+            }
+        }
 
-{include file='scripts.tpl'}
-
-<script type="text/javascript">
-  function selectAllPerms(section) {
-    var table = $('table#' + section);
-    table.find('tbody tr td .js-switch').each(function () {
-      $(this).prop('checked', true);
-      onChange(this);
-    });
-    return false;
-  }
-
-  function deselectAllPerms(section) {
-    var table = $('table#' + section);
-    table.find('tbody tr td .js-switch').each(function () {
-      $(this).prop('checked', false);
-      onChange(this);
-    });
-    return false;
-  }
-
-  function onChange(el) {
-    if (typeof Event === 'function' || !document.fireEvent) {
-      var event = document.createEvent('HTMLEvents');
-      event.initEvent('change', true, true);
-      el.dispatchEvent(event);
-    } else {
-      el.fireEvent('onchange');
-    }
-  }
-</script>
-
+        function XSearch() {
+            let input = document.getElementById('X_Search').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('PName');
+            let A = document.getElementsByClassName('HI');
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    A[i].style.display="none";
+                }
+                else {
+                    A[i].style.display="";
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>

@@ -161,14 +161,14 @@
 	<script type="text/javascript">
 		function showDeleteModal(id) {
 			$('#deletecategory').attr('href', id);
-			$('#deleteModal').modal().show();
+			$('#deleteModal').modal('show');
 		}
 	</script>
 
 	<script type="text/javascript">
 		function showAddModal() {
 			$('#addcategory').attr('href');
-			$('#addModal').modal().show();
+			$('#addModal').modal('show');
 		}
 	</script>
 

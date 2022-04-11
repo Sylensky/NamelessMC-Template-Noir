@@ -225,7 +225,7 @@
         function showRevokeModal(link, text) {
             $('#revokeModalContents').html(text);
             $('#revokeForm').attr('action', link);
-            $('#revokeModal').modal().show();
+            $('#revokeModal').modal('show');
         }
     </script>
 </body>

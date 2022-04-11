@@ -97,7 +97,7 @@
 <script type="text/javascript">
   function showDeleteModal(id) {
     $('#deleteLink').attr('href', id);
-    $('#deleteModal').modal().show();
+    $('#deleteModal').modal('show');
   }
 </script>
 </body>

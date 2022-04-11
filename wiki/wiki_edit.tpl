@@ -187,12 +187,12 @@
     <script type="text/javascript">
         function showDeleteModal(id) {
             $('#deleteLink').attr('href', id);
-            $('#deleteModal').modal().show();
+            $('#deleteModal').modal('show');
         }
 
         function showDeleteButtonModal(id) {
             $('#deleteButtonLink').attr('href', id);
-            $('#deleteButtonModal').modal().show();
+            $('#deleteButtonModal').modal('show');
         }
     </script>
 

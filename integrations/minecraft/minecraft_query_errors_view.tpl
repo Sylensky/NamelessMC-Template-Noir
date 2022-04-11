@@ -104,7 +104,7 @@
 
 <script type="text/javascript">
   function showDeleteModal() {
-    $('#deleteModal').modal().show();
+    $('#deleteModal').modal('show');
   }
 </script>
 

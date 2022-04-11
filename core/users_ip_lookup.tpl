@@ -21,15 +21,10 @@
                     </div>
                     {include file='includes/update.tpl'}
                     <div class="card">
-                        <div class="card-header">
-                            {$SEARCH_FOR_IP_OR_USER}
-                        </div>
                         <div class="card-body">
                             <form action="" method="post">
                                 <input type="hidden" name="token" value="{$TOKEN}">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="search" name="search" onchange="this.form.submit()">
-                                </div>
+                                <input type="text" class="form-control text-center" placeholder="{$SEARCH_FOR_IP_OR_USER}" id="search" name="search" onchange="this.form.submit()">
                             </form>
                         </div>
                     </div>

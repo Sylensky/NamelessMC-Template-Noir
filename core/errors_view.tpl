@@ -63,7 +63,7 @@
 {include file='scripts.tpl'}
 <script type="text/javascript">
   function showPurgeModal() {
-    $('#purgeModal').modal().show();
+    $('#purgeModal').modal('show');
   }
 </script>
 </body>

@@ -109,7 +109,7 @@
 
 <script type="text/javascript">
   function showCancelModal() {
-    $('#cancelModal').modal().show();
+    $('#cancelModal').modal('show');
   }
 
   var editor = CodeMirror.fromTextArea(document.getElementById("code"), {

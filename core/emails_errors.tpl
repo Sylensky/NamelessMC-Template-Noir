@@ -110,12 +110,12 @@
     {include file='scripts.tpl'}
     <script type="text/javascript">
         function showPurgeModal() {
-            $('#purgeModal').modal().show();
+            $('#purgeModal').modal('show');
         }
 
         function showDeleteModal(id) {
             $('#deleteLink').attr('href', '{$DELETE_LINK}'.replace('{literal}{x}{/literal}', id));
-            $('#deleteModal').modal().show();
+            $('#deleteModal').modal('show');
         }
     </script>
 </body>

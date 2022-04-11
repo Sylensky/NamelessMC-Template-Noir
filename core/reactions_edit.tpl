@@ -102,11 +102,11 @@
     {include file='scripts.tpl'}
     <script type="text/javascript">
         function showCancelModal() {
-            $('#cancelModal').modal().show();
+            $('#cancelModal').modal('show');
         }
 
         function showDeleteModal() {
-            $('#deleteModal').modal().show();
+            $('#deleteModal').modal('show');
         }
     </script>
 </body>

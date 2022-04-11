@@ -82,7 +82,7 @@
 {include file='scripts.tpl'}
 <script type="text/javascript">
   function showConfirmModal() {
-    $('#confirmModal').modal().show();
+    $('#confirmModal').modal('show');
   }
 </script>
 </body>
